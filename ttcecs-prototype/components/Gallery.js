@@ -2,6 +2,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const galleryItems = [
   {
@@ -100,10 +101,13 @@ export default function Gallery() {
                 onClick={() => setSelectedItem(item)}
               >
                 <div className="relative overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
+                    width={600}
+                    height={400}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                     <div>
@@ -139,7 +143,14 @@ export default function Gallery() {
               className="max-w-4xl w-full glass rounded-2xl overflow-hidden"
               onClick={(e) => e.stopPropagation()}
             >
-              <img src={selectedItem.image} alt={selectedItem.title} className="w-full h-auto" />
+              <Image 
+                src={selectedItem.image} 
+                alt={selectedItem.title} 
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+                unoptimized
+              />
               <div className="p-8">
                 <div className="text-xs text-electric font-semibold mb-2 uppercase tracking-wide">
                   {selectedItem.category}
