@@ -11,54 +11,130 @@ import 'swiper/css/effect-coverflow';
 
 const schemes = [
   {
+    id: 'fd',
+    name: 'Fixed Deposit (FD)',
+    icon: '💰',
+    minAmount: '₹500',
+    rate: '14.40%',
+    tenure: '1 to 10 years',
+    color: 'from-blue-500 to-purple-600',
+    features: [
+      'Minimum deposit: ₹500',
+      'Interest rate: 14.40% per annum',
+      'Quarterly compounding',
+      'Tenure: 1 to 10 years',
+      'Loan facility available',
+      'Premature withdrawal allowed'
+    ],
+    description: 'Secure your future with guaranteed high returns'
+  },
+  {
+    id: 'rd',
+    name: 'Recurring Deposit (RD)',
+    icon: '�',
+    minAmount: '₹100/month',
+    rate: '14.40%',
+    tenure: '1 to 10 years',
+    color: 'from-green-500 to-teal-600',
+    features: [
+      'Monthly deposit: ₹100 onwards',
+      'Interest rate: 14.40% per annum',
+      'Flexible tenure: 1-10 years',
+      'Disciplined savings habit',
+      'Loan facility available',
+      'Perfect for regular income earners'
+    ],
+    description: 'Build wealth systematically with monthly savings'
+  },
+  {
     id: 'dmg',
     name: 'DMG (Diamond)',
     icon: '💎',
-    ageRange: '0-12 years',
+    minAmount: '₹500',
     rate: '14.40%',
-    color: 'from-blue-500 to-purple-600',
-    features: ['Minor accounts', 'Guardian operated', 'Education focused', 'Quarterly interest'],
+    tenure: 'Age 0-12 years',
+    color: 'from-blue-400 to-indigo-600',
+    features: [
+      'Age group: 0-12 years',
+      'Minor accounts',
+      'Guardian operated',
+      'Education focused savings',
+      'Same FD/RD benefits',
+      'Future planning for children'
+    ],
     description: 'Perfect start for your child\'s financial future'
   },
   {
     id: 'gnx',
     name: 'GNX (Gold Next)',
     icon: '🥇',
-    ageRange: '13-18 years',
+    minAmount: '₹500',
     rate: '14.40%',
+    tenure: 'Age 13-18 years',
     color: 'from-yellow-500 to-orange-600',
-    features: ['Teen accounts', 'Partial self-operation', 'Higher education goals', 'Flexible deposits'],
+    features: [
+      'Age group: 13-18 years',
+      'Teen accounts',
+      'Partial self-operation',
+      'Higher education goals',
+      'All FD/RD facilities',
+      'Financial literacy building'
+    ],
     description: 'Growing wealth for growing minds'
   },
   {
     id: 'frontiers',
     name: 'Frontiers',
     icon: '🚀',
-    ageRange: '19-35 years',
+    minAmount: '₹500',
     rate: '14.40%',
-    color: 'from-green-500 to-teal-600',
-    features: ['Young professionals', 'Marriage & house goals', 'Loan eligibility', 'Smart Card access'],
+    tenure: 'Age 19-35 years',
+    color: 'from-green-400 to-emerald-600',
+    features: [
+      'Age group: 19-35 years',
+      'Young professionals',
+      'Marriage & house goals',
+      'Loan eligibility up to 90%',
+      'Smart Card access',
+      'Complete banking facilities'
+    ],
     description: 'Launch your financial independence'
   },
   {
     id: 'pioneers',
     name: 'Pioneers',
     icon: '⭐',
-    ageRange: '36-55 years',
+    minAmount: '₹500',
     rate: '14.40%',
+    tenure: 'Age 36-55 years',
     color: 'from-indigo-500 to-blue-600',
-    features: ['Prime earning years', 'Wealth accumulation', 'Retirement planning', 'Premium services'],
+    features: [
+      'Age group: 36-55 years',
+      'Prime earning years',
+      'Wealth accumulation',
+      'Retirement planning',
+      'Premium loan services',
+      'Investment counseling'
+    ],
     description: 'Build your legacy with confidence'
   },
   {
     id: 'ssnr',
     name: 'SSNR (Senior)',
     icon: '👑',
-    ageRange: '56+ years',
+    minAmount: '₹500',
     rate: '14.40%',
+    tenure: 'Age 56+ years',
     color: 'from-red-500 to-pink-600',
-    features: ['Senior citizens', 'Retirement income', 'Health benefits', 'Priority support'],
-    description: 'Secure your golden years'
+    features: [
+      'Age group: 56+ years',
+      'Senior citizens special',
+      'Retirement income support',
+      'Priority services',
+      'Health & welfare benefits',
+      'Flexible withdrawal options'
+    ],
+    description: 'Secure your golden years with dignity'
   },
 ];
 
@@ -86,7 +162,8 @@ function SchemeCard({ scheme }) {
           <div className={`text-4xl font-black bg-gradient-to-r ${scheme.color} bg-clip-text text-transparent mb-3`}>
             {scheme.rate}
           </div>
-          <div className="text-muted text-sm mb-4">{scheme.ageRange}</div>
+          <div className="text-muted text-sm mb-2">{scheme.tenure}</div>
+          <div className="text-electric text-xs font-semibold mb-3">{scheme.minAmount} onwards</div>
           <p className="text-sm text-muted/80 italic">{scheme.description}</p>
           <div className="mt-auto pt-6">
             <div className="text-xs text-electric animate-pulse">Click to see details →</div>
@@ -152,9 +229,9 @@ export default function DepositSchemes() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Deposit Plans for Every Life Stage</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Fixed & Recurring Deposit Plans</h2>
           <p className="text-muted text-lg max-w-3xl mx-auto">
-            From childhood to retirement, we have tailored fixed deposit schemes with consistent 14.40% returns
+            Choose from FD, RD, or age-specific deposit schemes. All offering 14.40% annual returns with quarterly compounding. Start with as low as ₹100/month for RD or ₹500 for FD.
           </p>
         </motion.div>
 
@@ -203,8 +280,8 @@ export default function DepositSchemes() {
           className="mt-12 glass p-6 rounded-xl text-center"
         >
           <p className="text-sm text-muted">
-            🏆 All schemes offer the same competitive 14.40% annual returns with quarterly compounding.
-            <span className="text-electric font-semibold"> Choose based on your age and goals!</span>
+            🏆 All schemes offer 14.40% annual returns with quarterly compounding.
+            <span className="text-electric font-semibold"> FD from ₹500 | RD from ₹100/month | Loan facility available | Premature withdrawal allowed</span>
           </p>
         </motion.div>
       </div>

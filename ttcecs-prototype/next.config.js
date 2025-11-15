@@ -8,10 +8,9 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
-    unoptimized: true, // Required for Netlify static export if not using Netlify Image CDN
+    // Don't use unoptimized - let Netlify handle it with the plugin
   },
-  // Ensure trailing slashes are handled correctly
-  trailingSlash: true,
+  // Remove trailingSlash - not needed with Netlify plugin
 }
 
 module.exports = nextConfig

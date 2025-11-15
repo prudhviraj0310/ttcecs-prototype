@@ -42,7 +42,7 @@ export default function FDCalculator() {
   }, []);
 
   const isDark = theme === 'dark';
-  const [principal, setPrincipal] = useState(100000);
+  const [principal, setPrincipal] = useState(50000);
   const [years, setYears] = useState(3);
   const [rate] = useState(14.40);
   const [maturityAmount, setMaturityAmount] = useState(0);
@@ -147,9 +147,9 @@ export default function FDCalculator() {
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Calculate Your Returns</h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4">Calculate Your FD Returns</h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">
-            See how your investment grows with TTCECS Fixed Deposits at 14.40% annual returns
+            See how your investment grows with TTCECS Fixed Deposits at 14.40% per annum. Minimum deposit: ₹500, tenure: 1-10 years
           </p>
         </motion.div>
 
@@ -172,15 +172,15 @@ export default function FDCalculator() {
               </div>
               <input
                 type="range"
-                min="10000"
+                min="500"
                 max="1000000"
-                step="10000"
+                step="500"
                 value={principal}
                 onChange={(e) => setPrincipal(Number(e.target.value))}
                 className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-electric"
               />
               <div className="flex justify-between text-xs text-muted mt-2">
-                <span>₹10K</span>
+                <span>₹500</span>
                 <span>₹10L</span>
               </div>
             </div>
