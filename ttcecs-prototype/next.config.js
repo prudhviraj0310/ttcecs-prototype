@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   output: 'standalone', // Required for Docker/Coolify deployment
+  transpilePackages: ['gsap'], // Force GSAP transpilation for Docker builds
   images: {
     remotePatterns: [
       {

@@ -1,10 +1,10 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import Header from '../components/Header'
 import Hero3D from '../components/Hero3D'
 import ScrollHandMoney from '../components/ScrollHandMoney'
 import FDCalculator from '../components/FDCalculator'
 import DepositSchemes from '../components/DepositSchemes'
-import Story from '../components/Story'
 import SmartCardDemo from '../components/SmartCardDemo'
 import AssociatedOrgs from '../components/AssociatedOrgs'
 import Globe from '../components/Globe'
@@ -16,7 +16,10 @@ import Resources from '../components/Resources'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
 import Chatbot from '../components/Chatbot'
-import ScrollEffects from '../components/ScrollEffects'
+
+// Dynamically import components that use GSAP (no SSR)
+const Story = dynamic(() => import('../components/Story'), { ssr: false })
+const ScrollEffects = dynamic(() => import('../components/ScrollEffects'), { ssr: false })
 
 export default function Home() {
   return (
