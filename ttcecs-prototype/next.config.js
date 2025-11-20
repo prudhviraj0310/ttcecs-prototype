@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: 'standalone', // Required for Docker/Coolify deployment
   images: {
     remotePatterns: [
       {
@@ -8,9 +9,7 @@ const nextConfig = {
         hostname: 'images.unsplash.com',
       },
     ],
-    // Don't use unoptimized - let Netlify handle it with the plugin
   },
-  // Remove trailingSlash - not needed with Netlify plugin
 }
 
 module.exports = nextConfig
