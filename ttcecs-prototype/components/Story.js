@@ -2,7 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Lottie from 'lottie-react';
 import discoveryAnim from '../public/animations/discovery.json';
 import designAnim from '../public/animations/design.json';
