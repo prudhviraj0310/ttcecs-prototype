@@ -1,0 +1,226 @@
+// components/GlobeScene.js
+'use client';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { OrbitControls, Stars, Html, Sphere } from '@react-three/drei';
+import { Suspense, useRef, useEffect } from 'react';
+import * as THREE from 'three';
+
+// Convert lat/lng to 3D coordinates
+function latLngToVector3(lat, lng, radius = 1.6) {
+  const phi = (90 - lat) * (Math.PI / 180);
+  const theta = (lng + 180) * (Math.PI / 180);
+  
+  const x = -(radius * Math.sin(phi) * Math.cos(theta));
+  const z = radius * Math.sin(phi) * Math.sin(theta);
+  const y = radius * Math.cos(phi);
+  
+  return new THREE.Vector3(x, y, z);
+}
+
+// Real coordinates
+const BRANCH_LOCATIONS = [
+  { name: 'Anna Nagar (HQ)', members: '50,000+', lat: 13.0878, lng: 80.2086 },
+  { name: 'T Nagar', members: '25,000+', lat: 13.0418, lng: 80.2341 },
+  { name: 'Kilambakkam', members: '15,000+', lat: 12.7945, lng: 80.0839 },
+  { name: 'Nanganallur', members: '12,000+', lat: 12.9850, lng: 80.1927 },
+  { name: 'Coimbatore', members: '18,000+', lat: 11.0168, lng: 76.9558 },
+  { name: 'Nagercoil', members: '5,000+', lat: 8.1790, lng: 77.4337 },
+];
+
+// Camera zoom controller
+function CameraController({ activePin }) {
+  const { camera, controls } = useThree();
+
+  useEffect(() => {
+    if (!activePin || !controls) return;
+
+    const location = BRANCH_LOCATIONS.find(loc => loc.name === activePin.name);
+    if (!location) return;
+
+    const targetPos = latLngToVector3(location.lat, location.lng);
+    const distance = 3.5;
+    const cameraPos = targetPos.clone().normalize().multiplyScalar(distance);
+
+    const startPos = camera.position.clone();
+    const startTarget = controls.target.clone();
+    const startTime = Date.now();
+    const duration = 1500;
+
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      
+      const eased = progress < 0.5
+        ? 4 * progress * progress * progress
+        : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+      camera.position.lerpVectors(startPos, cameraPos, eased);
+      controls.target.lerp(targetPos, eased);
+      controls.update();
+
+      if (progress < 1) requestAnimationFrame(animate);
+    };
+
+    animate();
+  }, [activePin, camera, controls]);
+
+  return null;
+}
+
+// Location pin
+function LocationPin({ lat, lng, name, members, onClick, isActive }) {
+  const meshRef = useRef();
+  const glowRef = useRef();
+  const position = latLngToVector3(lat, lng);
+
+  useFrame((state) => {
+    if (meshRef.current) {
+      const scale = isActive 
+        ? 1.2 + Math.sin(state.clock.elapsedTime * 4) * 0.3
+        : 1 + Math.sin(state.clock.elapsedTime * 2) * 0.15;
+      meshRef.current.scale.setScalar(scale);
+    }
+    if (glowRef.current && isActive) {
+      glowRef.current.scale.setScalar(1.5 + Math.sin(state.clock.elapsedTime * 3) * 0.5);
+    }
+  });
+
+  return (
+    <group position={position.toArray()} onClick={onClick}>
+      {/* BIGGER glow effect */}
+      {isActive && (
+        <mesh ref={glowRef}>
+          <sphereGeometry args={[0.25, 16, 16]} />
+          <meshBasicMaterial color="#00ff88" transparent opacity={0.4} />
+        </mesh>
+      )}
+      
+      {/* MUCH BIGGER pin marker */}
+      <mesh ref={meshRef}>
+        <sphereGeometry args={[0.12, 16, 16]} />
+        <meshStandardMaterial
+          color={isActive ? "#00ff88" : "#ff3366"}
+          emissive={isActive ? "#00ff88" : "#ff3366"}
+          emissiveIntensity={2.0}
+          roughness={0.3}
+          metalness={0.7}
+        />
+      </mesh>
+
+      {/* TALLER vertical beam */}
+      <mesh position={[0, 0.15, 0]}>
+        <cylinderGeometry args={[0.02, 0.02, 0.3, 8]} />
+        <meshStandardMaterial
+          color={isActive ? "#00ff88" : "#ff3366"}
+          emissive={isActive ? "#00ff88" : "#ff3366"}
+          emissiveIntensity={2.0}
+        />
+      </mesh>
+
+      {/* BIGGER label */}
+      <Html position={[0, 0.35, 0]} center distanceFactor={1.5} style={{ pointerEvents: 'none', userSelect: 'none' }}>
+        <div 
+          className={`px-4 py-2 rounded-lg backdrop-blur-sm transition-all duration-300 ${
+            isActive ? 'bg-green-500/95 text-white scale-125' : 'bg-pink-600/95 text-white scale-100'
+          }`}
+          style={{ fontSize: '13px', fontWeight: '700', whiteSpace: 'nowrap', textShadow: '0 2px 8px rgba(0,0,0,0.8)', border: '2px solid rgba(255,255,255,0.3)' }}
+        >
+          {name}
+          <div style={{ fontSize: '11px', opacity: 0.95, fontWeight: '600' }}>{members} members</div>
+        </div>
+      </Html>
+    </group>
+  );
+}
+
+// Earth globe
+function EarthGlobe({ onPinClick, activePin }) {
+  const globeRef = useRef();
+  
+  useFrame(() => {
+    if (globeRef.current && !activePin) {
+      globeRef.current.rotation.y += 0.001;
+    }
+  });
+
+  return (
+    <group ref={globeRef}>
+      {/* Main Earth - Bright blue oceans */}
+      <Sphere args={[1.6, 128, 128]}>
+        <meshStandardMaterial
+          color="#1e88e5"
+          roughness={0.6}
+          metalness={0.3}
+          emissive="#0d47a1"
+          emissiveIntensity={0.2}
+        />
+      </Sphere>
+
+      {/* Atmosphere glow - More visible */}
+      <Sphere args={[1.65, 64, 64]}>
+        <meshBasicMaterial color="#64b5f6" transparent opacity={0.15} side={THREE.BackSide} />
+      </Sphere>
+
+      {/* Bright grid lines for continents */}
+      <Sphere args={[1.605, 64, 64]}>
+        <meshBasicMaterial color="#00d9ff" wireframe transparent opacity={0.25} />
+      </Sphere>
+      
+      {/* India region highlight - BRIGHT GREEN */}
+      <mesh position={latLngToVector3(20, 78, 1.62).toArray()}>
+        <sphereGeometry args={[0.35, 32, 32]} />
+        <meshBasicMaterial 
+          color="#00ff88" 
+          transparent 
+          opacity={0.4}
+          side={THREE.DoubleSide}
+        />
+      </mesh>
+
+      {BRANCH_LOCATIONS.map((loc) => (
+        <LocationPin
+          key={loc.name}
+          lat={loc.lat}
+          lng={loc.lng}
+          name={loc.name}
+          members={loc.members}
+          onClick={() => onPinClick(loc)}
+          isActive={activePin?.name === loc.name}
+        />
+      ))}
+
+      <Stars radius={150} depth={80} count={8000} factor={5} saturation={0} fade speed={0.5} />
+    </group>
+  );
+}
+
+export default function GlobeScene({ onPinClick, activePin }) {
+  return (
+    <Canvas camera={{ position: [0, 0, 5], fov: 45 }} style={{ background: 'transparent' }}>
+      <Suspense fallback={null}>
+        {/* MUCH BRIGHTER LIGHTING */}
+        <ambientLight intensity={1.2} />
+        <directionalLight position={[10, 10, 5]} intensity={1.5} color="#ffffff" />
+        <directionalLight position={[-10, -10, -5]} intensity={0.8} color="#ffffff" />
+        <pointLight position={[0, 0, 10]} intensity={0.8} color="#ffffff" />
+        <spotLight position={[0, 15, 0]} intensity={1} angle={0.4} penumbra={1} color="#ffffff" />
+        
+        <EarthGlobe onPinClick={onPinClick} activePin={activePin} />
+        
+        <CameraController activePin={activePin} />
+        <OrbitControls
+          enablePan={false}
+          enableZoom={true}
+          minDistance={3}
+          maxDistance={10}
+          autoRotate={!activePin}
+          autoRotateSpeed={0.3}
+          minPolarAngle={Math.PI / 6}
+          maxPolarAngle={Math.PI - Math.PI / 6}
+          enableDamping
+          dampingFactor={0.05}
+        />
+      </Suspense>
+    </Canvas>
+  );
+}
