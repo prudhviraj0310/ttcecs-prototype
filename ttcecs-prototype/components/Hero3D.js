@@ -47,7 +47,7 @@ export default function Hero3D() {
   return (
     <section
       id="home"
-      className={`relative min-h-[90vh] flex flex-col justify-center items-center text-center overflow-hidden ${bgGradient} px-6`}
+      className={`relative min-h-[90vh] flex flex-col justify-center items-center text-center overflow-hidden ${bgGradient} px-6 pt-32`}
     >
       {/* Subtle rainbow particles background */}
       <div className="absolute inset-0 -z-10">
