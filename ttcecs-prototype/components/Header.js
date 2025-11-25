@@ -54,24 +54,30 @@ export default function Header() {
             <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
               TC
             </div>
-            <span className={`font-black text-xl ${isDark ? 'text-white' : 'text-brand-teal'}`}>TTCECS</span>
+            <span className={`font-black text-xl ${isDark ? 'text-white' : 'text-brand-teal'}`}>Thecos</span>
           </motion.div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold">
-            <a href="#home" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold">
+            <a href="/" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
               Home
             </a>
-            <a href="#fd" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
-              FD Plans
+            <a href="/about" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              About Us
             </a>
-            <a href="#services" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
-              Services
+            <a href="/membership" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              Membership
             </a>
-            <a href="#globe" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
-              Branches
+            <a href="/deposits" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              Deposits
             </a>
-            <a href="#contact" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+            <a href="/loans" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              Loans
+            </a>
+            <a href="/subsidiaries" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              Subsidiaries
+            </a>
+            <a href="/contact" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
               Contact
             </a>
 
@@ -110,13 +116,13 @@ export default function Header() {
 
             {/* CTA Button with gradient */}
             <motion.a
-              href="#contact"
+              href="/membership"
               whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(39, 169, 225, 0.3)' }}
               whileTap={{ scale: 0.95 }}
               className="px-6 py-2.5 rounded-lg font-bold text-white shadow-md"
               style={{ background: 'linear-gradient(90deg, #EA2E89 0%, #27A9E1 100%)' }}
             >
-              Open Account
+              Become a Member
             </motion.a>
           </nav>
 
@@ -177,47 +183,61 @@ export default function Header() {
         <div className={`mx-4 mt-2 ${isDark ? 'bg-[#0a1628]' : 'bg-white'} rounded-2xl p-6 shadow-2xl ${isDark ? 'border-2 border-[#1a2942]' : 'border-2 border-brand-gray-light'}`}>
           <nav className="flex flex-col gap-4">
             <a
-              href="#home"
+              href="/"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
               Home
             </a>
             <a
-              href="#fd"
+              href="/about"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
-              FD Plans
+              About Us
             </a>
             <a
-              href="#services"
+              href="/membership"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
-              Services
+              Membership
             </a>
             <a
-              href="#globe"
+              href="/deposits"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
-              Branches
+              Deposits
             </a>
             <a
-              href="#contact"
+              href="/loans"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
+            >
+              Loans
+            </a>
+            <a
+              href="/subsidiaries"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
+            >
+              Subsidiaries
+            </a>
+            <a
+              href="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
               Contact
             </a>
             <a
-              href="#contact"
+              href="/membership"
               onClick={() => setMobileMenuOpen(false)}
               className="mt-4 px-6 py-3 rounded-lg font-bold text-white text-center shadow-lg"
               style={{ background: 'linear-gradient(90deg, #EA2E89 0%, #27A9E1 100%)' }}
             >
-              Open Account
+              Become a Member
             </a>
           </nav>
         </div>

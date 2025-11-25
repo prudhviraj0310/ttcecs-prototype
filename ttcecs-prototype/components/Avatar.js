@@ -1,9 +1,9 @@
 // components/Avatar.js
-export default function Avatar({ type = 'bot', name = 'TTCECS', size = 40 }) {
+export default function Avatar({ type = 'bot', name = 'Thecos', size = 40 }) {
   const style = { width: size, height: size };
   
   if (type === 'bot') {
-    // Bot avatar: TTCECS logo with fallback to gradient
+    // Bot avatar: Thecos logo with fallback to gradient
     return (
       <div 
         style={style} 

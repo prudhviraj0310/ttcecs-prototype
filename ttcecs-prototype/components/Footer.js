@@ -1,34 +1,86 @@
 export default function Footer() {
   return (
     <footer className="bg-transparent border-t border-white/6 mt-10">
-      <div className="max-w-6xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* About Section */}
           <div>
-            <h4 className="text-electric font-semibold">Quick Links</h4>
-            <ul className="mt-3 text-sm text-muted">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#projects">Projects</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-electric font-semibold">Services</h4>
-            <ul className="mt-3 text-sm text-muted">
-              <li>Fixed Deposits</li>
-              <li>Loans</li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-electric font-semibold">Connect</h4>
-            <div className="flex gap-3 mt-3">
-              <a href="#" className="px-3 py-2 rounded bg-white/5">in</a>
-              <a href="#" className="px-3 py-2 rounded bg-white/5">tw</a>
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
+                TC
+              </div>
+              <span className="font-black text-xl text-electric">Thecos</span>
             </div>
+            <p className="text-sm text-muted mb-4">
+              Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd.
+            </p>
+            <p className="text-sm text-muted">
+              Empowering Members Since 1991
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-electric font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-muted">
+              <li><a href="/" className="hover:text-electric transition-colors">Home</a></li>
+              <li><a href="/about" className="hover:text-electric transition-colors">About Us</a></li>
+              <li><a href="/membership" className="hover:text-electric transition-colors">Membership</a></li>
+              <li><a href="/deposits" className="hover:text-electric transition-colors">Deposits</a></li>
+              <li><a href="/loans" className="hover:text-electric transition-colors">Loans</a></li>
+            </ul>
+          </div>
+
+          {/* More Links */}
+          <div>
+            <h4 className="text-electric font-semibold mb-4">More</h4>
+            <ul className="space-y-2 text-sm text-muted">
+              <li><a href="/subsidiaries" className="hover:text-electric transition-colors">Subsidiaries</a></li>
+              <li><a href="/news" className="hover:text-electric transition-colors">News</a></li>
+              <li><a href="/downloads" className="hover:text-electric transition-colors">Downloads</a></li>
+              <li><a href="/faqs" className="hover:text-electric transition-colors">FAQs</a></li>
+              <li><a href="/contact" className="hover:text-electric transition-colors">Contact Us</a></li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="text-electric font-semibold mb-4">Contact</h4>
+            <ul className="space-y-3 text-sm text-muted">
+              <li>
+                <strong className="text-electric">Head Office:</strong><br />
+                No. 1735, 18th Main Road,<br />
+                Anna Nagar West, Chennai – 600040
+              </li>
+              <li>
+                <strong className="text-electric">Phone:</strong><br />
+                <a href="tel:+919025947007" className="hover:text-electric transition-colors">+91 90259 47007</a>
+              </li>
+              <li>
+                <strong className="text-electric">Email:</strong><br />
+                <a href="mailto:itsupport@ttcecs.com" className="hover:text-electric transition-colors">itsupport@ttcecs.com</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div className="text-center text-sm text-muted mt-6">
-          © {new Date().getFullYear()} TTCECS. All rights reserved.
+        <div className="border-t border-white/6 mt-8 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-muted text-center md:text-left">
+              © {new Date().getFullYear()} Thecos. All rights reserved. | GSTIN: 33AAIAT2044E1ZU | LEI: 3358004B6E98BGWE1P16
+            </div>
+            <div className="flex gap-4">
+              <a href="https://www.facebook.com/ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+                Facebook
+              </a>
+              <a href="https://www.instagram.com/ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+                Instagram
+              </a>
+              <a href="https://www.youtube.com/@ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+                YouTube
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

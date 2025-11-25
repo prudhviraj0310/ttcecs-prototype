@@ -58,8 +58,8 @@ function CameraController({ activePin, controlsRef }) {
     controls.enableDamping = false;
 
     const targetPos = latLngToVector3(location.lat, location.lng, 2);
-    const distance = 0.8; // Much closer zoom for city view
-    const cameraPos = targetPos.clone().normalize().multiplyScalar(distance + 2); // Position relative to globe surface
+    const distance = 0.5; // Balanced zoom - shows city without overlap
+    const cameraPos = targetPos.clone().normalize().multiplyScalar(2 + distance);
 
     const startPos = camera.position.clone();
     const startTarget = controls.target.clone();
@@ -146,73 +146,61 @@ function ParticleRing({ position, isActive }) {
   );
 }
 
-// Enhanced location pin with glow effects
+// Enhanced location pin with clean design
 function LocationPin({ lat, lng, name, members, onClick, isActive }) {
   const meshRef = useRef();
-  const glowRef = useRef();
   const position = useMemo(() => latLngToVector3(lat, lng), [lat, lng]);
 
   useFrame((state) => {
-    if (meshRef.current) {
-      const scale = isActive
-        ? 1.3 + Math.sin(state.clock.elapsedTime * 4) * 0.2
-        : 1 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
+    if (meshRef.current && isActive) {
+      const scale = 1.2 + Math.sin(state.clock.elapsedTime * 3) * 0.1;
       meshRef.current.scale.setScalar(scale);
-    }
-    if (glowRef.current && isActive) {
-      glowRef.current.scale.setScalar(2 + Math.sin(state.clock.elapsedTime * 3) * 0.3);
-      glowRef.current.material.opacity = 0.3 + Math.sin(state.clock.elapsedTime * 2) * 0.1;
     }
   });
 
   return (
     <group position={position.toArray()} onClick={onClick}>
-      {isActive && (
-        <mesh ref={glowRef}>
-          <sphereGeometry args={[0.15, 16, 16]} />
-          <meshBasicMaterial color="#00ff88" transparent opacity={0.3} />
-        </mesh>
-      )}
-
+      {/* Simple pin marker - no excessive glow */}
       <mesh ref={meshRef}>
         <sphereGeometry args={[0.08, 16, 16]} />
         <meshStandardMaterial
-          color={isActive ? "#00ff88" : "#ff3366"}
-          emissive={isActive ? "#00ff88" : "#ff3366"}
-          emissiveIntensity={3}
-          metalness={0.8}
-          roughness={0.2}
+          color={isActive ? "#00cc77" : "#ff4466"}
+          emissive={isActive ? "#00cc77" : "#ff4466"}
+          emissiveIntensity={0.3}
+          metalness={0.2}
+          roughness={0.6}
         />
       </mesh>
 
+      {/* Simple vertical beam */}
       <mesh position={[0, 0.12, 0]}>
-        <cylinderGeometry args={[0.015, 0.015, 0.24, 8]} />
+        <cylinderGeometry args={[0.01, 0.01, 0.24, 8]} />
         <meshStandardMaterial
-          color={isActive ? "#00ff88" : "#ff3366"}
-          emissive={isActive ? "#00ff88" : "#ff3366"}
-          emissiveIntensity={2.5}
+          color={isActive ? "#00cc77" : "#ff4466"}
+          emissive={isActive ? "#00cc77" : "#ff4466"}
+          emissiveIntensity={0.2}
           transparent
-          opacity={0.9}
+          opacity={0.7}
         />
       </mesh>
 
-      <ParticleRing position={[0, 0, 0]} isActive={isActive} />
+      {/* Particle ring only for active marker */}
+      {isActive && <ParticleRing position={[0, 0, 0]} isActive={isActive} />}
 
-      <Html position={[0, 0.3, 0]} center distanceFactor={1.2} style={{ pointerEvents: 'none', userSelect: 'none' }}>
+      {/* Label - Only show if active */}
+      <Html position={[0, 0.3, 0]} center distanceFactor={1.2} style={{ pointerEvents: 'none', userSelect: 'none', display: isActive ? 'block' : 'none' }}>
         <div
-          className={`px-3 py-2 rounded-lg backdrop-blur-md transition-all duration-300 ${isActive ? 'bg-green-500/95 text-white scale-110' : 'bg-pink-600/90 text-white scale-100'
-            }`}
+          className="px-3 py-2 rounded-lg backdrop-blur-md bg-green-500/90 text-white"
           style={{
             fontSize: '12px',
-            fontWeight: '700',
+            fontWeight: '600',
             whiteSpace: 'nowrap',
-            textShadow: '0 2px 10px rgba(0,0,0,0.9)',
-            border: '2px solid rgba(255,255,255,0.4)',
-            boxShadow: isActive ? '0 0 20px rgba(0,255,136,0.6)' : '0 0 10px rgba(255,51,102,0.4)'
+            textShadow: '0 1px 3px rgba(0,0,0,0.5)',
+            border: '1px solid rgba(255,255,255,0.3)'
           }}
         >
           {name}
-          <div style={{ fontSize: '10px', opacity: 0.95, fontWeight: '600', marginTop: '2px' }}>
+          <div style={{ fontSize: '10px', opacity: 0.9, fontWeight: '500', marginTop: '2px' }}>
             {members} members
           </div>
         </div>
@@ -335,7 +323,7 @@ export default function GlobeScene({ onPinClick, activePin }) {
           ref={controlsRef}
           enablePan={false}
           enableZoom={true}
-          minDistance={2.5}
+          minDistance={2.4}
           maxDistance={15}
           autoRotate={!activePin}
           autoRotateSpeed={0.4}

@@ -94,7 +94,7 @@ export default function Hero3D() {
         transition={{ duration: 0.8, delay: 0.3 }}
         className="mt-12 text-4xl md:text-6xl font-black text-gradient-rainbow"
       >
-        Trust. Growth. Digital.
+        Empowering Members Since 1991
       </motion.h2>
 
       {/* Subheadline */}
@@ -102,9 +102,9 @@ export default function Hero3D() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className={`mt-6 text-lg md:text-xl max-w-2xl leading-relaxed ${isDark ? 'text-muted' : 'text-brand-gray'}`}
+        className={`mt-6 text-lg md:text-xl max-w-3xl leading-relaxed ${isDark ? 'text-muted' : 'text-brand-gray'}`}
       >
-        Secure, member-first deposits with digital Smart Card access and personal support across Chennai branches.
+        Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd. — Savings, Loans & Financial Security for All Members.
       </motion.p>
 
       {/* CTA Buttons */}
@@ -116,23 +116,34 @@ export default function Hero3D() {
       >
         {/* Primary button with gradient */}
         <motion.a
-          href="#contact"
+          href="/membership"
           whileHover={{ scale: 1.05, boxShadow: '0 10px 30px rgba(39, 169, 225, 0.4)' }}
           whileTap={{ scale: 0.95 }}
           className="px-8 py-4 rounded-xl font-bold text-white shadow-lg"
           style={{ background: 'linear-gradient(90deg, #27A9E1 0%, #76C043 100%)' }}
         >
-          Open FD Account
+          Become a Member
         </motion.a>
 
-        {/* Secondary button with gradient border */}
+        {/* Secondary button */}
         <motion.a
-          href="#services"
+          href="/loans"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className={`px-8 py-4 rounded-xl font-bold ${isDark ? 'text-white bg-[#0a1628] border-[#1a2942]' : 'text-brand-teal bg-white border-brand-gray-light'} border-2 shadow-lg relative overflow-hidden group`}
         >
-          <span className="relative z-10">Explore Services</span>
+          <span className="relative z-10">Explore Loan Options</span>
+          <div className="absolute inset-0 bg-gradient-rainbow opacity-0 group-hover:opacity-10 transition-opacity" />
+        </motion.a>
+
+        {/* Tertiary button */}
+        <motion.a
+          href="/deposits"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className={`px-8 py-4 rounded-xl font-bold ${isDark ? 'text-white bg-[#0a1628] border-[#1a2942]' : 'text-brand-teal bg-white border-brand-gray-light'} border-2 shadow-lg relative overflow-hidden group`}
+        >
+          <span className="relative z-10">View Deposit Schemes</span>
           <div className="absolute inset-0 bg-gradient-rainbow opacity-0 group-hover:opacity-10 transition-opacity" />
         </motion.a>
       </motion.div>
@@ -158,19 +169,6 @@ export default function Hero3D() {
           <span className="text-2xl">🏆</span>
           <span className={`font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>ISO 9001</span>
           <span className={`text-sm ${isDark ? 'text-muted' : 'text-brand-gray'}`}>Certified</span>
-        </div>
-      </motion.div>
-
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-8 flex flex-col items-center text-brand-gray"
-      >
-        <span className="text-sm font-medium mb-2">Scroll to discover</span>
-        <div className="w-6 h-10 border-2 border-brand-gray rounded-full relative">
-          <div className="w-1.5 h-3 bg-brand-blue rounded-full absolute top-2 left-1/2 -translate-x-1/2 animate-bounce-slow" />
         </div>
       </motion.div>
 
