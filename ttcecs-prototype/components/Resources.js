@@ -184,8 +184,8 @@ export default function Resources() {
           className="text-center text-sm text-muted mt-8"
         >
           Need assistance? Contact our support team at{' '}
-          <a href="mailto:support@ttcecs.com" className="text-electric hover:underline">
-            support@ttcecs.com
+          <a href="mailto:support@thecos.com" className="text-electric hover:underline">
+            support@thecos.com
           </a>{' '}
           or call{' '}
           <a href="tel:+914412345678" className="text-electric hover:underline">

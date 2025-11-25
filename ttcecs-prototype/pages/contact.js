@@ -107,8 +107,8 @@ export default function ContactPage() {
                 <div className="text-6xl mb-4">📧</div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Email Us</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">For support & inquiries</p>
-                <a href="mailto:itsupport@ttcecs.com" className="text-[#27A9E1] font-bold text-lg hover:underline">
-                  itsupport@ttcecs.com
+                <a href="mailto:support@thecos.com" className="text-[#27A9E1] font-bold text-lg hover:underline">
+                  support@thecos.com
                 </a>
               </motion.div>
 

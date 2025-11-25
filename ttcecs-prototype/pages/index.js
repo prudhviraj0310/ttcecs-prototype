@@ -34,8 +34,8 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "FinancialService",
             "name": "Thecos",
-            "url": "https://ttcecs.com",
-            "logo": "https://ttcecs.com/logo.png",
+            "url": "https://thecos.com",
+            "logo": "https://thecos.com/logo.png",
             "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9150070312", "contactType": "customer service", "areaServed": "IN" }]
           })
         }} />

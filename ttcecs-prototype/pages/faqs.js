@@ -100,7 +100,7 @@ export default function FAQs() {
         },
         {
           q: 'How can I contact Thecos?',
-          a: 'Call us at +91 90259 47007 (Anna Nagar Head Office), email itsupport@ttcecs.com, or visit any of our branches in Chennai, Nagercoil, and Coimbatore.'
+          a: 'Call us at +91 90259 47007 (Anna Nagar Head Office), email support@thecos.com, or visit any of our branches in Chennai, Nagercoil, and Coimbatore.'
         },
         {
           q: 'What subsidiaries does Thecos have?',

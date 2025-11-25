@@ -58,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <strong className="text-electric">Email:</strong><br />
-                <a href="mailto:itsupport@ttcecs.com" className="hover:text-electric transition-colors">itsupport@ttcecs.com</a>
+                <a href="mailto:support@thecos.com" className="hover:text-electric transition-colors">support@thecos.com</a>
               </li>
             </ul>
           </div>
@@ -70,13 +70,13 @@ export default function Footer() {
               © {new Date().getFullYear()} Thecos. All rights reserved. | GSTIN: 33AAIAT2044E1ZU | LEI: 3358004B6E98BGWE1P16
             </div>
             <div className="flex gap-4">
-              <a href="https://www.facebook.com/ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+              <a href="https://www.facebook.com/thecos" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
                 Facebook
               </a>
-              <a href="https://www.instagram.com/ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+              <a href="https://www.instagram.com/thecos" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
                 Instagram
               </a>
-              <a href="https://www.youtube.com/@ttcecs" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
+              <a href="https://www.youtube.com/@thecos" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">
                 YouTube
               </a>
             </div>
