@@ -24,11 +24,11 @@ export default function Chatbot() {
       setTheme(currentTheme);
     };
     getTheme();
-    
+
     // Watch for theme changes
     const observer = new MutationObserver(getTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -199,20 +199,20 @@ export default function Chatbot() {
   return (
     <>
       {/* Floating Toggle Button */}
-        <motion.button
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-          onPointerDown={() => setIsOpen(prev => !prev)}
-          className={`fixed bottom-6 right-6 w-14 h-14 ${buttonBg} ${buttonText} rounded-full shadow-2xl flex items-center justify-center font-black text-xl hover:scale-110 transition-transform`}
-          style={{ zIndex: 99999, pointerEvents: 'auto' }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label={isOpen ? 'Close chat' : 'Open chat'}
-          role="button"
-          tabIndex={0}
-        >
-          {isOpen ? '✕' : ''}
-        </motion.button>
+      <motion.button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        onPointerDown={() => setIsOpen(prev => !prev)}
+        className={`fixed bottom-6 right-6 w-14 h-14 ${buttonBg} ${buttonText} rounded-full shadow-2xl flex items-center justify-center font-black text-xl hover:scale-110 transition-transform`}
+        style={{ zIndex: 99999, pointerEvents: 'auto' }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        aria-label={isOpen ? 'Close chat' : 'Open chat'}
+        role="button"
+        tabIndex={0}
+      >
+        {isOpen ? '✕' : '💬'}
+      </motion.button>
 
       {/* Chat Window */}
       <AnimatePresence>
@@ -261,9 +261,9 @@ export default function Chatbot() {
             <div
               ref={chatRef}
               className="flex-1 p-3 overflow-y-auto space-y-3 min-h-[200px]"
-              style={{ 
-                scrollbarWidth: 'thin', 
-                scrollbarColor: isDark ? 'rgba(0,217,255,0.2) transparent' : 'rgba(39,169,225,0.3) transparent' 
+              style={{
+                scrollbarWidth: 'thin',
+                scrollbarColor: isDark ? 'rgba(0,217,255,0.2) transparent' : 'rgba(39,169,225,0.3) transparent'
               }}
             >
               {messages.map((msg) => {
@@ -317,13 +317,12 @@ export default function Chatbot() {
                 <button
                   onClick={() => (listening ? stopListening() : startListening())}
                   title={listening ? 'Stop listening' : 'Voice input'}
-                  className={`p-2 rounded-md transition ${
-                    listening 
-                      ? 'bg-red-500 text-white animate-pulse' 
-                      : isDark 
-                        ? 'bg-white/10 text-white hover:bg-white/20' 
+                  className={`p-2 rounded-md transition ${listening
+                      ? 'bg-red-500 text-white animate-pulse'
+                      : isDark
+                        ? 'bg-white/10 text-white hover:bg-white/20'
                         : 'bg-brand-gray-light text-brand-teal hover:bg-brand-gray-light/70'
-                  }`}
+                    }`}
                 >
                   {listening ? '●' : '🎤'}
                 </button>

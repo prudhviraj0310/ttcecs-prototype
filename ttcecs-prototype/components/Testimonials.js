@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Testimonials() {
   const [theme, setTheme] = useState('light');
@@ -11,10 +12,10 @@ export default function Testimonials() {
       setTheme(currentTheme);
     };
     getTheme();
-    
+
     const observer = new MutationObserver(getTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -25,25 +26,29 @@ export default function Testimonials() {
       quote: "Thanks to THECOS, I could buy gold safely and pay it back swiftly — no hidden fees.",
       name: "Rajesh Kumar",
       role: "SETC Employee, 12 years",
-      rating: 5
+      rating: 5,
+      image: "/testimonial-4.jpg"
     },
     {
       quote: "The 14.40% interest rate on FD is unbeatable. My savings grow faster here than any bank.",
       name: "Priya Shankar",
       role: "Member since 2015",
-      rating: 5
+      rating: 5,
+      image: "/testimonial-2.jpg"
     },
     {
       quote: "Marriage advance loan helped me during my daughter's wedding. Zero interest - truly member-first!",
       name: "Venkatesh Iyer",
       role: "SETC Driver, Anna Nagar",
-      rating: 5
+      rating: 5,
+      image: "/testimonial-1.jpg"
     },
     {
       quote: "Smart Card makes everything so easy. I can track all my deposits and loans in one place.",
       name: "Lakshmi Devi",
       role: "Member since 2018",
-      rating: 5
+      rating: 5,
+      image: "/testimonial-3.jpg"
     }
   ];
 
@@ -74,23 +79,32 @@ export default function Testimonials() {
               transition={{ delay: idx * 0.1 }}
               className={`${isDark ? 'bg-[#0a1628]' : 'bg-white'} rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all relative`}
             >
-              {/* Quote mark */}
-              <div className="absolute -top-4 left-8 text-6xl text-brand-blue opacity-20">"</div>
-              
+              {/* Profile Image */}
+              <div className="flex justify-center mb-6">
+                <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-white">
+                  <Image
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
               {/* Rating stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 justify-center">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <span key={i} className="text-yellow-500 text-xl">⭐</span>
                 ))}
               </div>
 
               {/* Quote */}
-              <p className={`${isDark ? 'text-white' : 'text-gray-700'} mb-6 italic relative z-10 leading-relaxed`}>
+              <p className={`${isDark ? 'text-white' : 'text-gray-700'} mb-6 italic relative z-10 leading-relaxed text-center`}>
                 {testimonial.quote}
               </p>
 
               {/* Author */}
-              <div className="border-t pt-4" style={{ borderColor: isDark ? '#1a2942' : '#e5eaf0' }}>
+              <div className="border-t pt-4 text-center" style={{ borderColor: isDark ? '#1a2942' : '#e5eaf0' }}>
                 <p className={`font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>
                   {testimonial.name}
                 </p>

@@ -49,6 +49,15 @@ export default function Hero3D() {
       id="home"
       className={`relative min-h-[90vh] flex flex-col justify-center items-center text-center overflow-hidden ${bgGradient} px-6 pt-32`}
     >
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 -z-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: 'url(/hero-finance.jpg)' }}
+        />
+        <div className={`absolute inset-0 ${isDark ? 'bg-gradient-to-b from-[#071428] via-[#071428]/80 to-[#03121f]' : 'bg-gradient-to-b from-[#f5faff]/95 via-white/90 to-white'}`} />
+      </div>
+
       {/* Subtle rainbow particles background */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 left-20 w-32 h-32 bg-brand-pink/10 rounded-full blur-3xl animate-pulse" />

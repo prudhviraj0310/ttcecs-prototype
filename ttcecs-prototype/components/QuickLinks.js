@@ -11,10 +11,10 @@ export default function QuickLinks() {
       setTheme(currentTheme);
     };
     getTheme();
-    
+
     const observer = new MutationObserver(getTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -24,42 +24,42 @@ export default function QuickLinks() {
     {
       title: 'Membership',
       subtitle: 'How to Join',
-      icon: '',
+      icon: '👥',
       href: '/membership',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Deposits',
       subtitle: 'Fixed Deposit Plans',
-      icon: '',
+      icon: '💎',
       href: '/deposits',
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Loans',
       subtitle: 'Apply for a Loan',
-      icon: '',
+      icon: '💳',
       href: '/loans',
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Subsidiaries',
       subtitle: 'Our Group Companies',
-      icon: '',
+      icon: '🏢',
       href: '/subsidiaries',
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'News / Notices',
       subtitle: 'Latest Announcements',
-      icon: '',
+      icon: '📰',
       href: '/news',
       color: 'from-pink-500 to-rose-500'
     },
     {
       title: 'Downloads',
       subtitle: 'Forms & Reports',
-      icon: '',
+      icon: '📥',
       href: '/downloads',
       color: 'from-indigo-500 to-purple-500'
     }
@@ -75,7 +75,7 @@ export default function QuickLinks() {
           className="text-center mb-16"
         >
           <h2 className={`text-4xl md:text-5xl font-black mb-4 ${isDark ? 'text-white' : 'text-brand-teal'}`}>
-            Quick Links
+            🔗 Quick Links
           </h2>
           <p className={`text-lg ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
             Navigate to what you need in just one click
@@ -97,7 +97,7 @@ export default function QuickLinks() {
             >
               {/* Background gradient on hover */}
               <div className={`absolute inset-0 bg-gradient-to-r ${link.color} opacity-0 group-hover:opacity-10 transition-opacity`} />
-              
+
               <div className="relative z-10">
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${link.color} flex items-center justify-center text-4xl mb-6 group-hover:scale-110 transition-transform`}>
                   {link.icon}
