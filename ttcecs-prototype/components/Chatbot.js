@@ -211,7 +211,7 @@ export default function Chatbot() {
           role="button"
           tabIndex={0}
         >
-          {isOpen ? '✕' : '💬'}
+          {isOpen ? '✕' : ''}
         </motion.button>
 
       {/* Chat Window */}

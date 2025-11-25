@@ -10,7 +10,7 @@ export default function ContactPage() {
       name: 'Anna Nagar (Head Office)',
       address: 'No. 1735, 18th Main Road, Anna Nagar West, Chennai – 600040',
       phone: '+91 90259 47007',
-      icon: '🏢',
+      icon: '',
       mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.368662809545!2d80.20637731482264!3d13.087636390776892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2s18th%20Main%20Rd%2C%20Anna%20Nagar%20West%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
     },
     {
@@ -119,7 +119,7 @@ export default function ContactPage() {
                 transition={{ delay: 0.2 }}
                 className="bg-white dark:bg-[#0f1f3a] rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl transition-all"
               >
-                <div className="text-6xl mb-4">💬</div>
+                <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">WhatsApp</h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-2">Chat with Thecos Bot</p>
                 <a href="https://wa.me/919150070311" target="_blank" rel="noopener noreferrer" className="text-[#27A9E1] font-bold text-lg hover:underline">
@@ -223,7 +223,7 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Tempz Hospital</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="text-3xl">🏥</div>
+                    <div className="text-3xl"></div>
                     <div>
                       <p className="font-bold text-gray-900 dark:text-white">Tempz Hospital Chatbot</p>
                       <a href="https://wa.me/919150070312" target="_blank" rel="noopener noreferrer" className="text-[#27A9E1] hover:underline">

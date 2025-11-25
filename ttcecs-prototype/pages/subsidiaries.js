@@ -7,7 +7,7 @@ export default function Subsidiaries() {
   const subsidiaries = [
     {
       name: 'Tempz Academy & Medical Charitable Foundation',
-      icon: '🏥',
+      icon: '',
       color: 'from-red-500 to-pink-500',
       mission: 'Affordable healthcare for all members and their families',
       services: [
@@ -40,7 +40,7 @@ export default function Subsidiaries() {
     },
     {
       name: 'Zajasol HR Solutions Pvt. Ltd.',
-      icon: '💼',
+      icon: '',
       color: 'from-purple-500 to-pink-500',
       mission: 'Helping members and community find professional job placements',
       services: [
@@ -127,10 +127,10 @@ export default function Subsidiaries() {
               <h2 className="text-4xl font-black mb-8 text-gray-900 dark:text-white">Our Collective Impact</h2>
               <div className="grid md:grid-cols-4 gap-6">
                 {[
-                  { icon: '🏥', title: 'Healthcare', value: 'Affordable medical services' },
+                  { icon: '', title: 'Healthcare', value: 'Affordable medical services' },
                   { icon: '🏘️', title: 'Housing', value: 'Dream homes for members' },
                   { icon: '🎓', title: 'Education', value: 'Quality CBSE schooling' },
-                  { icon: '💼', title: 'Employment', value: 'Job placement support' }
+                  { icon: '', title: 'Employment', value: 'Job placement support' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}

@@ -7,7 +7,7 @@ const organizations = [
   {
     id: 'tempz',
     name: 'Tempz Hospital',
-    icon: '🏥',
+    icon: '',
     tagline: 'Holistic Healthcare Services',
     frontDescription: 'Advanced medical care with compassion',
     backDescription: 'Comprehensive healthcare facility offering modern treatment, diagnostics, and wellness programs for Thecos members and families.',

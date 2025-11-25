@@ -8,7 +8,7 @@ const resources = [
     id: 1,
     title: 'Annual Report 2024',
     description: 'Comprehensive overview of our financial performance and achievements',
-    icon: '📊',
+    icon: '',
     fileType: 'PDF',
     fileSize: '2.4 MB',
     downloadLink: '#',
@@ -18,7 +18,7 @@ const resources = [
     id: 2,
     title: 'ISO 9001:2015 Certificate',
     description: 'Quality management system certification',
-    icon: '🏆',
+    icon: '',
     fileType: 'PDF',
     fileSize: '850 KB',
     downloadLink: '#',
@@ -28,7 +28,7 @@ const resources = [
     id: 3,
     title: 'Society Information',
     description: 'Registration details, bylaws, and governance structure',
-    icon: '📋',
+    icon: '',
     fileType: 'PDF',
     fileSize: '1.2 MB',
     downloadLink: '#',
@@ -38,7 +38,7 @@ const resources = [
     id: 4,
     title: 'FD Application Form',
     description: 'Downloadable form for fixed deposit account opening',
-    icon: '📝',
+    icon: '',
     fileType: 'PDF',
     fileSize: '450 KB',
     downloadLink: '#',
@@ -48,7 +48,7 @@ const resources = [
     id: 5,
     title: 'Smart Card User Guide',
     description: 'Instructions for activating and using your Thecos Smart Card',
-    icon: '💳',
+    icon: '',
     fileType: 'PDF',
     fileSize: '1.8 MB',
     downloadLink: '#',
@@ -58,7 +58,7 @@ const resources = [
     id: 6,
     title: 'Interest Rate Schedule',
     description: 'Current rates for all deposit schemes and loan products',
-    icon: '📈',
+    icon: '',
     fileType: 'PDF',
     fileSize: '600 KB',
     downloadLink: '#',
@@ -159,7 +159,7 @@ export default function Resources() {
         >
           <div className="flex items-center gap-4">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center text-4xl shadow-2xl animate-pulse">
-              🏅
+              
             </div>
             <div>
               <h3 className="text-xl font-bold mb-1">ISO 9001:2015 Certified</h3>

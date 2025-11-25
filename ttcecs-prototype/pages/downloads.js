@@ -7,7 +7,7 @@ export default function Downloads() {
   const downloadCategories = [
     {
       title: 'Membership Forms',
-      icon: '👤',
+      icon: '',
       items: [
         { name: 'Membership Application Form', size: 'PDF, 250 KB', desc: 'Apply for new membership' },
         { name: 'Nominee Details Form', size: 'PDF, 180 KB', desc: 'Add or update nominee information' },
@@ -16,7 +16,7 @@ export default function Downloads() {
     },
     {
       title: 'Loan Forms',
-      icon: '💰',
+      icon: '',
       items: [
         { name: 'Surety Loan Application', size: 'PDF, 300 KB', desc: 'Apply for salary-based loan' },
         { name: 'Gold Loan Application', size: 'PDF, 280 KB', desc: 'Apply for gold loan' },
@@ -27,7 +27,7 @@ export default function Downloads() {
     },
     {
       title: 'Deposit Forms',
-      icon: '📈',
+      icon: '',
       items: [
         { name: 'Fixed Deposit Application', size: 'PDF, 270 KB', desc: 'Open new FD account' },
         { name: 'FD Renewal Form', size: 'PDF, 220 KB', desc: 'Renew existing FD' },
@@ -37,7 +37,7 @@ export default function Downloads() {
     },
     {
       title: 'Annual Reports',
-      icon: '📊',
+      icon: '',
       items: [
         { name: 'Annual Report 2023-24', size: 'PDF, 3.5 MB', desc: 'Financial year 2023-24 report' },
         { name: 'Annual Report 2022-23', size: 'PDF, 3.2 MB', desc: 'Financial year 2022-23 report' },
@@ -46,7 +46,7 @@ export default function Downloads() {
     },
     {
       title: 'Election Documents',
-      icon: '🗳️',
+      icon: '',
       items: [
         { name: 'Nomination Form', size: 'PDF, 230 KB', desc: 'Board election nomination form' },
         { name: 'Delegate List 2024', size: 'PDF, 450 KB', desc: 'Registered delegate list' },
@@ -121,7 +121,7 @@ export default function Downloads() {
                       className="bg-white dark:bg-[#0f1f3a] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all group cursor-pointer"
                     >
                       <div className="flex items-start justify-between mb-3">
-                        <div className="text-4xl">📄</div>
+                        <div className="text-4xl"></div>
                         <div className="text-sm font-bold text-gray-500 dark:text-gray-400">{item.size}</div>
                       </div>
                       <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#27A9E1] transition-colors">

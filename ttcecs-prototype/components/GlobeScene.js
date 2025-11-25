@@ -84,7 +84,7 @@ function CameraController({ activePin, controlsRef }) {
         requestAnimationFrame(animate);
       } else {
         controls.enableDamping = true;
-        console.log('✅ Zoom complete to', activePin.name);
+        console.log(' Zoom complete to', activePin.name);
       }
     };
 

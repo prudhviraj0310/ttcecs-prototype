@@ -22,19 +22,19 @@ export default function WhyChoose() {
 
   const features = [
     {
-      icon: '💸',
+      icon: '',
       title: 'Low-Cost Loans',
       description: 'Competitive loan interest rates for members at just 6.99% flat rate',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: '🔒',
+      icon: '',
       title: 'Secure Savings',
       description: 'Fixed/Savings deposits with attractive returns up to 14.40%',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: '👥',
+      icon: '',
       title: 'Open Membership',
       description: 'SETC employees and general public can join our community',
       color: 'from-purple-500 to-pink-500'
@@ -46,7 +46,7 @@ export default function WhyChoose() {
       color: 'from-orange-500 to-red-500'
     },
     {
-      icon: '🏥',
+      icon: '',
       title: 'Community & Welfare',
       description: 'Education, healthcare & support through our subsidiaries',
       color: 'from-pink-500 to-rose-500'

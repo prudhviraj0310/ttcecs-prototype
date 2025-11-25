@@ -11,7 +11,7 @@ export default function LatestNews() {
       category: 'Election',
       title: 'Board of Directors Election 2024 - Nomination Open',
       date: '20 Nov 2024',
-      icon: '🗳️',
+      icon: '',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -19,7 +19,7 @@ export default function LatestNews() {
       category: 'Annual Report',
       title: 'FY 2023-24 Annual Report Published',
       date: '15 Nov 2024',
-      icon: '📊',
+      icon: '',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -27,7 +27,7 @@ export default function LatestNews() {
       category: 'Policy Update',
       title: 'Enhanced Interest Rates on Fixed Deposits',
       date: '1 Nov 2024',
-      icon: '📈',
+      icon: '',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -35,7 +35,7 @@ export default function LatestNews() {
       category: 'AGM Notice',
       title: 'Annual General Meeting - December 2024',
       date: '25 Oct 2024',
-      icon: '📅',
+      icon: '',
       color: 'from-red-500 to-orange-500'
     },
     {
@@ -43,7 +43,7 @@ export default function LatestNews() {
       category: 'Achievement',
       title: 'Thecos Recognized as Best Co-operative Society',
       date: '20 Sep 2024',
-      icon: '🏆',
+      icon: '',
       color: 'from-yellow-500 to-orange-500'
     }
   ]

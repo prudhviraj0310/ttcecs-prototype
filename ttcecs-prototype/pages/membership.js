@@ -40,10 +40,10 @@ export default function Membership() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why Become a Member?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: '💸', title: 'Low-Interest Loans', desc: 'Access exclusive loan products at just 6.99% flat rate' },
-                { icon: '📈', title: 'Higher Returns', desc: 'Fixed deposits up to 14.40% per annum' },
-                { icon: '🗳️', title: 'Governance Rights', desc: 'Vote in elections and shape society decisions' },
-                { icon: '🏥', title: 'Welfare Benefits', desc: 'Healthcare, education through subsidiaries' }
+                { icon: '', title: 'Low-Interest Loans', desc: 'Access exclusive loan products at just 6.99% flat rate' },
+                { icon: '', title: 'Higher Returns', desc: 'Fixed deposits up to 14.40% per annum' },
+                { icon: '', title: 'Governance Rights', desc: 'Vote in elections and shape society decisions' },
+                { icon: '', title: 'Welfare Benefits', desc: 'Healthcare, education through subsidiaries' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -74,7 +74,7 @@ export default function Membership() {
               <h2 className="text-4xl font-black mb-8 text-gray-900 dark:text-white">Eligibility</h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="text-5xl">✅</div>
+                  <div className="text-5xl"></div>
                   <div>
                     <h3 className="text-2xl font-bold mb-2 text-[#27A9E1]">Primary Members</h3>
                     <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -102,10 +102,10 @@ export default function Membership() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">How to Join — Simple Steps</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { step: '01', icon: '📄', title: 'Fill Form', desc: 'Download and complete the membership application form' },
-                { step: '02', icon: '📎', title: 'Submit Documents', desc: 'Employee ID, salary slip, Aadhar Card, PAN, SETC proof' },
-                { step: '03', icon: '💳', title: 'Pay Share Capital', desc: 'Make the membership fee payment (if applicable)' },
-                { step: '04', icon: '🎉', title: 'Get Member Card', desc: 'Receive your Smart Card / QR Card for account access' }
+                { step: '01', icon: '', title: 'Fill Form', desc: 'Download and complete the membership application form' },
+                { step: '02', icon: '', title: 'Submit Documents', desc: 'Employee ID, salary slip, Aadhar Card, PAN, SETC proof' },
+                { step: '03', icon: '', title: 'Pay Share Capital', desc: 'Make the membership fee payment (if applicable)' },
+                { step: '04', icon: '', title: 'Get Member Card', desc: 'Receive your Smart Card / QR Card for account access' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -151,10 +151,10 @@ export default function Membership() {
               <h2 className="text-4xl font-black mb-8 text-gray-900 dark:text-white">Member Benefits</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {[
-                  { icon: '💳', title: 'Smart Card / QR Access', desc: 'Secure card to track accounts, deposits, and transactions' },
-                  { icon: '💰', title: 'Dividend on Shares', desc: 'Annual dividends based on society performance (if applicable)' },
-                  { icon: '🗳️', title: 'Voting Rights', desc: 'Participate in elections and Annual General Meetings' },
-                  { icon: '🏥', title: 'Welfare Programs', desc: 'Access to hospital, school, and community services' }
+                  { icon: '', title: 'Smart Card / QR Access', desc: 'Secure card to track accounts, deposits, and transactions' },
+                  { icon: '', title: 'Dividend on Shares', desc: 'Annual dividends based on society performance (if applicable)' },
+                  { icon: '', title: 'Voting Rights', desc: 'Participate in elections and Annual General Meetings' },
+                  { icon: '', title: 'Welfare Programs', desc: 'Access to hospital, school, and community services' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}

@@ -13,7 +13,7 @@ const schemes = [
   {
     id: 'fd',
     name: 'Fixed Deposit (FD)',
-    icon: '💰',
+    icon: '',
     minAmount: '₹500',
     rate: '14.40%',
     tenure: '1 to 10 years',
@@ -280,7 +280,7 @@ export default function DepositSchemes() {
           className="mt-12 glass p-6 rounded-xl text-center"
         >
           <p className="text-sm text-muted">
-            🏆 All schemes offer 14.40% annual returns with quarterly compounding.
+             All schemes offer 14.40% annual returns with quarterly compounding.
             <span className="text-electric font-semibold"> FD from ₹500 | RD from ₹100/month | Loan facility available | Premature withdrawal allowed</span>
           </p>
         </motion.div>

@@ -24,42 +24,42 @@ export default function QuickLinks() {
     {
       title: 'Membership',
       subtitle: 'How to Join',
-      icon: '👤',
+      icon: '',
       href: '/membership',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       title: 'Deposits',
       subtitle: 'Fixed Deposit Plans',
-      icon: '📈',
+      icon: '',
       href: '/deposits',
       color: 'from-green-500 to-emerald-500'
     },
     {
       title: 'Loans',
       subtitle: 'Apply for a Loan',
-      icon: '💰',
+      icon: '',
       href: '/loans',
       color: 'from-purple-500 to-pink-500'
     },
     {
       title: 'Subsidiaries',
       subtitle: 'Our Group Companies',
-      icon: '🏢',
+      icon: '',
       href: '/subsidiaries',
       color: 'from-orange-500 to-red-500'
     },
     {
       title: 'News / Notices',
       subtitle: 'Latest Announcements',
-      icon: '📰',
+      icon: '',
       href: '/news',
       color: 'from-pink-500 to-rose-500'
     },
     {
       title: 'Downloads',
       subtitle: 'Forms & Reports',
-      icon: '📥',
+      icon: '',
       href: '/downloads',
       color: 'from-indigo-500 to-purple-500'
     }

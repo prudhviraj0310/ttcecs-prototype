@@ -226,7 +226,7 @@ export default function FAQs() {
                   whileTap={{ scale: 0.95 }}
                   className="px-8 py-4 bg-white/10 border-2 border-white text-white rounded-xl font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2"
                 >
-                  <span>💬</span>
+                  <span></span>
                   <span>WhatsApp Us</span>
                 </motion.a>
               </div>

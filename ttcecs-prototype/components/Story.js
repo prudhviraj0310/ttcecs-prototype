@@ -78,7 +78,7 @@ export default function Story() {
       title: 'Optimization',
       desc: 'Monitor performance & member satisfaction',
       anim: optimizationAnim,
-      icon: '📊',
+      icon: '',
     },
   ];
 

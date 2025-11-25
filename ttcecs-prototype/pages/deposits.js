@@ -46,9 +46,9 @@ export default function Deposits() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why Choose Our Fixed Deposits?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: '📈', title: 'Competitive Rates', desc: 'Interest rates up to 14.40% per annum' },
-                { icon: '🔒', title: 'Safe & Secure', desc: 'Strong cooperative backing with transparency' },
-                { icon: '💳', title: 'Monthly Interest', desc: 'Interest credited directly to your bank account' },
+                { icon: '', title: 'Competitive Rates', desc: 'Interest rates up to 14.40% per annum' },
+                { icon: '', title: 'Safe & Secure', desc: 'Strong cooperative backing with transparency' },
+                { icon: '', title: 'Monthly Interest', desc: 'Interest credited directly to your bank account' },
                 { icon: '🔄', title: 'Easy Renewal', desc: 'Flexible renewal facility on maturity' }
               ].map((item, idx) => (
                 <motion.div
@@ -90,12 +90,12 @@ export default function Deposits() {
               <h2 className="text-4xl font-black mb-8 text-gray-900 dark:text-white">Policy Highlights</h2>
               <div className="space-y-6">
                 {[
-                  { icon: '📄', title: 'FD Receipt Required', desc: 'Original FD receipt must be submitted for maturity withdrawal' },
+                  { icon: '', title: 'FD Receipt Required', desc: 'Original FD receipt must be submitted for maturity withdrawal' },
                   { icon: '🔄', title: 'Renewal Process', desc: 'Application for renewal must be made before maturity date' },
                   { icon: '⏰', title: 'Grace Period', desc: 'Up to 30 days renewal grace period (subject to board approval)' },
                   { icon: '❌', title: 'Pre-Closure Rules', desc: 'Some plans allow pre-closure, others don\'t - check your plan details' },
-                  { icon: '💰', title: 'Interest Credit', desc: 'Interest is credited monthly to your registered bank account' },
-                  { icon: '📊', title: 'Flexible Tenures', desc: 'Short-term and long-term options available (PMW, PNX, HXP, PM0, LTP)' }
+                  { icon: '', title: 'Interest Credit', desc: 'Interest is credited monthly to your registered bank account' },
+                  { icon: '', title: 'Flexible Tenures', desc: 'Short-term and long-term options available (PMW, PNX, HXP, PM0, LTP)' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -123,11 +123,11 @@ export default function Deposits() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">How to Invest — Easy Steps</h2>
             <div className="grid md:grid-cols-5 gap-6">
               {[
-                { step: '01', icon: '📥', title: 'Download Form', desc: 'Get the FD application form' },
+                { step: '01', icon: '', title: 'Download Form', desc: 'Get the FD application form' },
                 { step: '02', icon: '✍️', title: 'Fill Details', desc: 'Complete personal & deposit info' },
                 { step: '03', icon: '⚙️', title: 'Choose Options', desc: 'Select tenure & payout preference' },
-                { step: '04', icon: '📎', title: 'Submit Docs', desc: 'ID proof, address proof' },
-                { step: '05', icon: '🎉', title: 'Get Certificate', desc: 'Receive FD bond/certificate' }
+                { step: '04', icon: '', title: 'Submit Docs', desc: 'ID proof, address proof' },
+                { step: '05', icon: '', title: 'Get Certificate', desc: 'Receive FD bond/certificate' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}

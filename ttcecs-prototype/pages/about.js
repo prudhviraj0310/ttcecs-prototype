@@ -112,7 +112,7 @@ export default function About() {
               <h2 className="text-4xl font-black mb-6 text-gray-900 dark:text-white">Our History</h2>
               <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300">
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl">📅</div>
+                  <div className="text-4xl"></div>
                   <div>
                     <p className="font-bold text-xl text-[#27A9E1] mb-2">Founded on 10 July 1991</p>
                     <p>
@@ -153,7 +153,7 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="text-4xl">📋</div>
+                  <div className="text-4xl"></div>
                   <div className="text-lg text-gray-700 dark:text-gray-300">
                     <p>
                       We publish election notices, delegate lists, and AGM reports to maintain full <strong>democratic transparency</strong>.
@@ -171,11 +171,11 @@ export default function About() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why Choose Thecos</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { icon: '💰', title: 'Low-Cost Loans', desc: 'Competitive loan interest rates for members' },
-                { icon: '🔒', title: 'Secure Savings', desc: 'Fixed/Savings deposits with attractive returns' },
-                { icon: '👥', title: 'Open Membership', desc: 'SETC employees and general public can join' },
-                { icon: '🗳️', title: 'Democratic Governance', desc: 'Democratically elected Board of Directors' },
-                { icon: '🏥', title: 'Welfare Support', desc: 'Education, healthcare through subsidiaries' },
+                { icon: '', title: 'Low-Cost Loans', desc: 'Competitive loan interest rates for members' },
+                { icon: '', title: 'Secure Savings', desc: 'Fixed/Savings deposits with attractive returns' },
+                { icon: '', title: 'Open Membership', desc: 'SETC employees and general public can join' },
+                { icon: '', title: 'Democratic Governance', desc: 'Democratically elected Board of Directors' },
+                { icon: '', title: 'Welfare Support', desc: 'Education, healthcare through subsidiaries' },
                 { icon: '✨', title: 'Member-First', desc: 'Built by members, for members' }
               ].map((item, idx) => (
                 <motion.div

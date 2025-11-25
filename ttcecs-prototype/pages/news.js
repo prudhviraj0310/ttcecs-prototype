@@ -11,7 +11,7 @@ export default function News() {
       title: 'Board of Directors Election 2024 - Nomination Open',
       date: '20 November 2024',
       excerpt: 'Nominations are now open for the 2024 Board of Directors election. Members interested in serving can submit their nomination forms by December 5, 2024.',
-      icon: '🗳️',
+      icon: '',
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -20,7 +20,7 @@ export default function News() {
       title: 'FY 2023-24 Annual Report Published',
       date: '15 November 2024',
       excerpt: 'Thecos annual report for fiscal year 2023-24 is now available. The society achieved record growth with ₹500+ crore in total assets and maintained strong financial health.',
-      icon: '📊',
+      icon: '',
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -29,7 +29,7 @@ export default function News() {
       title: 'Enhanced Interest Rates on Fixed Deposits',
       date: '1 November 2024',
       excerpt: 'New FD interest rates effective from November 1, 2024. Premium plans now offering up to 14.40% per annum. Existing members can opt for renewal at revised rates.',
-      icon: '📈',
+      icon: '',
       color: 'from-purple-500 to-pink-500'
     },
     {
@@ -38,7 +38,7 @@ export default function News() {
       title: 'Annual General Meeting - December 2024',
       date: '25 October 2024',
       excerpt: 'The 33rd Annual General Meeting will be held on December 28, 2024, at 10:00 AM at the Head Office, Anna Nagar. All members are requested to attend.',
-      icon: '📅',
+      icon: '',
       color: 'from-red-500 to-orange-500'
     },
     {
@@ -56,7 +56,7 @@ export default function News() {
       title: 'Tempz Hospital Expansion Completed',
       date: '5 October 2024',
       excerpt: 'Our subsidiary, Tempz Hospital, has completed a major expansion adding 50 new beds, advanced diagnostic equipment, and specialized treatment facilities for members.',
-      icon: '🏥',
+      icon: '',
       color: 'from-pink-500 to-rose-500'
     },
     {
@@ -65,7 +65,7 @@ export default function News() {
       title: 'Thecos Recognized as Best Co-operative Society',
       date: '20 September 2024',
       excerpt: 'Thecos has been awarded the "Best Multi-State Co-operative Society" by the National Co-operative Union of India for excellence in member services and governance.',
-      icon: '🏆',
+      icon: '',
       color: 'from-yellow-500 to-orange-500'
     },
     {
