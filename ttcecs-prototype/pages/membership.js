@@ -8,8 +8,8 @@ export default function Membership() {
   return (
     <>
       <Head>
-        <title>Membership — Join Thecos Today</title>
-        <meta name="description" content="Become a Thecos member - Access exclusive low-interest loans, higher returns on deposits, and participation in society governance." />
+        <title>Membership — Join THECOS Today</title>
+        <meta name="description" content="Become a THECOS member - Access exclusive low-interest loans, higher returns on deposits, and participation in society governance." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
@@ -28,7 +28,7 @@ export default function Membership() {
                 Become a Member
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Join Thecos and unlock exclusive benefits, competitive loans, and welfare support
+                Join THECOS and unlock exclusive benefits, competitive loans, and welfare support
               </p>
             </motion.div>
           </div>
@@ -187,7 +187,7 @@ export default function Membership() {
             >
               <h2 className="text-4xl font-black mb-6 text-white">Ready to Join?</h2>
               <p className="text-xl text-white/90 mb-8">
-                Start your journey with Thecos today and unlock a world of financial benefits
+                Start your journey with THECOS today and unlock a world of financial benefits
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a

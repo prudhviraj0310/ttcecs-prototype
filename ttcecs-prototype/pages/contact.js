@@ -53,8 +53,8 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us — Thecos Branch Locations & Support</title>
-        <meta name="description" content="Contact Thecos - Visit our branches in Anna Nagar, T. Nagar, Kilambakkam, Nagercoil, Coimbatore, and Nanganallur. Call us for support." />
+        <title>Contact Us — THECOS Branch Locations & Support</title>
+        <meta name="description" content="Contact THECOS - Visit our branches in Anna Nagar, T. Nagar, Kilambakkam, Nagercoil, Coimbatore, and Nanganallur. Call us for support." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
@@ -121,7 +121,7 @@ export default function ContactPage() {
               >
                 <div className="text-6xl mb-4"></div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">WhatsApp</h3>
-                <p className="text-gray-700 dark:text-gray-300 mb-2">Chat with Thecos Bot</p>
+                <p className="text-gray-700 dark:text-gray-300 mb-2">Chat with THECOS Bot</p>
                 <a href="https://wa.me/919150070311" target="_blank" rel="noopener noreferrer" className="text-[#27A9E1] font-bold text-lg hover:underline">
                   +91 91500 70311
                 </a>
@@ -200,12 +200,12 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-white dark:bg-[#0f1f3a] rounded-2xl shadow-xl p-8"
               >
-                <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Thecos Services</h3>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">THECOS Services</h3>
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
                     <div className="text-3xl">🤖</div>
                     <div>
-                      <p className="font-bold text-gray-900 dark:text-white">Thecos Chatbot</p>
+                      <p className="font-bold text-gray-900 dark:text-white">THECOS Chatbot</p>
                       <a href="https://wa.me/919150070311" target="_blank" rel="noopener noreferrer" className="text-[#27A9E1] hover:underline">
                         +91 91500 70311
                       </a>

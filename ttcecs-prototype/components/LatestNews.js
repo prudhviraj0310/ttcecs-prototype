@@ -41,7 +41,7 @@ export default function LatestNews() {
     {
       id: 5,
       category: 'Achievement',
-      title: 'Thecos Recognized as Best Co-operative Society',
+      title: 'THECOS Recognized as Best Co-operative Society',
       date: '20 Sep 2024',
       icon: '',
       color: 'from-yellow-500 to-orange-500'

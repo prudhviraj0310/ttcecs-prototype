@@ -22,7 +22,7 @@ export default function Testimonials() {
 
   const testimonials = [
     {
-      quote: "Thanks to Thecos, I could buy gold safely and pay it back swiftly — no hidden fees.",
+      quote: "Thanks to THECOS, I could buy gold safely and pay it back swiftly — no hidden fees.",
       name: "Rajesh Kumar",
       role: "SETC Employee, 12 years",
       rating: 5

@@ -22,9 +22,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Thecos — Cinematic Financial Dashboard | Fixed Deposits 14.40%</title>
-        <meta name="description" content="Thecos — Cooperative financial services with Fixed Deposits at 14.40%, Smart Card access, and comprehensive member services across Chennai branches." />
-        <meta property="og:title" content="Thecos — Fixed Deposit 14.40%" />
+        <title>THECOS — Cinematic Financial Dashboard | Fixed Deposits 14.40%</title>
+        <meta name="description" content="THECOS — Cooperative financial services with Fixed Deposits at 14.40%, Smart Card access, and comprehensive member services across Chennai branches." />
+        <meta property="og:title" content="THECOS — Fixed Deposit 14.40%" />
         <meta property="og:description" content="Premium cooperative banking with modern fintech solutions. High yielding fixed deposits and member services for transport employees." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -33,7 +33,7 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FinancialService",
-            "name": "Thecos",
+            "name": "THECOS",
             "url": "https://thecos.com",
             "logo": "https://thecos.com/logo.png",
             "contactPoint": [{ "@type": "ContactPoint", "telephone": "+91-9150070312", "contactType": "customer service", "areaServed": "IN" }]
@@ -46,7 +46,7 @@ export default function Home() {
         {/* Hero: 14.40% with animated counter and CTAs */}
         <Hero3D />
 
-        {/* Why Choose Thecos: 5 key value points with icons */}
+        {/* Why Choose THECOS: 5 key value points with icons */}
         <WhyChoose />
 
         {/* Quick Links: 6 card navigation to main sections */}

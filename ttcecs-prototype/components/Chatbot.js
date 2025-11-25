@@ -44,7 +44,7 @@ export default function Chatbot() {
     } else {
       setMessages([{
         id: Date.now(),
-        text: '👋 Hi, I\'m Thecos Assistant — how can I help you today?',
+        text: '👋 Hi, I\'m THECOS Assistant — how can I help you today?',
         sender: 'bot',
         timestamp: Date.now()
       }]);
@@ -179,7 +179,7 @@ export default function Chatbot() {
     if (confirm('Clear all chat history?')) {
       setMessages([{
         id: Date.now(),
-        text: '👋 Hi, I\'m Thecos Assistant — how can I help you today?',
+        text: '👋 Hi, I\'m THECOS Assistant — how can I help you today?',
         sender: 'bot',
         timestamp: Date.now()
       }]);
@@ -227,9 +227,9 @@ export default function Chatbot() {
             {/* Header */}
             <div className={`px-4 py-3 ${isDark ? 'bg-[#071428]' : 'bg-gradient-to-r from-brand-blue to-brand-purple'} border-b ${borderColor} flex items-center justify-between`}>
               <div className="flex items-center gap-3">
-                <Avatar type="bot" name="Thecos" size={36} />
+                <Avatar type="bot" name="THECOS" size={36} />
                 <div>
-                  <h3 className={`font-bold text-sm text-white`}>Thecos Assistant</h3>
+                  <h3 className={`font-bold text-sm text-white`}>THECOS Assistant</h3>
                   <p className={`text-xs ${isDark ? 'text-muted' : 'text-white/90'}`}>Always here to help</p>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function Chatbot() {
                     className={`flex ${isBot ? 'flex-row' : 'flex-row-reverse'} gap-2 items-end`}
                   >
                     <div className="flex-shrink-0">
-                      <Avatar type={isBot ? 'bot' : 'user'} name={isBot ? 'Thecos' : 'You'} size={32} />
+                      <Avatar type={isBot ? 'bot' : 'user'} name={isBot ? 'THECOS' : 'You'} size={32} />
                     </div>
 
                     <div className={`max-w-[78%] ${isBot ? 'self-start' : 'self-end'}`}>

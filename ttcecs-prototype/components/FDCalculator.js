@@ -149,7 +149,7 @@ export default function FDCalculator() {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Calculate Your FD Returns</h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">
-            See how your investment grows with Thecos Fixed Deposits at 14.40% per annum. Minimum deposit: ₹500, tenure: 1-10 years
+            See how your investment grows with THECOS Fixed Deposits at 14.40% per annum. Minimum deposit: ₹500, tenure: 1-10 years
           </p>
         </motion.div>
 

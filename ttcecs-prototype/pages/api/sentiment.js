@@ -96,7 +96,7 @@ function generateResponse(message, sentiment) {
   }
 
   if (lowerMsg.includes('account') || lowerMsg.includes('open') || lowerMsg.includes('register') || lowerMsg.includes('join')) {
-    return "Opening an account is easy! Click 'Open Account' in the header or visit the Contact section. Transport employees get priority service. Welcome to Thecos!";
+    return "Opening an account is easy! Click 'Open Account' in the header or visit the Contact section. Transport employees get priority service. Welcome to THECOS!";
   }
 
   if (lowerMsg.includes('contact') || lowerMsg.includes('phone') || lowerMsg.includes('email') || lowerMsg.includes('reach')) {

@@ -47,7 +47,7 @@ const resources = [
   {
     id: 5,
     title: 'Smart Card User Guide',
-    description: 'Instructions for activating and using your Thecos Smart Card',
+    description: 'Instructions for activating and using your THECOS Smart Card',
     icon: '',
     fileType: 'PDF',
     fileSize: '1.8 MB',

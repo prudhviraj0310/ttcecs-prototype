@@ -53,7 +53,7 @@ export default function Header() {
             <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
               TC
             </div>
-            <span className={`font-black text-xl ${isDark ? 'text-white' : 'text-brand-teal'}`}>Thecos</span>
+            <span className={`font-black text-xl ${isDark ? 'text-white' : 'text-brand-teal'}`}>THECOS</span>
           </motion.div>
 
           {/* Desktop Navigation */}

@@ -16,7 +16,7 @@ export default function FAQs() {
           a: 'Regular and permanent employees of SETC (State Express Transport Corporation), Tamil Nadu, can join. Dependents and nominees may benefit from certain schemes.'
         },
         {
-          q: 'How can I join Thecos?',
+          q: 'How can I join THECOS?',
           a: 'Download the membership form from our Downloads page, fill in your details, attach proof of SETC employment (Employee ID, salary slip, Aadhar Card, PAN), and pay the membership share capital.'
         },
         {
@@ -88,10 +88,10 @@ export default function FAQs() {
       questions: [
         {
           q: 'What are the society\'s registration details?',
-          a: 'Thecos is registered under the Multi-State Co-operative Societies Act, 2002. Registration: MSCS/CR/16-91. GSTIN: 33AAIAT2044E1ZU. LEI: 3358004B6E98BGWE1P16.'
+          a: 'THECOS is registered under the Multi-State Co-operative Societies Act, 2002. Registration: MSCS/CR/16-91. GSTIN: 33AAIAT2044E1ZU. LEI: 3358004B6E98BGWE1P16.'
         },
         {
-          q: 'How is Thecos governed?',
+          q: 'How is THECOS governed?',
           a: 'The society is governed by a Board of Directors, elected regularly by members. We publish election notices, delegate lists, and AGM reports for full transparency.'
         },
         {
@@ -99,11 +99,11 @@ export default function FAQs() {
           a: 'Head Office: No. 1735, 18th Main Road, Anna Nagar West, Chennai – 600040.'
         },
         {
-          q: 'How can I contact Thecos?',
+          q: 'How can I contact THECOS?',
           a: 'Call us at +91 90259 47007 (Anna Nagar Head Office), email support@thecos.com, or visit any of our branches in Chennai, Nagercoil, and Coimbatore.'
         },
         {
-          q: 'What subsidiaries does Thecos have?',
+          q: 'What subsidiaries does THECOS have?',
           a: 'We have four subsidiaries: Tempz Academy & Medical Charitable Foundation (healthcare), Oblong Realties Pvt. Ltd. (real estate), Thiruvalluvar Vidhyashram (CBSE school), and Zajasol HR Solutions Pvt. Ltd. (recruitment).'
         }
       ]
@@ -113,8 +113,8 @@ export default function FAQs() {
   return (
     <>
       <Head>
-        <title>FAQs — Frequently Asked Questions | Thecos</title>
-        <meta name="description" content="Find answers to common questions about Thecos membership, deposits, loans, and services." />
+        <title>FAQs — Frequently Asked Questions | THECOS</title>
+        <meta name="description" content="Find answers to common questions about THECOS membership, deposits, loans, and services." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">

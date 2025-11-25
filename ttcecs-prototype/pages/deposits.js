@@ -9,8 +9,8 @@ export default function Deposits() {
   return (
     <>
       <Head>
-        <title>Deposits — Fixed Deposit Plans up to 14.40% | Thecos</title>
-        <meta name="description" content="Thecos Fixed Deposit schemes with competitive interest rates up to 14.40% per annum. Safe, secure, and flexible investment options." />
+        <title>Deposits — Fixed Deposit Plans up to 14.40% | THECOS</title>
+        <meta name="description" content="THECOS Fixed Deposit schemes with competitive interest rates up to 14.40% per annum. Safe, secure, and flexible investment options." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
@@ -162,7 +162,7 @@ export default function Deposits() {
             >
               <h2 className="text-4xl font-black mb-6 text-white">Start Investing Today</h2>
               <p className="text-xl text-white/90 mb-8">
-                Secure your financial future with Thecos Fixed Deposits
+                Secure your financial future with THECOS Fixed Deposits
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a

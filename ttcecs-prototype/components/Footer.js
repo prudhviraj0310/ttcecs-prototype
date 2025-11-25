@@ -9,7 +9,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
                 TC
               </div>
-              <span className="font-black text-xl text-electric">Thecos</span>
+              <span className="font-black text-xl text-electric">THECOS</span>
             </div>
             <p className="text-sm text-muted mb-4">
               Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd.
@@ -67,7 +67,7 @@ export default function Footer() {
         <div className="border-t border-white/6 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted text-center md:text-left">
-              © {new Date().getFullYear()} Thecos. All rights reserved. | GSTIN: 33AAIAT2044E1ZU | LEI: 3358004B6E98BGWE1P16
+              © {new Date().getFullYear()} THECOS. All rights reserved. | GSTIN: 33AAIAT2044E1ZU | LEI: 3358004B6E98BGWE1P16
             </div>
             <div className="flex gap-4">
               <a href="https://www.facebook.com/thecos" target="_blank" rel="noopener noreferrer" className="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-electric">

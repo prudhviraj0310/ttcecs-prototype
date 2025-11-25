@@ -19,7 +19,7 @@ export default function News() {
       category: 'Annual Report',
       title: 'FY 2023-24 Annual Report Published',
       date: '15 November 2024',
-      excerpt: 'Thecos annual report for fiscal year 2023-24 is now available. The society achieved record growth with ₹500+ crore in total assets and maintained strong financial health.',
+      excerpt: 'THECOS annual report for fiscal year 2023-24 is now available. The society achieved record growth with ₹500+ crore in total assets and maintained strong financial health.',
       icon: '',
       color: 'from-green-500 to-emerald-500'
     },
@@ -44,9 +44,9 @@ export default function News() {
     {
       id: 5,
       category: 'New Service',
-      title: 'Thecos Mobile App Coming Soon',
+      title: 'THECOS Mobile App Coming Soon',
       date: '10 October 2024',
-      excerpt: 'We are excited to announce the upcoming launch of the Thecos mobile app. Members will soon be able to manage deposits, apply for loans, and track transactions on-the-go.',
+      excerpt: 'We are excited to announce the upcoming launch of the THECOS mobile app. Members will soon be able to manage deposits, apply for loans, and track transactions on-the-go.',
       icon: '📱',
       color: 'from-indigo-500 to-blue-500'
     },
@@ -62,9 +62,9 @@ export default function News() {
     {
       id: 7,
       category: 'Achievement',
-      title: 'Thecos Recognized as Best Co-operative Society',
+      title: 'THECOS Recognized as Best Co-operative Society',
       date: '20 September 2024',
-      excerpt: 'Thecos has been awarded the "Best Multi-State Co-operative Society" by the National Co-operative Union of India for excellence in member services and governance.',
+      excerpt: 'THECOS has been awarded the "Best Multi-State Co-operative Society" by the National Co-operative Union of India for excellence in member services and governance.',
       icon: '',
       color: 'from-yellow-500 to-orange-500'
     },
@@ -82,8 +82,8 @@ export default function News() {
   return (
     <>
       <Head>
-        <title>News & Announcements — Thecos Updates</title>
-        <meta name="description" content="Stay updated with Thecos news, announcements, election notices, AGM updates, and community events." />
+        <title>News & Announcements — THECOS Updates</title>
+        <meta name="description" content="Stay updated with THECOS news, announcements, election notices, AGM updates, and community events." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
@@ -102,7 +102,7 @@ export default function News() {
                 News & Announcements
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Stay informed with the latest updates, events, and notices from Thecos
+                Stay informed with the latest updates, events, and notices from THECOS
               </p>
             </motion.div>
           </div>

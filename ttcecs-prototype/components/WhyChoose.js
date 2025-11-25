@@ -63,7 +63,7 @@ export default function WhyChoose() {
           className="text-center mb-16"
         >
           <h2 className={`text-4xl md:text-5xl font-black mb-4 ${isDark ? 'text-white' : 'text-brand-teal'}`}>
-            Why Choose Thecos?
+            Why Choose THECOS?
           </h2>
           <p className={`text-lg ${isDark ? 'text-muted' : 'text-brand-gray'} max-w-2xl mx-auto`}>
             Your trusted partner for financial security and growth since 1991

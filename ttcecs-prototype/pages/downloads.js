@@ -58,7 +58,7 @@ export default function Downloads() {
       title: 'Bylaws & Rules',
       icon: '📜',
       items: [
-        { name: 'Society Bylaws', size: 'PDF, 1.2 MB', desc: 'Thecos bylaws and constitution' },
+        { name: 'Society Bylaws', size: 'PDF, 1.2 MB', desc: 'THECOS bylaws and constitution' },
         { name: 'Loan Policy Document', size: 'PDF, 680 KB', desc: 'Comprehensive loan policy' },
         { name: 'Deposit Scheme Rules', size: 'PDF, 540 KB', desc: 'FD and RD scheme details' },
         { name: 'Membership Guidelines', size: 'PDF, 420 KB', desc: 'Member rights and responsibilities' }
@@ -69,8 +69,8 @@ export default function Downloads() {
   return (
     <>
       <Head>
-        <title>Downloads — Forms & Documents | Thecos</title>
-        <meta name="description" content="Download Thecos forms, applications, annual reports, and policy documents - Membership forms, loan applications, FD forms, and more." />
+        <title>Downloads — Forms & Documents | THECOS</title>
+        <meta name="description" content="Download THECOS forms, applications, annual reports, and policy documents - Membership forms, loan applications, FD forms, and more." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">

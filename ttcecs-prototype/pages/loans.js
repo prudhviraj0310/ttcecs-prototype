@@ -7,8 +7,8 @@ export default function Loans() {
   return (
     <>
       <Head>
-        <title>Loans — Affordable Loans at 6.99% | Thecos</title>
-        <meta name="description" content="Thecos offers affordable loans at 6.99% flat rate - Surety Loan, Gold Loan, Consumer Loan, and Marriage Advance for members." />
+        <title>Loans — Affordable Loans at 6.99% | THECOS</title>
+        <meta name="description" content="THECOS offers affordable loans at 6.99% flat rate - Surety Loan, Gold Loan, Consumer Loan, and Marriage Advance for members." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">

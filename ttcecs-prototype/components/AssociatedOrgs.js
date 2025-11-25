@@ -10,7 +10,7 @@ const organizations = [
     icon: '',
     tagline: 'Holistic Healthcare Services',
     frontDescription: 'Advanced medical care with compassion',
-    backDescription: 'Comprehensive healthcare facility offering modern treatment, diagnostics, and wellness programs for Thecos members and families.',
+    backDescription: 'Comprehensive healthcare facility offering modern treatment, diagnostics, and wellness programs for THECOS members and families.',
     services: ['24/7 Emergency Care', 'Specialized Departments', 'Diagnostic Lab', 'Preventive Health Checkups'],
     ctaText: 'Book Appointment',
     ctaLink: '#',
@@ -179,7 +179,7 @@ export default function AssociatedOrgs() {
           className="mt-12 glass p-6 rounded-xl text-center border border-electric/20"
         >
           <p className="text-sm">
-            <span className="text-electric font-semibold">✨ Thecos Members Benefit:</span>
+            <span className="text-electric font-semibold">✨ THECOS Members Benefit:</span>
             <span className="text-muted ml-2">
               Special discounts and priority services across all partner organizations
             </span>

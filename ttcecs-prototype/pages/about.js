@@ -7,8 +7,8 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About Us — Thecos | Since 1991</title>
-        <meta name="description" content="Learn about Thecos - Founded in 1991, serving SETC employees with trust, transparency, and strong governance." />
+        <title>About Us — THECOS | Since 1991</title>
+        <meta name="description" content="Learn about THECOS - Founded in 1991, serving SETC employees with trust, transparency, and strong governance." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
@@ -24,7 +24,7 @@ export default function About() {
               className="text-center"
             >
               <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-[#EA2E89] to-[#27A9E1] bg-clip-text text-transparent">
-                About Thecos
+                About THECOS
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Empowering Members Since 1991
@@ -45,7 +45,7 @@ export default function About() {
               <h2 className="text-4xl font-black mb-6 text-gray-900 dark:text-white">Our Identity</h2>
               <div className="space-y-4 text-lg text-gray-700 dark:text-gray-300">
                 <p>
-                  <strong className="text-[#EA2E89]">Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd. (Thecos)</strong>
+                  <strong className="text-[#EA2E89]">Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd. (THECOS)</strong>
                 </p>
                 <p>
                   Registered under the <strong>Multi-State Co-operative Societies Act, 2002</strong>
@@ -116,7 +116,7 @@ export default function About() {
                   <div>
                     <p className="font-bold text-xl text-[#27A9E1] mb-2">Founded on 10 July 1991</p>
                     <p>
-                      Thecos has proudly served SETC (State Express Transport Corporation) employees for more than three decades.
+                      THECOS has proudly served SETC (State Express Transport Corporation) employees for more than three decades.
                     </p>
                   </div>
                 </div>
@@ -168,7 +168,7 @@ export default function About() {
         {/* Key Values Section */}
         <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why Choose Thecos</h2>
+            <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why Choose THECOS</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { icon: '', title: 'Low-Cost Loans', desc: 'Competitive loan interest rates for members' },

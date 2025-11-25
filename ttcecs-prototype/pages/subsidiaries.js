@@ -54,8 +54,8 @@ export default function Subsidiaries() {
   return (
     <>
       <Head>
-        <title>Subsidiaries — Thecos Group Companies</title>
-        <meta name="description" content="Explore Thecos subsidiaries - Tempz Healthcare, Oblong Realties, Thiruvalluvar Vidhyashram, and Zajasol HR Solutions." />
+        <title>Subsidiaries — THECOS Group Companies</title>
+        <meta name="description" content="Explore THECOS subsidiaries - Tempz Healthcare, Oblong Realties, Thiruvalluvar Vidhyashram, and Zajasol HR Solutions." />
       </Head>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
