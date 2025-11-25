@@ -6,9 +6,9 @@ import { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 
 // Dynamically import the 3D scene (optional for light theme)
-const CoinScene = dynamic(() => import('./CoinScene'), { 
+const CoinScene = dynamic(() => import('./CoinScene'), {
   ssr: false,
-  loading: () => null 
+  loading: () => null
 });
 
 export default function Hero3D() {
@@ -32,16 +32,16 @@ export default function Hero3D() {
       setTheme(currentTheme);
     };
     getTheme();
-    
+
     const observer = new MutationObserver(getTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
   const isDark = theme === 'dark';
-  const bgGradient = isDark 
-    ? 'bg-gradient-to-b from-[#071428] to-[#03121f]' 
+  const bgGradient = isDark
+    ? 'bg-gradient-to-b from-[#071428] to-[#03121f]'
     : 'bg-gradient-to-b from-[#f5faff] to-white';
 
   return (
@@ -68,7 +68,7 @@ export default function Hero3D() {
         <div className="rounded-2xl p-[3px] bg-gradient-rainbow shadow-xl">
           <div className={`${isDark ? 'bg-[#0a1628]' : 'bg-white'} rounded-2xl px-12 py-8 shadow-2xl`}>
             <p className={`uppercase tracking-wider text-xs font-bold mb-2 ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
-              Annual Returns
+              ANNUAL RETURNS
             </p>
             {showCounter && (
               <motion.h1
