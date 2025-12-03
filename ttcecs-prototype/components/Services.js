@@ -5,28 +5,28 @@ import Image from 'next/image';
 
 const services = [
   {
-    title: 'Fixed Deposits',
-    desc: 'High ROI FDs at 14.40% with flexible tenure options and renewal services.',
+    title: 'Savings & Deposits',
+    desc: 'Fixed deposits, recurring deposits, and specially designed savings programs with high returns.',
     image: '/growth-chart.jpg',
     icon: '💰'
   },
   {
-    title: 'Loans',
-    desc: 'Member loans at competitive cooperative rates with quick approval.',
+    title: 'Loan Facilities',
+    desc: 'Personal, education, emergency, and other essential loan products at competitive rates.',
     image: '/financial-planning.jpg',
-    icon: '🏦'
-  },
-  {
-    title: 'Smart Card',
-    desc: 'Secure QR + OTP member access for seamless transactions.',
-    image: '/banking-services.jpg',
     icon: '💳'
   },
   {
-    title: 'Training',
-    desc: 'Financial literacy & operational training for all members.',
+    title: 'Member Welfare',
+    desc: 'Financial guidance, welfare initiatives, and assistance programs for employees and families.',
     image: '/team-meeting.jpg',
-    icon: '📚'
+    icon: '🤝'
+  },
+  {
+    title: 'Digital Services',
+    desc: 'Online fund transfers, mobile app support, WhatsApp communication, and SMS notifications.',
+    image: '/banking-services.jpg',
+    icon: '📱'
   }
 ];
 
@@ -58,10 +58,10 @@ export default function Services() {
           className="text-center mb-12"
         >
           <h2 className={`text-4xl md:text-5xl font-black mb-4 ${isDark ? 'text-white' : 'text-brand-teal'}`}>
-            Our Services
+            What We Do
           </h2>
           <p className={`text-lg max-w-2xl mx-auto ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
-            Tailored financial services for transport employees — trusted and local.
+            Comprehensive financial services tailored for transport employees.
           </p>
         </motion.div>
 

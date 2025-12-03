@@ -1,182 +1,203 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import { motion } from 'framer-motion'
+import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export default function Downloads() {
-  const downloadCategories = [
+  const [theme, setTheme] = useState('light');
+
+  useEffect(() => {
+    const getTheme = () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+      setTheme(currentTheme);
+    };
+    getTheme();
+
+    const observer = new MutationObserver(getTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const isDark = theme === 'dark';
+
+  const downloads = [
     {
-      title: 'Membership Forms',
-      icon: '',
-      items: [
-        { name: 'Membership Application Form', size: 'PDF, 250 KB', desc: 'Apply for new membership' },
-        { name: 'Nominee Details Form', size: 'PDF, 180 KB', desc: 'Add or update nominee information' },
-        { name: 'KYC Update Form', size: 'PDF, 200 KB', desc: 'Update your KYC details' }
-      ]
+      title: 'Member Admission Form',
+      description: 'Application form for new membership. Join the TTCECS family today.',
+      file: '/forms/member-admission-form.pdf',
+      icon: '📝',
+      color: 'from-blue-500 to-cyan-500',
+      size: '190 KB'
     },
     {
-      title: 'Loan Forms',
-      icon: '',
-      items: [
-        { name: 'Surety Loan Application', size: 'PDF, 300 KB', desc: 'Apply for salary-based loan' },
-        { name: 'Gold Loan Application', size: 'PDF, 280 KB', desc: 'Apply for gold loan' },
-        { name: 'Consumer Loan Application', size: 'PDF, 290 KB', desc: 'Apply for consumer goods loan' },
-        { name: 'Marriage Advance Form', size: 'PDF, 240 KB', desc: 'Apply for interest-free marriage loan' },
-        { name: 'Promissory Note Template', size: 'PDF, 150 KB', desc: 'Loan agreement template' }
-      ]
+      title: 'Fixed Deposit Form',
+      description: 'Application form for opening a new Fixed Deposit account.',
+      file: '/forms/fixed-deposit-form.pdf',
+      icon: '💰',
+      color: 'from-green-500 to-emerald-500',
+      size: '815 KB'
     },
     {
-      title: 'Deposit Forms',
-      icon: '',
-      items: [
-        { name: 'Fixed Deposit Application', size: 'PDF, 270 KB', desc: 'Open new FD account' },
-        { name: 'FD Renewal Form', size: 'PDF, 220 KB', desc: 'Renew existing FD' },
-        { name: 'FD Pre-closure Request', size: 'PDF, 200 KB', desc: 'Request early FD withdrawal' },
-        { name: 'Recurring Deposit Form', size: 'PDF, 260 KB', desc: 'Open RD account' }
-      ]
+      title: 'Recurring Deposit Form',
+      description: 'Start saving monthly with our Recurring Deposit scheme.',
+      file: '/forms/recurring-deposit-form.pdf',
+      icon: '🔄',
+      color: 'from-purple-500 to-pink-500',
+      size: '427 KB'
     },
     {
-      title: 'Annual Reports',
-      icon: '',
-      items: [
-        { name: 'Annual Report 2023-24', size: 'PDF, 3.5 MB', desc: 'Financial year 2023-24 report' },
-        { name: 'Annual Report 2022-23', size: 'PDF, 3.2 MB', desc: 'Financial year 2022-23 report' },
-        { name: 'Annual Report 2021-22', size: 'PDF, 2.9 MB', desc: 'Financial year 2021-22 report' }
-      ]
+      title: 'Loan Application Form',
+      description: 'Apply for personal, educational, or housing loans.',
+      file: '/forms/loan-form.pdf',
+      icon: '💳',
+      color: 'from-orange-500 to-red-500',
+      size: '726 KB'
     },
     {
-      title: 'Election Documents',
-      icon: '',
-      items: [
-        { name: 'Nomination Form', size: 'PDF, 230 KB', desc: 'Board election nomination form' },
-        { name: 'Delegate List 2024', size: 'PDF, 450 KB', desc: 'Registered delegate list' },
-        { name: 'Election Notice 2024', size: 'PDF, 280 KB', desc: 'Board election announcement' },
-        { name: 'AGM Notice', size: 'PDF, 320 KB', desc: 'Annual General Meeting notice' }
-      ]
-    },
-    {
-      title: 'Bylaws & Rules',
-      icon: '📜',
-      items: [
-        { name: 'Society Bylaws', size: 'PDF, 1.2 MB', desc: 'THECOS bylaws and constitution' },
-        { name: 'Loan Policy Document', size: 'PDF, 680 KB', desc: 'Comprehensive loan policy' },
-        { name: 'Deposit Scheme Rules', size: 'PDF, 540 KB', desc: 'FD and RD scheme details' },
-        { name: 'Membership Guidelines', size: 'PDF, 420 KB', desc: 'Member rights and responsibilities' }
-      ]
+      title: 'Audit Report 2024-25',
+      description: 'Annual financial audit report and performance review.',
+      file: '/forms/audit-report-2024-25.pdf',
+      icon: '📊',
+      color: 'from-indigo-500 to-purple-500',
+      size: '4.3 MB',
+      featured: true
     }
-  ]
+  ];
 
   return (
     <>
       <Head>
-        <title>Downloads — Forms & Documents | THECOS</title>
-        <meta name="description" content="Download THECOS forms, applications, annual reports, and policy documents - Membership forms, loan applications, FD forms, and more." />
+        <title>Downloads & Resources | THECOS</title>
+        <meta name="description" content="Download application forms for membership, fixed deposits, recurring deposits, loans, and annual audit reports." />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-[#071428] dark:to-[#0a1628]">
-        <Header />
+      <Header />
 
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 px-6">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-[#EA2E89] to-[#27A9E1] bg-clip-text text-transparent">
-                Downloads & Resources
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Access all forms, applications, reports, and documents you need
-              </p>
-            </motion.div>
-          </div>
-        </section>
+      <main className={`pt-24 pb-20 min-h-screen ${isDark ? 'bg-[#071428]' : 'bg-gray-50'}`}>
+        <div className="max-w-7xl mx-auto px-6">
 
-        {/* Downloads Section */}
-        <section className="py-16 px-6">
-          <div className="max-w-7xl mx-auto space-y-12">
-            {downloadCategories.map((category, catIdx) => (
-              <motion.div
-                key={catIdx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: catIdx * 0.1 }}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="text-6xl">{category.icon}</div>
-                  <h2 className="text-3xl font-black text-gray-900 dark:text-white">{category.title}</h2>
+          {/* Hero Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="text-center mb-12"
+          >
+            <h1 className={`text-4xl md:text-6xl font-black mb-6 ${isDark ? 'text-white' : 'text-brand-teal'}`}>
+              Downloads & <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-green">Resources</span>
+            </h1>
+            <p className={`text-xl max-w-2xl mx-auto ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
+              Access all the necessary forms and documents you need for your financial journey with THECOS.
+            </p>
+          </motion.div>
+
+          {/* How It Works Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className={`mb-16 p-8 rounded-3xl ${isDark ? 'bg-[#0f1f3a] border border-[#1a2942]' : 'bg-white shadow-xl border border-gray-100'}`}
+          >
+            <h2 className={`text-2xl font-bold mb-8 text-center ${isDark ? 'text-white' : 'text-brand-teal'}`}>How It Works</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="relative">
+                <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl mb-4 ${isDark ? 'bg-[#1a2942] text-brand-blue' : 'bg-blue-50 text-brand-blue'}`}>
+                  1
                 </div>
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.items.map((item, itemIdx) => (
-                    <motion.div
-                      key={itemIdx}
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: itemIdx * 0.05 }}
-                      className="bg-white dark:bg-[#0f1f3a] rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all group cursor-pointer"
-                    >
-                      <div className="flex items-start justify-between mb-3">
-                        <div className="text-4xl"></div>
-                        <div className="text-sm font-bold text-gray-500 dark:text-gray-400">{item.size}</div>
-                      </div>
-                      <h3 className="text-lg font-bold mb-2 text-gray-900 dark:text-white group-hover:text-[#27A9E1] transition-colors">
-                        {item.name}
-                      </h3>
-                      <p className="text-sm text-gray-700 dark:text-gray-300 mb-4">{item.desc}</p>
-                      <button className="w-full px-4 py-2 bg-gradient-to-r from-[#EA2E89] to-[#27A9E1] text-white rounded-lg font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
-                        <span>⬇️</span>
-                        <span>Download</span>
-                      </button>
-                    </motion.div>
-                  ))}
+                <h3 className={`font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>Download Form</h3>
+                <p className={`text-sm ${isDark ? 'text-muted' : 'text-gray-600'}`}>Select and download the PDF form you need.</p>
+                <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent transform translate-x-1/2 opacity-30" />
+              </div>
+              <div className="relative">
+                <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl mb-4 ${isDark ? 'bg-[#1a2942] text-brand-green' : 'bg-green-50 text-brand-green'}`}>
+                  2
+                </div>
+                <h3 className={`font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>Print & Fill</h3>
+                <p className={`text-sm ${isDark ? 'text-muted' : 'text-gray-600'}`}>Print the form and fill in your details clearly.</p>
+                <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-transparent via-gray-300 to-transparent transform translate-x-1/2 opacity-30" />
+              </div>
+              <div>
+                <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl mb-4 ${isDark ? 'bg-[#1a2942] text-brand-pink' : 'bg-pink-50 text-brand-pink'}`}>
+                  3
+                </div>
+                <h3 className={`font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>Submit</h3>
+                <p className={`text-sm ${isDark ? 'text-muted' : 'text-gray-600'}`}>Submit the filled form at your nearest branch.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Downloads Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {downloads.map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: idx * 0.1 }}
+                whileHover={{ y: -5 }}
+                className={`relative rounded-3xl p-8 flex flex-col ${isDark
+                    ? 'bg-[#0f1f3a] border border-[#1a2942]'
+                    : 'bg-white border border-gray-100 shadow-xl'
+                  } ${item.featured ? 'md:col-span-2 lg:col-span-1 ring-2 ring-brand-blue' : ''}`}
+              >
+                <div className="flex items-start justify-between mb-6">
+                  <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center text-2xl shadow-lg`}>
+                    {item.icon}
+                  </div>
+                  <span className={`px-3 py-1 rounded-full text-xs font-bold ${isDark ? 'bg-[#1a2942] text-white' : 'bg-gray-100 text-gray-700'}`}>
+                    PDF
+                  </span>
+                </div>
+
+                <h3 className={`text-xl font-bold mb-3 ${isDark ? 'text-white' : 'text-brand-teal'}`}>
+                  {item.title}
+                </h3>
+                <p className={`mb-8 text-sm flex-grow ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
+                  {item.description}
+                </p>
+
+                <div className="mt-auto">
+                  <div className={`flex items-center justify-between text-xs font-medium mb-4 ${isDark ? 'text-white/40' : 'text-gray-400'}`}>
+                    <span>File Size: {item.size}</span>
+                  </div>
+                  <a
+                    href={item.file}
+                    download
+                    className={`w-full block py-3 rounded-xl font-bold text-white text-center shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] bg-gradient-to-r ${item.color}`}
+                  >
+                    Download Form
+                  </a>
                 </div>
               </motion.div>
             ))}
           </div>
-        </section>
 
-        {/* Help Section */}
-        <section className="py-16 px-6 bg-gradient-to-r from-[#EA2E89]/10 to-[#27A9E1]/10">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="bg-white dark:bg-[#0f1f3a] rounded-3xl shadow-2xl p-8 md:p-12"
-            >
-              <h2 className="text-4xl font-black mb-6 text-center text-gray-900 dark:text-white">Need Help?</h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 text-center mb-8">
-                If you can't find the form you're looking for or need assistance filling it out, we're here to help.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <motion.a
-                  href="/contact"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gradient-to-r from-[#EA2E89] to-[#27A9E1] text-white rounded-xl font-bold text-lg shadow-lg hover:shadow-xl transition-all text-center"
-                >
-                  Contact Support
-                </motion.a>
-                <motion.a
-                  href="/faqs"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-8 py-4 bg-gray-100 dark:bg-[#1a2942] text-gray-900 dark:text-white rounded-xl font-bold text-lg hover:shadow-lg transition-all text-center"
-                >
-                  View FAQs
-                </motion.a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
+          {/* Need Help Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className={`p-8 rounded-3xl text-center ${isDark ? 'bg-[#0f1f3a] border border-[#1a2942]' : 'bg-blue-50 border border-blue-100'}`}
+          >
+            <h3 className={`text-2xl font-bold mb-4 ${isDark ? 'text-white' : 'text-brand-teal'}`}>Need help with the forms?</h3>
+            <p className={`mb-6 ${isDark ? 'text-muted' : 'text-gray-600'}`}>
+              Our support team is here to assist you with filling out applications or answering any questions.
+            </p>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+              <a href="tel:+919025947007" className={`flex items-center gap-2 font-bold ${isDark ? 'text-brand-blue' : 'text-brand-blue'}`}>
+                <span>📞</span> +91 90259 47007
+              </a>
+              <a href="mailto:support@thecos.com" className={`flex items-center gap-2 font-bold ${isDark ? 'text-brand-blue' : 'text-brand-blue'}`}>
+                <span>✉️</span> support@thecos.com
+              </a>
+            </div>
+          </motion.div>
 
-        <Footer />
-      </div>
+        </div>
+      </main>
+
+      <Footer />
     </>
-  )
+  );
 }

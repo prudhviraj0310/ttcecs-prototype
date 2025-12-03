@@ -1,17 +1,33 @@
+import Image from 'next/image';
+
 export default function Footer() {
+  const branches = [
+    { name: 'Anna Nagar', phone: '+91 90259 47007' },
+    { name: 'T. Nagar', phone: '+91 63834 02323' },
+    { name: 'Kilambakkam', phone: '+91 99404 09355' },
+    { name: 'Nagercoil', phone: '+91 87547 61657' },
+    { name: 'Coimbatore', phone: '+91 87787 95546' },
+    { name: 'Nanganallur', phone: '+91 91500 70313' },
+  ];
+
   return (
     <footer className="bg-transparent border-t border-white/6 mt-10">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* About Section */}
-          <div>
+          <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
-                TC
+              <div className="relative w-10 h-10">
+                <Image
+                  src="/logo.png"
+                  alt="THECOS Logo"
+                  fill
+                  className="object-contain"
+                />
               </div>
               <span className="font-black text-xl text-electric">THECOS</span>
             </div>
-            <p className="text-sm text-muted mb-4">
+            <p className="text-sm text-muted mb-4 max-w-sm">
               Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd.
             </p>
             <p className="text-sm text-muted">
@@ -26,38 +42,36 @@ export default function Footer() {
               <li><a href="/" className="hover:text-electric transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-electric transition-colors">About Us</a></li>
               <li><a href="/membership" className="hover:text-electric transition-colors">Membership</a></li>
-              <li><a href="/deposits" className="hover:text-electric transition-colors">Deposits</a></li>
               <li><a href="/loans" className="hover:text-electric transition-colors">Loans</a></li>
+              <li><a href="/downloads" className="hover:text-electric transition-colors">Downloads</a></li>
             </ul>
           </div>
 
-          {/* More Links */}
+          {/* Branch Hotlines */}
           <div>
-            <h4 className="text-electric font-semibold mb-4">More</h4>
+            <h4 className="text-electric font-semibold mb-4">Branch Hotlines</h4>
             <ul className="space-y-2 text-sm text-muted">
-              <li><a href="/subsidiaries" className="hover:text-electric transition-colors">Subsidiaries</a></li>
-              <li><a href="/news" className="hover:text-electric transition-colors">News</a></li>
-              <li><a href="/downloads" className="hover:text-electric transition-colors">Downloads</a></li>
-              <li><a href="/faqs" className="hover:text-electric transition-colors">FAQs</a></li>
-              <li><a href="/contact" className="hover:text-electric transition-colors">Contact Us</a></li>
+              {branches.map((branch) => (
+                <li key={branch.name} className="flex justify-between gap-4">
+                  <span>{branch.name}:</span>
+                  <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="hover:text-electric transition-colors whitespace-nowrap">
+                    {branch.phone}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-electric font-semibold mb-4">Contact</h4>
+            <h4 className="text-electric font-semibold mb-4">Head Office</h4>
             <ul className="space-y-3 text-sm text-muted">
               <li>
-                <strong className="text-electric">Head Office:</strong><br />
                 No. 1735, 18th Main Road,<br />
-                Anna Nagar West, Chennai – 600040
+                Anna Nagar West,<br />
+                Chennai – 600040
               </li>
               <li>
-                <strong className="text-electric">Phone:</strong><br />
-                <a href="tel:+919025947007" className="hover:text-electric transition-colors">+91 90259 47007</a>
-              </li>
-              <li>
-                <strong className="text-electric">Email:</strong><br />
                 <a href="mailto:support@thecos.com" className="hover:text-electric transition-colors">support@thecos.com</a>
               </li>
             </ul>

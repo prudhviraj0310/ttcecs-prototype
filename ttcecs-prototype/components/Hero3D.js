@@ -175,9 +175,9 @@ export default function Hero3D() {
           <span className={`text-sm ${isDark ? 'text-muted' : 'text-brand-gray'}`}>Branches</span>
         </div>
         <div className={`flex items-center gap-2 px-6 py-3 rounded-full ${isDark ? 'bg-[#0a1628] border-[#1a2942]' : 'bg-white border-brand-gray-light'} shadow-lg border`}>
-          <span className="text-2xl"></span>
-          <span className={`font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>ISO 9001</span>
-          <span className={`text-sm ${isDark ? 'text-muted' : 'text-brand-gray'}`}>Certified</span>
+          <span className="text-2xl">📜</span>
+          <span className={`font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>Reg. No.</span>
+          <span className={`text-sm ${isDark ? 'text-muted' : 'text-brand-gray'}`}>MSCS/CR/16-91</span>
         </div>
       </motion.div>
 

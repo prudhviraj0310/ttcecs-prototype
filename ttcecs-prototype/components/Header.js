@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Header() {
   const [shrink, setShrink] = useState(false);
@@ -46,15 +47,23 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
           {/* Logo */}
-          <motion.div
+          <div
             className="flex items-center gap-3 cursor-pointer"
-            whileHover={{ scale: 1.05 }}
+            onClick={() => window.location.href = '/'}
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center font-black text-white shadow-lg">
-              TC
+            <div className="relative w-12 h-12 md:w-14 md:h-14">
+              <Image
+                src="/logo.png"
+                alt="THECOS Logo"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className={`font-black text-xl ${isDark ? 'text-white' : 'text-brand-teal'}`}>THECOS</span>
-          </motion.div>
+            <span className={`font-black text-2xl md:text-3xl tracking-tight ${isDark ? 'text-white' : 'text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-teal'}`}>
+              THECOS
+            </span>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-semibold">
@@ -79,6 +88,35 @@ export default function Header() {
             <a href="/contact" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
               Contact
             </a>
+            <a href="/downloads" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+              Downloads
+            </a>
+
+            {/* Font Size Toggle */}
+            <div className="hidden md:flex items-center gap-1 mr-2">
+              <button
+                onClick={() => {
+                  const root = document.documentElement;
+                  const current = parseFloat(getComputedStyle(root).fontSize);
+                  if (current > 12) root.style.fontSize = `${current - 1}px`;
+                }}
+                className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-sm ${isDark ? 'bg-[#1a2942] text-white hover:bg-[#2a3952]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} transition-colors`}
+                title="Decrease Font Size"
+              >
+                A-
+              </button>
+              <button
+                onClick={() => {
+                  const root = document.documentElement;
+                  const current = parseFloat(getComputedStyle(root).fontSize);
+                  if (current < 24) root.style.fontSize = `${current + 1}px`;
+                }}
+                className={`w-8 h-8 rounded-lg flex items-center justify-center font-bold text-lg ${isDark ? 'bg-[#1a2942] text-white hover:bg-[#2a3952]' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'} transition-colors`}
+                title="Increase Font Size"
+              >
+                A+
+              </button>
+            </div>
 
             {/* Theme Toggle */}
             <motion.button
@@ -233,6 +271,13 @@ export default function Header() {
               className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
             >
               Contact
+            </a>
+            <a
+              href="/downloads"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
+            >
+              Downloads
             </a>
             <a
               href="/membership"
