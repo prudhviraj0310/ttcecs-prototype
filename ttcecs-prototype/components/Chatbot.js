@@ -202,7 +202,6 @@ export default function Chatbot() {
       <motion.button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        onPointerDown={() => setIsOpen(prev => !prev)}
         className={`fixed bottom-6 right-6 w-14 h-14 ${buttonBg} ${buttonText} rounded-full shadow-2xl flex items-center justify-center font-black text-xl hover:scale-110 transition-transform`}
         style={{ zIndex: 99999, pointerEvents: 'auto' }}
         whileHover={{ scale: 1.1 }}
@@ -218,11 +217,12 @@ export default function Chatbot() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            key="chat-window"
             initial={{ opacity: 0, y: 20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className={`fixed bottom-24 right-6 z-40 w-[90vw] max-w-md h-[500px] ${chatBg} border ${borderColor} rounded-2xl shadow-2xl flex flex-col overflow-hidden`}
+            className={`fixed bottom-24 right-6 z-[60] w-[90vw] max-w-md h-[500px] ${chatBg} border ${borderColor} rounded-2xl shadow-2xl flex flex-col overflow-hidden`}
           >
             {/* Header */}
             <div className={`px-4 py-3 ${isDark ? 'bg-[#071428]' : 'bg-gradient-to-r from-brand-blue to-brand-purple'} border-b ${borderColor} flex items-center justify-between`}>
@@ -318,10 +318,10 @@ export default function Chatbot() {
                   onClick={() => (listening ? stopListening() : startListening())}
                   title={listening ? 'Stop listening' : 'Voice input'}
                   className={`p-2 rounded-md transition ${listening
-                      ? 'bg-red-500 text-white animate-pulse'
-                      : isDark
-                        ? 'bg-white/10 text-white hover:bg-white/20'
-                        : 'bg-brand-gray-light text-brand-teal hover:bg-brand-gray-light/70'
+                    ? 'bg-red-500 text-white animate-pulse'
+                    : isDark
+                      ? 'bg-white/10 text-white hover:bg-white/20'
+                      : 'bg-brand-gray-light text-brand-teal hover:bg-brand-gray-light/70'
                     }`}
                 >
                   {listening ? '●' : '🎤'}
