@@ -65,18 +65,18 @@ export default function Downloads() {
       featured: true
     },
     {
-      title: 'Document 1764844128',
-      description: 'Downloadable document.',
+      title: 'Brochure for Fixed Deposits',
+      description: 'Official brochure detailing Fixed Deposit interest rates and terms.',
       file: '/forms/1764844128.pdf',
-      icon: '📄',
+      icon: '📘',
       color: 'from-teal-500 to-cyan-500',
       size: 'PDF'
     },
     {
-      title: 'Document 1764844210',
-      description: 'Downloadable document.',
+      title: 'Brochure for Recurring Deposit (RD)',
+      description: 'Official brochure detailing Recurring Deposit schemes and benefits.',
       file: '/forms/1764844210.pdf',
-      icon: '📄',
+      icon: '📗',
       color: 'from-rose-500 to-pink-500',
       size: 'PDF'
     }
