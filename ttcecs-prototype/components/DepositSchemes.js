@@ -11,131 +11,108 @@ import 'swiper/css/effect-coverflow';
 
 const schemes = [
   {
-    id: 'fd',
-    name: 'Fixed Deposit (FD)',
-    icon: '',
-    minAmount: '₹500',
-    rate: '14.40%',
-    tenure: '1 to 10 years',
-    color: 'from-blue-500 to-purple-600',
-    features: [
-      'Minimum deposit: ₹500',
-      'Interest rate: 14.40% per annum',
-      'Quarterly compounding',
-      'Tenure: 1 to 10 years',
-      'Loan facility available',
-      'Premature withdrawal allowed'
-    ],
-    description: 'Secure your future with guaranteed high returns'
-  },
-  {
     id: 'rd',
     name: 'Recurring Deposit (RD)',
-    icon: '�',
-    minAmount: '₹100/month',
-    rate: '14.40%',
-    tenure: '1 to 10 years',
-    color: 'from-green-500 to-teal-600',
+    icon: '💰',
+    minAmount: '₹1,000/month',
+    rate: 'Up to 10%',
+    tenure: '1 to 2 Years',
+    color: 'from-purple-500 to-pink-600',
     features: [
-      'Monthly deposit: ₹100 onwards',
-      'Interest rate: 14.40% per annum',
-      'Flexible tenure: 1-10 years',
-      'Disciplined savings habit',
-      'Loan facility available',
-      'Perfect for regular income earners'
+      '1 Year Tenure: 8% Interest',
+      '2 Years Tenure: 10% Interest',
+      'Min Deposit: ₹1,000/month',
+      'Safe & Secure Returns',
+      'Flexible Savings Option'
     ],
-    description: 'Build wealth systematically with monthly savings'
+    description: 'Start small, grow steadily with monthly savings'
   },
   {
     id: 'dmg',
-    name: 'DMG (Diamond)',
-    icon: '💎',
-    minAmount: '₹500',
+    name: 'DMG (Minors)',
+    icon: '🔵',
+    minAmount: '₹5,00,000',
     rate: '14.40%',
-    tenure: 'Age 0-12 years',
+    tenure: 'Below 18 Years',
     color: 'from-blue-400 to-indigo-600',
     features: [
-      'Age group: 0-12 years',
-      'Minor accounts',
-      'Guardian operated',
-      'Education focused savings',
-      'Same FD/RD benefits',
-      'Future planning for children'
+      'Eligible for: LTP Only',
+      'Min Amount: ₹5,00,000',
+      'Tenure: 5 Years',
+      'Interest: 14.40% (Cumulative)',
+      'No Monthly Payout',
+      'Example: ₹5L → ₹8.6L (5 yrs)'
     ],
-    description: 'Perfect start for your child\'s financial future'
+    description: 'Long Term Progressive Deposit for Minors'
   },
   {
     id: 'gnx',
-    name: 'GNX (Gold Next)',
-    icon: '🥇',
-    minAmount: '₹500',
-    rate: '14.40%',
-    tenure: 'Age 13-18 years',
-    color: 'from-yellow-500 to-orange-600',
+    name: 'GNX (18-30 yrs)',
+    icon: '🟢',
+    minAmount: 'Varies',
+    rate: 'Up to 14.40%',
+    tenure: '18 to 30 Years',
+    color: 'from-green-500 to-teal-600',
     features: [
-      'Age group: 13-18 years',
-      'Teen accounts',
-      'Partial self-operation',
-      'Higher education goals',
-      'All FD/RD facilities',
-      'Financial literacy building'
+      'PMW: 10.75% M / 11.19% C',
+      'PMO: 11.50% M / 12.00% C',
+      'LTP: 14.40% Cumulative (5yr)',
+      'PNX (Single Mom): 11.25% M',
+      'HXP (Diff Abled): 11.00% M'
     ],
-    description: 'Growing wealth for growing minds'
+    description: 'Flexible options for Young Adults'
   },
   {
     id: 'frontiers',
-    name: 'Frontiers',
-    icon: '🚀',
-    minAmount: '₹500',
-    rate: '14.40%',
-    tenure: 'Age 19-35 years',
-    color: 'from-green-400 to-emerald-600',
+    name: 'Frontiers (31-57 yrs)',
+    icon: '🟡',
+    minAmount: 'Varies',
+    rate: 'Up to 14.40%',
+    tenure: '31 to 57 Years',
+    color: 'from-yellow-500 to-orange-600',
     features: [
-      'Age group: 19-35 years',
-      'Young professionals',
-      'Marriage & house goals',
-      'Loan eligibility up to 90%',
-      'Smart Card access',
-      'Complete banking facilities'
+      'PMW: 10.50% M / 10.92% C',
+      'PMO: 11.25% M / 11.73% C',
+      'LTP: 14.40% Cumulative (5yr)',
+      'PNX (Single Mom): 11.25% M',
+      'HXP (Diff Abled): 11.00% M'
     ],
-    description: 'Launch your financial independence'
+    description: 'Growth plans for Working Professionals'
   },
   {
     id: 'pioneers',
-    name: 'Pioneers',
-    icon: '⭐',
-    minAmount: '₹500',
-    rate: '14.40%',
-    tenure: 'Age 36-55 years',
-    color: 'from-indigo-500 to-blue-600',
+    name: 'Pioneers (58-79 yrs)',
+    icon: '🟠',
+    minAmount: 'Varies',
+    rate: 'Up to 14.40%',
+    tenure: '58 to 79 Years',
+    color: 'from-orange-500 to-red-600',
     features: [
-      'Age group: 36-55 years',
-      'Prime earning years',
-      'Wealth accumulation',
-      'Retirement planning',
-      'Premium loan services',
-      'Investment counseling'
+      'PMW: 11.00% M / 11.46% C',
+      'PMO: 11.75% M / 12.28% C',
+      'LTP: 14.40% Cumulative (5yr)',
+      'PNX (Single Mom): 11.25% M',
+      'HXP (Diff Abled): 11.00% M'
     ],
-    description: 'Build your legacy with confidence'
+    description: 'Secure returns for Senior Citizens'
   },
   {
     id: 'ssnr',
-    name: 'SSNR (Senior)',
-    icon: '👑',
-    minAmount: '₹500',
-    rate: '14.40%',
-    tenure: 'Age 56+ years',
-    color: 'from-red-500 to-pink-600',
+    name: 'SSNR (80+ yrs)',
+    icon: '🔴',
+    minAmount: 'Varies',
+    rate: 'Up to 14.40%',
+    tenure: '80+ Years',
+    color: 'from-red-600 to-rose-700',
     features: [
-      'Age group: 56+ years',
-      'Senior citizens special',
-      'Retirement income support',
-      'Priority services',
-      'Health & welfare benefits',
-      'Flexible withdrawal options'
+      'PMW: 11.25% M / 11.73% C',
+      'PMO: 12.00% M / 12.55% C',
+      'LTP: 14.40% Cumulative (5yr)',
+      'PNX (Single Mom): 11.25% M',
+      'HXP (Diff Abled): 11.00% M'
     ],
-    description: 'Secure your golden years with dignity'
-  },
+    description: 'Highest returns for Super Seniors'
+  }
 ];
 
 function SchemeCard({ scheme }) {
@@ -280,7 +257,7 @@ export default function DepositSchemes() {
           className="mt-12 glass p-6 rounded-xl text-center"
         >
           <p className="text-sm text-muted">
-             All schemes offer 14.40% annual returns with quarterly compounding.
+            All schemes offer 14.40% annual returns with quarterly compounding.
             <span className="text-electric font-semibold"> FD from ₹500 | RD from ₹100/month | Loan facility available | Premature withdrawal allowed</span>
           </p>
         </motion.div>
