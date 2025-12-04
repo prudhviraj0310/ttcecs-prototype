@@ -63,6 +63,22 @@ export default function Downloads() {
       color: 'from-indigo-500 to-purple-500',
       size: '4.3 MB',
       featured: true
+    },
+    {
+      title: 'Document 1764844128',
+      description: 'Downloadable document.',
+      file: '/forms/1764844128.pdf',
+      icon: '📄',
+      color: 'from-teal-500 to-cyan-500',
+      size: 'PDF'
+    },
+    {
+      title: 'Document 1764844210',
+      description: 'Downloadable document.',
+      file: '/forms/1764844210.pdf',
+      icon: '📄',
+      color: 'from-rose-500 to-pink-500',
+      size: 'PDF'
     }
   ];
 
@@ -137,8 +153,8 @@ export default function Downloads() {
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -5 }}
                 className={`relative rounded-3xl p-8 flex flex-col ${isDark
-                    ? 'bg-[#0f1f3a] border border-[#1a2942]'
-                    : 'bg-white border border-gray-100 shadow-xl'
+                  ? 'bg-[#0f1f3a] border border-[#1a2942]'
+                  : 'bg-white border border-gray-100 shadow-xl'
                   } ${item.featured ? 'md:col-span-2 lg:col-span-1 ring-2 ring-brand-blue' : ''}`}
               >
                 <div className="flex items-start justify-between mb-6">

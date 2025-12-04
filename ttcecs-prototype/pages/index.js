@@ -12,7 +12,6 @@ import AssociatedOrgs from '../components/AssociatedOrgs'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
-import Chatbot from '../components/Chatbot'
 
 // Dynamically import components that use GSAP (no SSR)
 const Story = dynamic(() => import('../components/Story'), { ssr: false })
@@ -80,7 +79,6 @@ export default function Home() {
         <Footer />
       </main>
 
-      <Chatbot />
       <ScrollEffects />
     </>
   )
