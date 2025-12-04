@@ -11,7 +11,7 @@ export default function Chatbot() {
   const [input, setInput] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [listening, setListening] = useState(false);
-  const [voiceEnabled, setVoiceEnabled] = useState(true);
+  const [voiceEnabled, setVoiceEnabled] = useState(false);
   const [theme, setTheme] = useState('light');
   const messagesEndRef = useRef(null);
   const chatRef = useRef(null);
