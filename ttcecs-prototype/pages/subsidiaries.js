@@ -114,11 +114,13 @@ export default function Subsidiaries() {
       mission: 'Accessible, ethical, and patient-centred medical care',
       description: 'Tempz Hospital is a 24×7 multispeciality healthcare centre located in Anna Nagar West, Chennai. Established in 2021, it delivers accessible, ethical, and patient-centred medical care for individuals and families. Operated under Tempz Academy Educational & Medical Charitable Foundation.',
       services: [
-        { name: 'Doctor Consultations', desc: 'General & specialist care' },
-        { name: 'Dialysis Unit', desc: 'Safe, hygienic treatment for renal patients' },
-        { name: 'Physiotherapy', desc: 'Rehabilitation & therapeutic care' },
-        { name: 'Diagnostics', desc: 'X-Ray, Imaging, and Laboratory Tests with fast reporting' },
-        { name: 'In-house Pharmacy', desc: 'Quality medicines & essential supplies' }
+        { name: 'Ambulance Service', desc: 'Book an ambulance: +91 89255 55108' },
+        { name: 'Doctor Consultations', desc: 'Our experienced specialists provide personalized medical advice, accurate diagnosis, and dedicated treatment across multiple departments.' },
+        { name: 'Dialysis', desc: 'Our advanced dialysis unit offers safe, hygienic, and comfortable sessions for patients with kidney-related conditions, under expert supervision.' },
+        { name: 'Physiotherapy', desc: 'Our physiotherapists design tailored therapy plans to restore movement, relieve pain, and support recovery after injury or surgery.' },
+        { name: 'X-Ray & Scans', desc: 'Equipped with modern imaging technology to ensure precise and fast diagnostic results for effective treatment.' },
+        { name: 'Pharmacy', desc: 'Our in-house pharmacy provides high-quality medicines and healthcare essentials with trusted pharmacist guidance.' },
+        { name: 'Laboratory Tests', desc: 'Comprehensive and reliable lab diagnostics for routine and specialized tests, with quick turnaround times and accurate reporting.' }
       ],
       details: [
         { label: 'Entity', value: 'Tempz Academy Educational & Medical Charitable Foundation' },
