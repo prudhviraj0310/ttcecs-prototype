@@ -94,7 +94,7 @@ export default function Deposits() {
                   { icon: '🔄', title: 'Renewal Process', desc: 'Application for renewal must be made before maturity date' },
                   { icon: '⏰', title: 'Grace Period', desc: 'Up to 30 days renewal grace period (subject to board approval)' },
                   { icon: '❌', title: 'Pre-Closure Rules', desc: 'Some plans allow pre-closure, others don\'t - check your plan details' },
-                  { icon: '', title: 'Interest Credit', desc: 'Interest is credited monthly to your registered bank account' },
+                  { icon: '', title: 'Interest Credit', desc: 'Interest is credited monthly, cumulatively, or yearly based on the enrolled plan' },
                   { icon: '', title: 'Flexible Tenures', desc: 'Short-term and long-term options available (PMW, PNX, HXP, PM0, LTP)' }
                 ].map((item, idx) => (
                   <motion.div

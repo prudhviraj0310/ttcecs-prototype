@@ -27,7 +27,7 @@ export default function About() {
                 About TTCECS
               </h1>
               <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Trusted financial institution serving transport employees since 1991.
+                Serving members since 1991.
               </p>
             </motion.div>
           </div>
