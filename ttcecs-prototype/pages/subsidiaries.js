@@ -40,6 +40,70 @@ export default function Subsidiaries() {
       details: [
         { label: 'Portfolio', value: 'Chennai, Bengaluru, Coimbatore, Tirunelveli, Kanyakumari' },
         { label: 'Key Projects', value: 'Mogappair Urban Blocks, Perungudi School Campus, ECR Kunnukadu Land' }
+      ],
+      portfolio: [
+        {
+          name: 'Mogappair – VEGA 4+ (Chennai)',
+          type: 'Urban Residential Development',
+          status: '5 Blocks (A–E). Blocks B, C, D Sold Out. Block A Ready. Block E Under Construction.',
+          focus: 'Premium living in Mogappair’s fastest-growing community. Urban lifestyle, location advantage, ready-to-move-in options.'
+        },
+        {
+          name: 'Guduvancheri (Chennai)',
+          type: 'Apartment Project',
+          status: '2 Blocks, 3 Floors + Terrace. 12 Units Planned. Building approvals in progress.',
+          focus: 'Affordable gated apartments near GST Road. Pre-launch awareness & enquiries.',
+          plotDetails: 'Plot No 8 & 9, Sri Lakshmi Nagar – 3.96 cents'
+        },
+        {
+          name: 'Thiruvithancode (Tamil Nadu)',
+          type: 'Residential Plots',
+          status: 'Land cleared, Fencing completed, CCTV installed. Ready for sales.',
+          focus: 'Ready-to-build plots in a peaceful, fast-developing town. Ideal for first-time buyers & NRI buyers.',
+          plotDetails: 'Thiruvathancode, Kanyakumari – 3.29 cents'
+        },
+        {
+          name: 'Muthukadu – ECR (Chennai)',
+          type: 'Luxury 4BHK Villa',
+          status: 'Construction completed. Premium ECR location. Ready for immediate sale.',
+          focus: 'Luxury lifestyle on ECR. Perfect for holiday home buyers.',
+          plotDetails: 'No:9, Muthukadu – 2400.00 sq ft'
+        },
+        {
+          name: 'Kadapakkam – Crescent Community (Chennai)',
+          type: '45-Plot Layout',
+          status: 'Land cleared, Fully fenced, Secure community.',
+          focus: 'Secure gated plots in a developing residential hub.',
+          plotDetails: 'Edaikazhinadu, Kadapakkam – 1.59 cents'
+        },
+        {
+          name: 'Tirunelveli – Hotel Venus',
+          type: 'Commercial / Hospitality',
+          status: 'Vacant land, Fenced & secured, Road-facing prime location.',
+          focus: 'Upcoming landmark destination in Tirunelveli.',
+          plotDetails: 'Gangaikondan – 94.79 cents'
+        },
+        {
+          name: 'Tirunelveli – Epsilong Traveller Pitstop',
+          type: 'Pitstop / Retail / Hospitality',
+          status: 'Concept finalized: Shops, rooms, EV charging, rest area. Site cleared; signage installed.',
+          focus: 'A modern highway pitstop for travellers.',
+          plotDetails: 'Plot No 188, Gangaikondan – 5.25 cents'
+        },
+        {
+          name: 'Coimbatore – Jivana Solz',
+          type: 'Senior Living / Retirement Homes',
+          status: 'Land cleared, Fenced & secured, Approvals awaited.',
+          focus: 'Premium retirement community in Coimbatore.',
+          plotDetails: 'Siruvani Main Road – 8.72 cents'
+        },
+        {
+          name: 'Bangalore – Inside Out',
+          type: 'Plot Development',
+          status: '9 Plots. 1 Sold, 6 Under Construction, 2 Vacant.',
+          focus: 'Boutique gated plot community in Bangalore.',
+          plotDetails: 'Multiple plots in Budigere (946 sq ft - 2039 sq ft)'
+        }
       ]
     },
     {
@@ -158,6 +222,37 @@ export default function Subsidiaries() {
                           <span className="font-semibold text-gray-900 dark:text-white">{detail.value}</span>
                         </div>
                       ))}
+                    </div>
+                  )}
+
+                  {sub.portfolio && (
+                    <div className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
+                      <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Property Portfolio</h3>
+                      <div className="grid md:grid-cols-2 gap-6">
+                        {sub.portfolio.map((project, pidx) => (
+                          <div key={pidx} className="bg-gray-50 dark:bg-[#1a2942] rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all">
+                            <div className="flex justify-between items-start mb-3">
+                              <h4 className="text-lg font-bold text-gray-900 dark:text-white">{project.name}</h4>
+                              <span className="text-xs font-semibold px-2 py-1 bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-300 rounded-full">
+                                {project.type}
+                              </span>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+                              <strong className="text-gray-800 dark:text-gray-200">Status:</strong> {project.status}
+                            </p>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                              <strong className="text-gray-800 dark:text-gray-200">Focus:</strong> {project.focus}
+                            </p>
+                            {project.plotDetails && (
+                              <div className="mt-3 pt-3 border-t border-gray-200 dark:border-gray-600">
+                                <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">
+                                  📍 {project.plotDetails}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   )}
                 </div>

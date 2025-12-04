@@ -208,7 +208,7 @@ export default function DepositSchemes() {
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">Fixed & Recurring Deposit Plans</h2>
           <p className="text-muted text-lg max-w-3xl mx-auto">
-            Choose from FD, RD, or age-specific deposit schemes. All offering 14.40% annual returns with quarterly compounding. Start with as low as ₹100/month for RD or ₹500 for FD.
+            Choose from FD, RD, or age-specific deposit schemes. All offering 14.40% annual returns with quarterly compounding. Start with as low as ₹500/month for RD or ₹20,000 for FD.
           </p>
         </motion.div>
 
