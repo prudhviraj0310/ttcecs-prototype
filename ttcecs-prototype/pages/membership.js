@@ -92,6 +92,9 @@ export default function Membership() {
                   </div>
                 </div>
               </div>
+              <p className="mt-8 text-lg font-medium text-gray-900 dark:text-white border-t border-gray-100 dark:border-gray-800 pt-6">
+                Membership is also open to the public through any of our savings schemes (FD/RD).
+              </p>
             </motion.div>
           </div>
         </section>
