@@ -27,28 +27,28 @@ export default function Testimonials() {
       name: "Rajesh Kumar",
       role: "SETC Employee, 12 years",
       rating: 5,
-      image: "/testimonial-4.jpg"
+      image: "/testimonial-rajesh.png"
     },
     {
       quote: "The 14.40% interest rate on FD is unbeatable. My savings grow faster here than any bank.",
       name: "Priya Shankar",
       role: "Member since 2015",
       rating: 5,
-      image: "/testimonial-2.jpg"
+      image: "/testimonial-priya.png"
     },
     {
       quote: "Marriage advance loan helped me during my daughter's wedding. Zero interest - truly member-first!",
       name: "Venkatesh Iyer",
       role: "SETC Driver, Anna Nagar",
       rating: 5,
-      image: "/testimonial-1.jpg"
+      image: "/testimonial-venkatesh.png"
     },
     {
       quote: "Smart Card makes everything so easy. I can track all my deposits and loans in one place.",
       name: "Lakshmi Devi",
       role: "Member since 2018",
       rating: 5,
-      image: "/testimonial-3.jpg"
+      image: "/testimonial-lakshmi.png"
     }
   ];
 

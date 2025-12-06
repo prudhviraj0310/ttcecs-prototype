@@ -31,25 +31,36 @@
   --shadow: rgba(0, 0, 0, 0.3);
 }
 
-html, body, #__next { 
+html,
+body,
+#__next {
   height: 100%;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-  background: linear-gradient(135deg, var(--bg-900) 0%, var(--bg-800) 70%);
+  /* Background moved to .site-background */
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+.site-background {
+  background: linear-gradient(135deg, var(--bg-900) 0%, var(--bg-800) 70%);
+  position: fixed;
+  inset: 0;
+  z-index: -50;
+  pointer-events: none;
+}
+
 /* Glass effect with theme support */
+/* Glass effect with theme support - Refined for Professional Look */
 .glass {
   background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 4px 16px var(--shadow);
+  box-shadow: 0 4px 24px var(--shadow);
   transition: all 0.3s ease;
 }
 
@@ -58,30 +69,29 @@ body {
   color: var(--text-secondary);
 }
 
-.text-electric, .text-brand-blue {
+.text-electric,
+.text-brand-blue {
   color: var(--electric);
 }
 
-.bg-electric, .bg-brand-blue {
+.bg-electric,
+.bg-brand-blue {
   background-color: var(--electric);
 }
 
-/* Rainbow gradient utilities */
-.bg-gradient-rainbow {
-  background: linear-gradient(90deg, #EA2E89 0%, #F6A623 25%, #76C043 50%, #27A9E1 75%, #663399 100%);
-}
-
-.text-gradient-rainbow {
-  background: linear-gradient(90deg, #EA2E89 0%, #F6A623 25%, #76C043 50%, #27A9E1 75%, #663399 100%);
+/* Professional Gradient Utilities */
+.text-gradient-primary {
+  background: linear-gradient(135deg, #00303D 0%, #27A9E1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.border-gradient-rainbow {
-  border: 2px solid transparent;
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(90deg, #EA2E89 0%, #F6A623 25%, #76C043 50%, #27A9E1 75%, #663399 100%) border-box;
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F6A623 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Custom scrollbar */
@@ -120,7 +130,7 @@ svg {
 }
 
 /* Light theme specific styles */
-:root[data-theme="light"] body {
+:root[data-theme="light"] .site-background {
   background: linear-gradient(135deg, #FFFFFF 0%, #F5FAFF 100%);
 }
 
@@ -132,8 +142,15 @@ svg {
 
 /* Scroll indicator animation */
 @keyframes bounce-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 .animate-bounce-slow {
@@ -142,6 +159,7 @@ svg {
 
 /* Accessibility - Reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {

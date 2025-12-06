@@ -2,6 +2,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Header from '../components/Header'
 import Hero3D from '../components/Hero3D'
+
 import WhyChoose from '../components/WhyChoose'
 import QuickLinks from '../components/QuickLinks'
 import LatestNews from '../components/LatestNews'
@@ -44,6 +45,8 @@ export default function Home() {
       <main>
         {/* Hero: 14.40% with animated counter and CTAs */}
         <Hero3D />
+
+
 
         {/* Why Choose THECOS: 5 key value points with icons */}
         <WhyChoose />

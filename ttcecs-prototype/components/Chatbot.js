@@ -61,11 +61,7 @@ export default function Chatbot() {
     }
   }, [messages]);
 
-  // Auto-open
-  useEffect(() => {
-    const timer = setTimeout(() => setIsOpen(true), 2400);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   // Text-to-speech
   const speakText = (text) => {

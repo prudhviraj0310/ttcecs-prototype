@@ -12,10 +12,12 @@ module.exports = {
         'navy-800': '#0c2034',
         'electric': '#00d9ff',
         'muted': '#9fb0c8',
-        
+
         // THECOS Light theme brand colors
         brand: {
           teal: '#00303D',
+          navy: '#0A1929', // New deep navy
+          gold: '#D4AF37', // New premium gold
           pink: '#EA2E89',
           orange: '#F6A623',
           green: '#76C043',
@@ -29,8 +31,8 @@ module.exports = {
         sans: ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial']
       },
       backgroundImage: {
-        'gradient-rainbow': 'linear-gradient(90deg, #EA2E89 0%, #F6A623 25%, #76C043 50%, #27A9E1 75%, #663399 100%)',
-        'gradient-primary': 'linear-gradient(90deg, #27A9E1 0%, #76C043 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #00303D 0%, #27A9E1 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #D4AF37 0%, #F6A623 100%)',
         'gradient-accent': 'linear-gradient(90deg, #EA2E89 0%, #27A9E1 100%)'
       }
     }
