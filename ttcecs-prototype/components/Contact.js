@@ -14,10 +14,10 @@ export default function Contact() {
       setTheme(currentTheme);
     };
     getTheme();
-    
+
     const observer = new MutationObserver(getTheme);
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-    
+
     return () => observer.disconnect();
   }, []);
 
@@ -29,12 +29,20 @@ export default function Contact() {
 
   const branches = [
     {
-      name: 'Anna Nagar (Head Office)',
+      name: 'Anna Nagar',
       address: 'No:1735, 18th Main Rd, Anna Nagar West, Chennai, Tamil Nadu 600040',
       phone: '+91 91500 70312',
+      email: 'annanagar@thecos.com',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.2035789!3d13.0949008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e0f5e0f5e1%3A0x1f5e0f5e0f5e0f5e!2sAnna%20Nagar%20West%2C%20Chennai!5e0!3m2!1sen!2sin',
+      mapLink: 'https://maps.google.com/?q=13.0949008,80.2035789',
+    },
+    {
+      name: 'Arumbakkam (Head Office)',
+      address: 'No.10, TTCECS, 23rd St, Jai Nagar, Arumbakkam, Chennai, Tamil Nadu 600106',
+      phone: '+91 44 4551 0363',
       email: 'headoffice@thecos.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2!2d80.2089!3d13.0887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e0f5e0f5e1%3A0x1f5e0f5e0f5e0f5e!2sAnna%20Nagar%20West%2C%20Chennai!5e0!3m2!1sen!2sin!4v1234567890',
-      mapLink: 'https://maps.google.com/?q=13.0887,80.2089',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.587421!2d80.2100!3d13.0692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a0a0a0a0a0%3A0x0!2sThiruvalluvar+Transport+Corporation+Employees+Cooperative+Credit+Society!5e0!3m2!1sen!2sin',
+      mapLink: 'https://maps.google.com/?q=13.0692,80.2100',
     },
     {
       name: 'T Nagar',
@@ -43,14 +51,6 @@ export default function Contact() {
       email: 'tnagar@thecos.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8!2d80.2345!3d13.0418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526650e0f5e0f5%3A0x1f5e0f5e0f5e0f5e!2sT%20Nagar%2C%20Chennai!5e0!3m2!1sen!2sin!4v1234567890',
       mapLink: 'https://maps.google.com/?q=13.0418,80.2345',
-    },
-    {
-      name: 'Arumbakkam',
-      address: 'Arumbakkam Main Road, Arumbakkam, Chennai, Tamil Nadu 600106',
-      phone: '+91 44 2345 6789',
-      email: 'arumbakkam@thecos.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.5!2d80.2023!3d13.0692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e0f5e0f5e1%3A0x1f5e0f5e0f5e0f5e!2sArumbakkam%2C%20Chennai!5e0!3m2!1sen!2sin!4v1234567890',
-      mapLink: 'https://maps.google.com/?q=13.0692,80.2023',
     },
     {
       name: 'Kilambakkam',
@@ -97,8 +97,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass p-8 rounded-2xl"
+            className="glass p-8 rounded-2xl relative overflow-hidden"
           >
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF512F] via-[#00F260] to-[#0575E6]" />
             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" className="space-y-4">
               <div>
@@ -179,8 +180,9 @@ export default function Contact() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="glass p-8 rounded-2xl"
+            className="glass p-8 rounded-2xl relative overflow-hidden"
           >
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#8E2DE2] via-[#DD2476] to-[#FFD200]" />
             <h3 className="text-2xl font-bold mb-6">Our Branches</h3>
 
             {/* Branch selector */}
@@ -189,11 +191,10 @@ export default function Contact() {
                 <button
                   key={branch.name}
                   onClick={() => setSelectedBranch(index)}
-                  className={`p-3 rounded-lg text-sm font-semibold transition ${
-                    selectedBranch === index
-                      ? 'bg-brand-blue text-[#00121a]'
-                      : 'bg-white shadow-sm hover:bg-white/10'
-                  }`}
+                  className={`p-3 rounded-lg text-sm font-semibold transition ${selectedBranch === index
+                    ? 'bg-brand-blue text-[#00121a]'
+                    : 'bg-white shadow-sm hover:bg-white/10'
+                    }`}
                 >
                   {branch.name.split(' ')[0]}
                 </button>
@@ -289,10 +290,12 @@ export default function Contact() {
               key={branch.name}
               onClick={() => setSelectedBranch(index)}
               whileHover={{ scale: 1.02 }}
-              className={`glass p-4 rounded-xl text-left transition ${
-                selectedBranch === index ? 'ring-2 ring-electric' : ''
-              }`}
+              className={`glass p-4 rounded-xl text-left transition relative overflow-hidden glass-iridescent ${selectedBranch === index ? 'ring-2 ring-electric' : ''
+                }`}
             >
+              {selectedBranch === index && (
+                <div className="absolute inset-0 bg-gradient-to-r from-[#FF512F]/10 to-[#0575E6]/10 pointer-events-none" />
+              )}
               <div className="flex items-start gap-3">
                 <div className="w-10 h-10 rounded-full bg-brand-blue/10 flex items-center justify-center text-brand-blue flex-shrink-0">
                   📍

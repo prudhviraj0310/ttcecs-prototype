@@ -82,8 +82,8 @@ export default function FDCalculator() {
         {
           label: 'Total Value',
           data: totalData,
-          borderColor: '#00d9ff',
-          backgroundColor: 'rgba(0, 217, 255, 0.1)',
+          borderColor: '#FF512F', // Vibrant Red-Orange
+          backgroundColor: 'rgba(255, 81, 47, 0.1)',
           borderWidth: 3,
           fill: true,
           tension: 0.4,
@@ -177,7 +177,7 @@ export default function FDCalculator() {
                 step="500"
                 value={principal}
                 onChange={(e) => setPrincipal(Number(e.target.value))}
-                className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-electric"
+                className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-[#FF512F]"
               />
               <div className="flex justify-between text-xs text-muted mt-2">
                 <span>₹500</span>
@@ -198,7 +198,7 @@ export default function FDCalculator() {
                 step="1"
                 value={years}
                 onChange={(e) => setYears(Number(e.target.value))}
-                className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-electric"
+                className="w-full h-2 bg-navy-800 rounded-lg appearance-none cursor-pointer accent-[#00F260]"
               />
               <div className="flex justify-between text-xs text-muted mt-2">
                 <span>1 Year</span>
@@ -235,7 +235,7 @@ export default function FDCalculator() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-full bg-electric text-[#00121a] py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-electric/50 transition-shadow"
+              className="w-full bg-gradient-to-r from-[#FF512F] to-[#DD2476] text-white py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-orange-500/50 transition-shadow"
             >
               Open Fixed Deposit Account
             </motion.button>
@@ -253,7 +253,7 @@ export default function FDCalculator() {
             <div className="h-[350px]">
               <Line data={generateChartData()} options={chartOptions} />
             </div>
-            
+
             {/* Growth Stats */}
             <div className="grid grid-cols-3 gap-4 mt-6 pt-6 border-t border-white/10">
               <div className="text-center">

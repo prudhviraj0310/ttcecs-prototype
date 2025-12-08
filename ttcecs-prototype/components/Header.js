@@ -43,7 +43,8 @@ export default function Header() {
           : isDark
             ? 'bg-[#071428]/80 backdrop-blur-sm'
             : 'bg-white/80 backdrop-blur-sm'
-          }`}
+          } border-b-2 border-transparent`}
+        style={{ borderBottomImage: 'linear-gradient(90deg, #FF512F, #DD2476, #00F260, #0575E6, #8E2DE2) 1' }}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
           {/* Logo */}

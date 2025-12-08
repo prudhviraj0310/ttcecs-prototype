@@ -174,3 +174,46 @@ svg {
   outline: 2px solid var(--electric);
   outline-offset: 2px;
 }
+
+/* Rainbow Reflection Effect */
+.glass-iridescent {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-iridescent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(135deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.1) 25%,
+      rgba(255, 81, 47, 0.1) 40%,
+      rgba(0, 242, 96, 0.1) 50%,
+      rgba(5, 117, 230, 0.1) 60%,
+      rgba(255, 255, 255, 0.1) 75%,
+      transparent 100%);
+  transform: skewX(-25deg);
+  animation: shine 6s infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+
+  20% {
+    left: 200%;
+    opacity: 1;
+  }
+
+  100% {
+    left: 200%;
+    opacity: 0;
+  }
+}

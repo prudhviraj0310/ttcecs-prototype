@@ -10,11 +10,11 @@ const organizations = [
     icon: '🏥',
     tagline: '24×7 Multispeciality Care',
     frontDescription: 'Accessible, ethical, and patient-centred medical care',
-    backDescription: 'Comprehensive healthcare facility offering modern treatment, diagnostics, and wellness programs for THECOS members and families.',
+    backDescription: 'Comprehensive healthcare facility offering modern treatment, diagnostics, and wellness programs for Thecos members and families.',
     services: ['24/7 Emergency Care', 'Specialized Departments', 'Diagnostic Lab', 'Preventive Health Checkups'],
     ctaText: 'Book Appointment',
     ctaLink: '/subsidiaries',
-    gradient: 'from-red-500 to-pink-600'
+    gradient: 'from-[#FF512F] to-[#DD2476]' // Vibrant Red-Pink
   },
   {
     id: 'oblong',
@@ -26,7 +26,7 @@ const organizations = [
     services: ['Property Consultation', 'Legal Documentation', 'Home Loans Assistance', 'Site Verification'],
     ctaText: 'View Properties',
     ctaLink: '/subsidiaries',
-    gradient: 'from-green-500 to-teal-600'
+    gradient: 'from-[#00F260] to-[#0575E6]' // Vibrant Green-Blue
   },
   {
     id: 'vidhyashram',
@@ -38,7 +38,7 @@ const organizations = [
     services: ['CBSE Curriculum', 'Smart Classrooms', 'Sports & Arts', 'Scholarships for Members'],
     ctaText: 'Admissions Inquiry',
     ctaLink: '/subsidiaries',
-    gradient: 'from-blue-500 to-indigo-600'
+    gradient: 'from-[#4CB8C4] to-[#3CD3AD]' // Vibrant Teal-Aqua
   },
   {
     id: 'zajasol',
@@ -50,7 +50,7 @@ const organizations = [
     services: ['Recruitment Services', 'Manpower Planning', 'Payroll Coordination', 'Compliance Support'],
     ctaText: 'Learn More',
     ctaLink: '/subsidiaries',
-    gradient: 'from-purple-500 to-indigo-500'
+    gradient: 'from-[#8E2DE2] to-[#4A00E0]' // Vibrant Purple
   },
 ];
 

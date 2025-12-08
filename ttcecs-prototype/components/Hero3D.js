@@ -73,24 +73,26 @@ export default function Hero3D() {
         transition={{ duration: 0.8 }}
         className="relative z-10"
       >
-        <div className={`${isDark ? 'bg-[#0a1628] border-white/5' : 'bg-white border-gray-100'} border rounded-2xl px-12 py-10 shadow-2xl`}>
-          <p className={`uppercase tracking-widest text-xs font-bold mb-4 ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
-            ANNUAL RETURNS
-          </p>
-          {showCounter && (
-            <motion.h1
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              transition={{ type: 'spring', stiffness: 100 }}
-              className={`text-7xl md:text-9xl font-black tracking-tighter ${isDark ? 'text-white' : 'text-brand-teal'}`}
-            >
-              <CountUp start={0} end={14.40} duration={2.5} decimals={2} suffix="%" />
-            </motion.h1>
-          )}
-          <div className={`h-1 w-24 mx-auto mt-6 mb-4 rounded-full bg-gradient-gold`} />
-          <p className={`text-lg font-medium ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
-            Industry Leading Fixed Deposit Rates
-          </p>
+        <div className="p-[2px] rounded-2xl bg-gradient-to-r from-[#FF512F] via-[#00F260] to-[#0575E6] glass-iridescent">
+          <div className={`${isDark ? 'bg-[#0a1628]' : 'bg-white'} rounded-2xl px-12 py-10 shadow-2xl relative z-10`}>
+            <p className={`uppercase tracking-widest text-xs font-bold mb-4 ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
+              ANNUAL RETURNS
+            </p>
+            {showCounter && (
+              <motion.h1
+                initial={{ scale: 0.9 }}
+                animate={{ scale: 1 }}
+                transition={{ type: 'spring', stiffness: 100 }}
+                className={`text-7xl md:text-9xl font-black tracking-tighter ${isDark ? 'text-white' : 'text-brand-teal'}`}
+              >
+                <CountUp start={0} end={14.4} duration={2.5} decimals={1} suffix="%" />
+              </motion.h1>
+            )}
+            <div className={`h-1 w-24 mx-auto mt-6 mb-4 rounded-full bg-gradient-gold`} />
+            <p className={`text-lg font-medium ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
+              Industry Leading Fixed Deposit Rates
+            </p>
+          </div>
         </div>
       </motion.div>
 
@@ -99,7 +101,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="mt-16 text-4xl md:text-6xl font-black text-gradient-primary tracking-tight"
+        className="mt-16 text-4xl md:text-6xl font-black text-gradient-primary tracking-tight py-2 leading-relaxed"
       >
         Empowering Members Since 1991
       </motion.h2>
