@@ -125,12 +125,12 @@ export default function About() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Why TTCECS?</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { title: 'Strong Legacy', desc: 'Serving members with trust since 1991' },
-                { title: 'Transparent Governance', desc: 'Accountable and member-driven operations' },
-                { title: 'Financial Discipline', desc: 'Safe operations backed by strong management' },
-                { title: 'Member-Friendly', desc: 'Fast and accessible financial services' },
-                { title: 'Community Welfare', desc: 'Commitment to employee wellbeing' },
-                { title: 'Modern Access', desc: 'Digital tools for easy transactions' }
+                { icon: '🏛️', title: 'Strong Legacy', desc: 'Serving members with trust since 1991' },
+                { icon: '⚖️', title: 'Transparent Governance', desc: 'Accountable and member-driven operations' },
+                { icon: '🛡️', title: 'Financial Discipline', desc: 'Safe operations backed by strong management' },
+                { icon: '🤝', title: 'Member-Friendly', desc: 'Fast and accessible financial services' },
+                { icon: '🤲', title: 'Community Welfare', desc: 'Commitment to employee wellbeing' },
+                { icon: '💻', title: 'Modern Access', desc: 'Digital tools for easy transactions' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
@@ -140,6 +140,7 @@ export default function About() {
                   transition={{ delay: idx * 0.1 }}
                   className="bg-white dark:bg-[#0f1f3a] rounded-2xl shadow-lg p-8 text-center border-b-4 border-[#27A9E1]"
                 >
+                  <div className="text-5xl mb-4">{item.icon}</div>
                   <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{item.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300">{item.desc}</p>
                 </motion.div>

@@ -40,7 +40,7 @@ export default function Loans() {
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
-                  icon: '',
+                  icon: '🤝',
                   title: 'Surety Loan',
                   rate: '6.99%',
                   desc: 'Salary-based loan requiring 2 employee sureties',
@@ -54,14 +54,14 @@ export default function Loans() {
                   features: ['No labor/wastage charges', 'Affordable interest', 'Quick processing']
                 },
                 {
-                  icon: '',
+                  icon: '🛍️',
                   title: 'Consumer Loan',
                   rate: '6.99%',
                   desc: 'For household goods and appliances',
                   features: ['Up to ₹1,00,000', 'Flexible tenure', 'Simple documentation']
                 },
                 {
-                  icon: '',
+                  icon: '💍',
                   title: 'Marriage Advance',
                   rate: 'Interest Free',
                   desc: 'For child\'s marriage expenses',
@@ -104,9 +104,9 @@ export default function Loans() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">Loan Features & Benefits</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { icon: '', title: 'Low Interest', desc: 'Just 6.99% flat per annum' },
-                { icon: '', title: 'Easy Repayment', desc: 'EMI via salary deduction or mandate' },
-                { icon: '', title: 'Transparent Process', desc: 'No hidden fees or charges' },
+                { icon: '📉', title: 'Low Interest', desc: 'Just 6.99% flat per annum' },
+                { icon: '🗓️', title: 'Easy Repayment', desc: 'EMI via salary deduction or mandate' },
+                { icon: '🔍', title: 'Transparent Process', desc: 'No hidden fees or charges' },
                 { icon: '🤝', title: 'Support Available', desc: 'Documentation assistance provided' }
               ].map((item, idx) => (
                 <motion.div
@@ -138,12 +138,12 @@ export default function Loans() {
               <h2 className="text-4xl font-black mb-8 text-gray-900 dark:text-white">Loan Terms & Conditions</h2>
               <div className="space-y-6">
                 {[
-                  { icon: '', title: 'Minimum Tenure', desc: '24 months repayment period (varies for FD-backed loans)' },
-                  { icon: '', title: 'FD Loan Rule', desc: 'FD cannot be withdrawn until full loan repayment' },
-                  { icon: '', title: 'EMI Due Date', desc: '5th of every month' },
+                  { icon: '⏳', title: 'Minimum Tenure', desc: '24 months repayment period (varies for FD-backed loans)' },
+                  { icon: '🔒', title: 'FD Loan Rule', desc: 'FD cannot be withdrawn until full loan repayment' },
+                  { icon: '📅', title: 'EMI Due Date', desc: '5th of every month' },
                   { icon: '⚠️', title: 'Late Payment Penalty', desc: '4% penalty on overdue EMI amount' },
-                  { icon: '', title: 'Surety Required', desc: 'Surety/nominee required for all loan types' },
-                  { icon: '', title: 'Large Loans', desc: 'Loans above ₹5 lakh require 2 sureties' }
+                  { icon: '👥', title: 'Surety Required', desc: 'Surety/nominee required for all loan types' },
+                  { icon: '🏦', title: 'Large Loans', desc: 'Loans above ₹5 lakh require 2 sureties' }
                 ].map((item, idx) => (
                   <motion.div
                     key={idx}
@@ -223,10 +223,10 @@ export default function Loans() {
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">How to Apply — Simple Steps</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {[
-                { step: '01', icon: '', title: 'Download Form', desc: 'Get loan application form' },
-                { step: '02', icon: '', title: 'Attach Documents', desc: 'Collect required papers' },
-                { step: '03', icon: '', title: 'Submit Application', desc: 'At branch or online portal' },
-                { step: '04', icon: '', title: 'Get Approval', desc: 'Disbursement after approval' }
+                { step: '01', icon: '📝', title: 'Download Form', desc: 'Get loan application form' },
+                { step: '02', icon: '📎', title: 'Attach Documents', desc: 'Collect required papers' },
+                { step: '03', icon: '🏦', title: 'Submit Application', desc: 'At branch or online portal' },
+                { step: '04', icon: '✅', title: 'Get Approval', desc: 'Disbursement after approval' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
