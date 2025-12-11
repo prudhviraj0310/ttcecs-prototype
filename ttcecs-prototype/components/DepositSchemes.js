@@ -257,8 +257,8 @@ export default function DepositSchemes() {
           className="mt-12 glass p-6 rounded-xl text-center"
         >
           <p className="text-sm text-muted">
-            All schemes offer 14.40% annual returns with quarterly compounding.
-            <span className="text-electric font-semibold"> FD from ₹500 | RD from ₹100/month | Loan facility available | Premature withdrawal allowed</span>
+            Avail the Maximum Rate of Interest up to 14.40% with various schemes.
+            <span className="text-electric font-semibold"> Start with as low as ₹500/month for RD or ₹20,000 for FD.</span>
           </p>
         </motion.div>
       </div>

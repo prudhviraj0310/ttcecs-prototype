@@ -7,39 +7,35 @@ export default function News() {
   const newsItems = [
     {
       id: 1,
-      category: 'Election',
-      title: 'Board of Directors Election 2024 - Nomination Open',
-      date: '20 November 2024',
-      excerpt: 'Nominations are now open for the 2024 Board of Directors election. Members interested in serving can submit their nomination forms by December 5, 2024.',
-      icon: '',
-      color: 'from-blue-500 to-cyan-500'
+      category: 'Annual Report',
+      title: 'FY 2024-25 Annual Report Published',
+      excerpt: 'THECOS annual report for fiscal year 2024-25 is now available. The society achieved record growth with ₹550+ crore in total assets and maintained strong financial health.',
+      icon: '📊',
+      color: 'from-blue-500 to-indigo-600'
     },
     {
       id: 2,
-      category: 'Annual Report',
-      title: 'FY 2023-24 Annual Report Published',
-      date: '15 November 2024',
-      excerpt: 'THECOS annual report for fiscal year 2023-24 is now available. The society achieved record growth with ₹500+ crore in total assets and maintained strong financial health.',
-      icon: '',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 3,
       category: 'Policy Update',
       title: 'Enhanced Interest Rates on Fixed Deposits',
-      date: '1 November 2024',
       excerpt: 'New FD interest rates effective from November 1, 2024. Premium plans now offering up to 14.40% per annum. Existing members can opt for renewal at revised rates.',
       icon: '',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      id: 4,
+      id: 3,
       category: 'AGM Notice',
       title: 'Annual General Meeting - December 2024',
-      date: '25 October 2024',
-      excerpt: 'The 33rd Annual General Meeting will be held on December 28, 2024, at 10:00 AM at the Head Office, Anna Nagar. All members are requested to attend.',
+      excerpt: 'The 33rd Annual General Meeting will be held on December 28, 2024, at 10:00 AM at Amma Arangam. All members are requested to attend.',
       icon: '',
       color: 'from-red-500 to-orange-500'
+    },
+    {
+      id: 4,
+      category: 'Annual Report',
+      title: 'FY 2023-24 Annual Report Published',
+      excerpt: 'THECOS annual report for fiscal year 2023-24 is now available. The society achieved record growth with ₹500+ crore in total assets and maintained strong financial health.',
+      icon: '',
+      color: 'from-green-500 to-emerald-500'
     },
     {
       id: 5,
@@ -122,7 +118,7 @@ export default function News() {
                   <span className="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold">
                     {newsItems[0].category}
                   </span>
-                  <span className="text-white/80 text-sm">{newsItems[0].date}</span>
+
                 </div>
                 <div className="flex items-start gap-6">
                   <div className="text-7xl">{newsItems[0].icon}</div>
@@ -157,7 +153,7 @@ export default function News() {
                     </div>
                   </div>
                   <div className="p-6">
-                    <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">{news.date}</div>
+
                     <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-[#27A9E1] transition-colors">
                       {news.title}
                     </h3>
@@ -187,20 +183,35 @@ export default function News() {
               <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
                 Subscribe to our newsletter to receive the latest news, announcements, and updates directly in your inbox
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const email = e.target.email.value;
+                  const message = `*Newsletter Subscription Request*
+                  
+I would like to subscribe to the THECOS newsletter.
+*Email:* ${email}`;
+                  const whatsappUrl = `https://wa.me/919150070311?text=${encodeURIComponent(message)}`;
+                  window.open(whatsappUrl, '_blank');
+                }}
+                className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+              >
                 <input
+                  name="email"
                   type="email"
+                  required
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 rounded-xl border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-[#1a2942] text-gray-900 dark:text-white focus:outline-none focus:border-[#27A9E1] transition-colors"
                 />
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  type="submit"
                   className="px-8 py-4 bg-gradient-to-r from-[#EA2E89] to-[#27A9E1] text-white rounded-xl font-bold shadow-lg hover:shadow-xl transition-all"
                 >
                   Subscribe
                 </motion.button>
-              </div>
+              </form>
             </motion.div>
           </div>
         </section>

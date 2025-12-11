@@ -11,21 +11,21 @@ export default function ContactPage() {
       address: 'No. 1735, 18th Main Road, Anna Nagar West, Chennai – 600040',
       phone: '+91 90259 47007',
       icon: '',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.368662809545!2d80.20637731482264!3d13.087636390776892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2s18th%20Main%20Rd%2C%20Anna%20Nagar%20West%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.0699391944945!2d80.19675807507855!3d13.094753987232052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA1JzQxLjEiTiA4MMKwMTEnNTcuNiJF!5e0!3m2!1sen!2sin!4v1765471911233!5m2!1sen!2sin'
     },
     {
       name: 'T. Nagar',
       address: 'T. Nagar Branch, Chennai',
       phone: '+91 63834 02323',
       icon: '🏪',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.196812345678!2d80.23412341482156!3d13.041234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2sT.%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.869698152985!2d80.23105207507771!3d13.043964987278047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAyJzM4LjMiTiA4MMKwMTEnMDEuMSJF!5e0!3m2!1sen!2sin!4v1765471845178!5m2!1sen!2sin'
     },
     {
       name: 'Kilambakkam',
       address: 'Kilambakkam Branch, Chennai',
       phone: '+91 99404 09355',
       icon: '🏪',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.5678901234567!2d80.0567890148!3d12.812345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2sKilambakkam%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3889.6586374806798!2d80.07248307507464!3d12.86531098744034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUxJzU1LjEiTiA4MMKwMDQnMzAuMiJF!5e0!3m2!1sen!2sin!4v1765471687956!5m2!1sen!2sin'
     },
     {
       name: 'Nagercoil',
@@ -39,14 +39,14 @@ export default function ContactPage() {
       address: 'Coimbatore Branch, Tamil Nadu',
       phone: '+91 87787 95546',
       icon: '🏪',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.123456789012!2d76.95678901478!3d11.012345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8581e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3917.125174983033!2d76.78677707504444!3d10.953915989205871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDU3JzE0LjEiTiA3NsKwNDcnMjEuNyJF!5e0!3m2!1sen!2sin!4v1765471885600!5m2!1sen!2sin'
     },
     {
       name: 'Nanganallur',
       address: 'Nanganallur Branch, Chennai',
       phone: '+91 91500 70313',
       icon: '🏪',
-      mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.123456789012!2d80.18765431481!3d13.001234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526e1ef8e0f8d%3A0x7f9f8e0c1e8c1e8c!2sNanganallur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1732451234567!5m2!1sen!2sin'
+      mapUrl: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.779239801558!2d80.18582507507668!3d12.985966987330725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU5JzA5LjUiTiA4MMKwMTEnMTguMiJF!5e0!3m2!1sen!2sin!4v1765471808904!5m2!1sen!2sin'
     }
   ]
 

@@ -34,7 +34,7 @@ export default function Contact() {
       address: 'No:1735, 18th Main Rd, Anna Nagar West, Chennai, Tamil Nadu 600040',
       phone: '+91 90259 47007',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.199333!3d13.094754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna%20Nagar!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.0699391944945!2d80.19675807507855!3d13.094753987232052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDA1JzQxLjEiTiA4MMKwMTEnNTcuNiJF!5e0!3m2!1sen!2sin!4v1765471911233!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=13.094754,80.199333',
     },
     {
@@ -43,7 +43,7 @@ export default function Contact() {
       address: 'Nanganallur, Chennai, Tamil Nadu 600061',
       phone: '+91 91500 70313',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.828472!2d80.188400!3d12.985967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNanganallur!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.779239801558!2d80.18582507507668!3d12.985966987330725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU5JzA5LjUiTiA4MMKwMTEnMTguMiJF!5e0!3m2!1sen!2sin!4v1765471808904!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=12.985967,80.188400',
     },
     {
@@ -52,7 +52,7 @@ export default function Contact() {
       address: 'B.O Old No.25, New No.14, Coats Road, T Nagar, Chennai – 600017',
       phone: '+91 63834 02323',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8!2d80.233627!3d13.043965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sT%20Nagar!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3886.869698152985!2d80.23105207507771!3d13.043964987278047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAyJzM4LjMiTiA4MMKwMTEnMDEuMSJF!5e0!3m2!1sen!2sin!4v1765471845178!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=13.043965,80.233627',
     },
     {
@@ -61,7 +61,7 @@ export default function Contact() {
       address: 'B.O No.114, GST Road, Urapakkam, Chengalpattu - 603210',
       phone: '+91 99404 09335',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2!2d80.075058!3d12.865311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKilambakkam!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3889.6586374806798!2d80.07248307507464!3d12.86531098744034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDUxJzU1LjEiTiA4MMKwMDQnMzAuMiJF!5e0!3m2!1sen!2sin!4v1765471687956!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=12.865311,80.075058',
     },
     {
@@ -70,7 +70,7 @@ export default function Contact() {
       address: 'B.O No: 29, 1st floor, Gokulam complex, Siruvani Main Road, Alanthurai - 641101',
       phone: '+91 87787 95546',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3!2d76.789352!3d10.953916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCoimbatore!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3917.125174983033!2d76.78677707504444!3d10.953915989205871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTDCsDU3JzE0LjEiTiA3NsKwNDcnMjEuNyJF!5e0!3m2!1sen!2sin!4v1765471885600!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=10.953916,76.789352',
     },
     {

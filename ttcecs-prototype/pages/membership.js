@@ -103,12 +103,11 @@ export default function Membership() {
         <section className="py-16 px-6">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-black mb-12 text-center text-gray-900 dark:text-white">How to Join — Simple Steps</h2>
-            <div className="grid md:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
-                { step: '01', icon: '📝', title: 'Fill Form', desc: 'Download and complete the membership application form' },
-                { step: '02', icon: '📂', title: 'Submit Documents', desc: 'Employee ID, salary slip, Aadhar Card, PAN, SETC proof' },
-                { step: '03', icon: '💰', title: 'Pay Share Capital', desc: 'Make the membership fee payment (if applicable)' },
-                { step: '04', icon: '💳', title: 'Get Member Card', desc: 'Receive your Smart Card / QR Card for account access' }
+                { step: '01', icon: '📞', title: 'Contact nearest Branch', desc: 'Visit or call any of our branches to start' },
+                { step: '02', icon: '📂', title: 'Submit Documents', desc: 'Submit Aadhar Card and PAN Card' },
+                { step: '03', icon: '✅', title: 'Avail Services', desc: 'Avail any one of the services given by the society' }
               ].map((item, idx) => (
                 <motion.div
                   key={idx}
