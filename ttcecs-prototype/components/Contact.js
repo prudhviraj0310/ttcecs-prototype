@@ -34,7 +34,7 @@ export default function Contact() {
       address: 'No:1735, 18th Main Rd, Anna Nagar West, Chennai, Tamil Nadu 600040',
       phone: '+91 90259 47007',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.199333!3d13.094754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5264024c084a49%3A0x88989f660f772739!2s1735%2C%2018th%20Main%20Rd%2C%20Vasantham%20Colony%2C%20Anna%20Nagar%20West%2C%20Anna%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1709214744743!5m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.199333!3d13.094754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna%20Nagar!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=13.094754,80.199333',
     },
     {
@@ -43,7 +43,7 @@ export default function Contact() {
       address: 'Nanganallur, Chennai, Tamil Nadu 600061',
       phone: '+91 91500 70313',
       email: 'itsupport@ttcecs.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.828472!2d80.1884!3d12.985967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNanganallur!5e0!3m2!1sen!2sin',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.828472!2d80.188400!3d12.985967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNanganallur!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=12.985967,80.188400',
     },
     {

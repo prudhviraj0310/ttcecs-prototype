@@ -47,7 +47,7 @@ export default function Hero3D() {
   return (
     <section
       id="home"
-      className={`relative min-h-[90vh] flex flex-col justify-center items-center text-center overflow-hidden px-6 pt-32`}
+      className={`relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden px-6 pt-28 md:pt-32`}
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 -z-20">
@@ -101,7 +101,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.3 }}
-        className="mt-16 text-4xl md:text-6xl font-black text-gradient-primary tracking-tight py-2 leading-relaxed"
+        className="mt-10 md:mt-16 text-4xl md:text-6xl font-black text-gradient-primary tracking-tight py-2 leading-relaxed relative z-10"
       >
         Empowering Members Since 1991
       </motion.h2>
@@ -111,7 +111,7 @@ export default function Hero3D() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className={`mt-6 text-lg md:text-xl max-w-3xl leading-relaxed ${isDark ? 'text-muted' : 'text-brand-gray'}`}
+        className={`mt-6 text-lg md:text-xl max-w-3xl leading-relaxed ${isDark ? 'text-muted' : 'text-brand-gray'} relative z-10`}
       >
         Thiruvalluvar Transport Corporation Employees' Co-operative Credit Society Ltd. — <br className="hidden md:block" />
         Secure Savings, Low-Interest Loans & Financial Growth.
@@ -122,7 +122,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.7 }}
-        className="mt-12 flex flex-col sm:flex-row gap-4"
+        className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-4 relative z-10"
       >
         {/* Primary button with gradient */}
         <motion.a
@@ -160,7 +160,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="mt-16 flex items-center gap-8 flex-wrap justify-center opacity-80"
+        className="mt-10 md:mt-16 flex items-center gap-8 flex-wrap justify-center opacity-80 relative z-10 pb-10"
       >
         <div className="flex flex-col items-center">
           <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>7,000+</span>
