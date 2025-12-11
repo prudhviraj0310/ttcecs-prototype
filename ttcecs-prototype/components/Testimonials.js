@@ -124,7 +124,7 @@ export default function Testimonials() {
           className="text-center mt-12"
         >
           <p className={`text-lg mb-6 ${isDark ? 'text-muted' : 'text-brand-gray'}`}>
-            Join 125,000+ satisfied members today
+            Join 7,000+ satisfied members today
           </p>
           <motion.a
             href="/membership"

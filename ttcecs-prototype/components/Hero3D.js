@@ -163,7 +163,7 @@ export default function Hero3D() {
         className="mt-16 flex items-center gap-8 flex-wrap justify-center opacity-80"
       >
         <div className="flex flex-col items-center">
-          <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>125,000+</span>
+          <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>7,000+</span>
           <span className={`text-xs uppercase tracking-wider ${isDark ? 'text-muted' : 'text-brand-gray'}`}>Members</span>
         </div>
         <div className={`h-8 w-[1px] ${isDark ? 'bg-white/10' : 'bg-black/10'}`} />

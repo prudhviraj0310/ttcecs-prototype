@@ -2,10 +2,14 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
+
+const ElectionNotification = dynamic(() => import('./ElectionNotification'), { ssr: false });
 
 export default function Header() {
   const [shrink, setShrink] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showElectionModal, setShowElectionModal] = useState(false);
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
 
@@ -155,14 +159,14 @@ export default function Header() {
             </motion.button>
 
             {/* CTA Button with gradient */}
-            <motion.a
-              href="/membership"
+            <motion.button
+              onClick={() => setShowElectionModal(true)}
               whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(0, 48, 61, 0.2)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-2.5 rounded-lg font-bold text-white shadow-md bg-gradient-primary"
+              className="px-6 py-2.5 rounded-lg font-bold text-white shadow-md bg-gradient-to-r from-red-600 to-orange-600 animate-pulse"
             >
-              Become a Member
-            </motion.a>
+              Election Notification 2025
+            </motion.button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -277,17 +281,22 @@ export default function Header() {
             >
               Downloads
             </a>
-            <a
-              href="/membership"
-              onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 px-6 py-3 rounded-lg font-bold text-white text-center shadow-lg"
-              style={{ background: 'linear-gradient(90deg, #EA2E89 0%, #27A9E1 100%)' }}
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                setShowElectionModal(true);
+              }}
+              className="mt-4 px-6 py-3 rounded-lg font-bold text-white text-center shadow-lg w-full"
+              style={{ background: 'linear-gradient(90deg, #DC2626 0%, #EA580C 100%)' }}
             >
-              Become a Member
-            </a>
+              Election Notification 2025
+            </button>
           </nav>
         </div>
       </motion.div>
+
+      {/* Election Notification Modal */}
+      <ElectionNotification isOpen={showElectionModal} onClose={() => setShowElectionModal(false)} />
     </>
   );
 }
