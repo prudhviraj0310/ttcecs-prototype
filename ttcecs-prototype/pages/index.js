@@ -5,7 +5,6 @@ import Hero3D from '../components/Hero3D'
 
 import WhyChoose from '../components/WhyChoose'
 import QuickLinks from '../components/QuickLinks'
-import LatestNews from '../components/LatestNews'
 import DepositSchemes from '../components/DepositSchemes'
 import FDCalculator from '../components/FDCalculator'
 import Testimonials from '../components/Testimonials'
@@ -54,8 +53,6 @@ export default function Home() {
         {/* Quick Links: 6 card navigation to main sections */}
         <QuickLinks />
 
-        {/* Latest News: Carousel with recent announcements */}
-        <LatestNews />
 
         {/* Deposit Schemes: Carousel with all FD/RD plans */}
         <DepositSchemes />

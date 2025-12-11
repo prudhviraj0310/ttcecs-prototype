@@ -159,7 +159,7 @@ export default function Resources() {
         >
           <div className="flex items-center gap-4">
             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center text-4xl shadow-2xl animate-pulse">
-              
+
             </div>
             <div>
               <h3 className="text-xl font-bold mb-1">ISO 9001:2015 Certified</h3>
@@ -184,8 +184,8 @@ export default function Resources() {
           className="text-center text-sm text-muted mt-8"
         >
           Need assistance? Contact our support team at{' '}
-          <a href="mailto:support@thecos.com" className="text-electric hover:underline">
-            support@thecos.com
+          <a href="mailto:itsupport@ttcecs.com" className="text-electric hover:underline">
+            itsupport@ttcecs.com
           </a>{' '}
           or call{' '}
           <a href="tel:+914412345678" className="text-electric hover:underline">

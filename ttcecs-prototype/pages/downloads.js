@@ -204,8 +204,8 @@ export default function Downloads() {
               <a href="tel:+919025947007" className={`flex items-center gap-2 font-bold ${isDark ? 'text-brand-blue' : 'text-brand-blue'}`}>
                 <span>📞</span> +91 90259 47007
               </a>
-              <a href="mailto:support@thecos.com" className={`flex items-center gap-2 font-bold ${isDark ? 'text-brand-blue' : 'text-brand-blue'}`}>
-                <span>✉️</span> support@thecos.com
+              <a href="mailto:itsupport@ttcecs.com" className={`flex items-center gap-2 font-bold ${isDark ? 'text-brand-blue' : 'text-brand-blue'}`}>
+                <span>✉️</span> itsupport@ttcecs.com
               </a>
             </div>
           </motion.div>

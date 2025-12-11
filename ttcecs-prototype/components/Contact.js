@@ -30,49 +30,55 @@ export default function Contact() {
   const branches = [
     {
       name: 'Anna Nagar',
+      shortName: 'Anna Nagar',
       address: 'No:1735, 18th Main Rd, Anna Nagar West, Chennai, Tamil Nadu 600040',
-      phone: '+91 91500 70312',
-      email: 'annanagar@thecos.com',
-      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.199333!3d13.094754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna%20Nagar!5e0!3m2!1sen!2sin',
+      phone: '+91 90259 47007',
+      email: 'itsupport@ttcecs.com',
+      mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.096753046274!2d80.199333!3d13.094754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5264024c084a49%3A0x88989f660f772739!2s1735%2C%2018th%20Main%20Rd%2C%20Vasantham%20Colony%2C%20Anna%20Nagar%20West%2C%20Anna%20Nagar%2C%20Chennai%2C%20Tamil%20Nadu%20600040!5e0!3m2!1sen!2sin!4v1709214744743!5m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=13.094754,80.199333',
     },
     {
       name: 'Nanganallur',
+      shortName: 'Nanganallur',
       address: 'Nanganallur, Chennai, Tamil Nadu 600061',
       phone: '+91 91500 70313',
-      email: 'nanganallur@thecos.com',
+      email: 'itsupport@ttcecs.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.828472!2d80.1884!3d12.985967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sNanganallur!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=12.985967,80.188400',
     },
     {
       name: 'T Nagar',
-      address: 'T Nagar Main Road, T Nagar, Chennai, Tamil Nadu 600017',
-      phone: '+91 44 2434 5678',
-      email: 'tnagar@thecos.com',
+      shortName: 'T. Nagar',
+      address: 'B.O Old No.25, New No.14, Coats Road, T Nagar, Chennai – 600017',
+      phone: '+91 63834 02323',
+      email: 'itsupport@ttcecs.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8!2d80.233627!3d13.043965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sT%20Nagar!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=13.043965,80.233627',
     },
     {
       name: 'Kilambakkam',
-      address: 'Kilambakkam Main Road, Kilambakkam, Chennai, Tamil Nadu 603103',
-      phone: '+91 44 4567 8901',
-      email: 'kilambakkam@thecos.com',
+      shortName: 'Kilambakkam',
+      address: 'B.O No.114, GST Road, Urapakkam, Chengalpattu - 603210',
+      phone: '+91 99404 09335',
+      email: 'itsupport@ttcecs.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.2!2d80.075058!3d12.865311!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKilambakkam!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=12.865311,80.075058',
     },
     {
       name: 'Coimbatore',
-      address: 'RS Puram, Coimbatore, Tamil Nadu 641002',
-      phone: '+91 422 123 4567',
-      email: 'coimbatore@thecos.com',
+      shortName: 'Coimbatore',
+      address: 'B.O No: 29, 1st floor, Gokulam complex, Siruvani Main Road, Alanthurai - 641101',
+      phone: '+91 87787 95546',
+      email: 'itsupport@ttcecs.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.3!2d76.789352!3d10.953916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sCoimbatore!5e0!3m2!1sen!2sin',
       mapLink: 'https://maps.google.com/?q=10.953916,76.789352',
     },
     {
       name: 'Nagercoil',
-      address: 'Vadasery, Nagercoil, Tamil Nadu 629001',
-      phone: '+91 4652 123 456',
-      email: 'nagercoil@thecos.com',
+      shortName: 'Nagercoil',
+      address: '2nd Floor, Centree Tower, Dennison Road, Near Vasantham Hospital, Nagercoil - 1',
+      phone: '+91 87547 61657',
+      email: 'itsupport@ttcecs.com',
       mapEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.8!2d77.4324!3d8.1790!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b04ed0f5e0f5e0f%3A0x1f5e0f5e0f5e0f5e!2sNagercoil%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890',
       mapLink: 'https://maps.google.com/?q=8.1790,77.4324',
     },
@@ -101,7 +107,22 @@ export default function Contact() {
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF512F] via-[#00F260] to-[#0575E6]" />
             <h3 className="text-2xl font-bold mb-6">Send us a Message</h3>
-            <form action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST" className="space-y-4">
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              const data = Object.fromEntries(formData);
+              const message = `*New Inquiry from Website*
+              
+*Name:* ${data.name}
+*Email:* ${data._replyto}
+*Phone:* ${data.phone}
+
+*Message:*
+${data.message}`;
+
+              const whatsappUrl = `https://wa.me/919150070311?text=${encodeURIComponent(message)}`;
+              window.open(whatsappUrl, '_blank');
+            }} className="space-y-4">
               <div>
                 <label className={`block text-sm font-semibold mb-2 ${textColor}`}>Full Name *</label>
                 <input
@@ -196,7 +217,7 @@ export default function Contact() {
                     : 'bg-white shadow-sm hover:bg-white/10'
                     }`}
                 >
-                  {branch.name.split(' ')[0]}
+                  {branch.shortName || branch.name.split(' ')[0]}
                 </button>
               ))}
             </div>
@@ -267,16 +288,12 @@ export default function Contact() {
               <h4 className="font-semibold mb-3">Branch Timings</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted">Monday - Friday:</span>
-                  <span className="font-semibold">9:00 AM - 5:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-muted">Saturday:</span>
-                  <span className="font-semibold">9:00 AM - 1:00 PM</span>
+                  <span className="text-muted">Monday - Saturday:</span>
+                  <span className="font-semibold">9:00 AM - 6:30 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted">Sunday:</span>
-                  <span className="text-red-400">Closed</span>
+                  <span className="font-semibold">9:00 AM - 5:00 PM</span>
                 </div>
               </div>
             </div>

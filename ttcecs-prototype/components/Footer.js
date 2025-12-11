@@ -4,7 +4,7 @@ export default function Footer() {
   const branches = [
     { name: 'Anna Nagar', phone: '+91 90259 47007' },
     { name: 'T. Nagar', phone: '+91 63834 02323' },
-    { name: 'Kilambakkam', phone: '+91 99404 09355' },
+    { name: 'Kilambakkam', phone: '+91 99404 09335' },
     { name: 'Nagercoil', phone: '+91 87547 61657' },
     { name: 'Coimbatore', phone: '+91 87787 95546' },
     { name: 'Nanganallur', phone: '+91 91500 70313' },
@@ -55,9 +55,11 @@ export default function Footer() {
             <h4 className={`font-bold mb-6 ${isDark ? 'text-white' : 'text-brand-teal'}`}>Branch Hotlines</h4>
             <ul className={`space-y-3 text-sm ${isDark ? 'text-muted' : 'text-gray-600'}`}>
               {branches.map((branch) => (
-                <li key={branch.name} className="flex justify-between gap-4">
-                  <span>{branch.name}</span>
-                  <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="hover:text-brand-blue transition-colors whitespace-nowrap font-medium">
+                <li key={branch.name} className="flex justify-between gap-4 group">
+                  <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="group-hover:text-brand-blue transition-colors">
+                    {branch.name}
+                  </a>
+                  <a href={`tel:${branch.phone.replace(/\s/g, '')}`} className="group-hover:text-brand-blue transition-colors whitespace-nowrap font-medium">
                     {branch.phone}
                   </a>
                 </li>
@@ -75,7 +77,7 @@ export default function Footer() {
                 Chennai – 600040
               </li>
               <li>
-                <a href="mailto:support@thecos.com" className="hover:text-brand-blue transition-colors font-medium">support@thecos.com</a>
+                <a href="mailto:itsupport@ttcecs.com" className="hover:text-brand-blue transition-colors font-medium">itsupport@ttcecs.com</a>
               </li>
             </ul>
           </div>

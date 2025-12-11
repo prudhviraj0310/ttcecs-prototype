@@ -41,42 +41,42 @@ const notifications = [
     {
         title: 'FINAL LIST OF DELEGATES',
         date: '13/11/2025',
-        file: '/election/FINAL LIST OF DELEGATES.pdf',
+        file: '/election/FINAL%20LIST%20OF%20DELEGATES.pdf',
         type: 'pdf',
         desc: 'Final List Of Delegates Published by ARO'
     },
     {
         title: 'DELEGATE LIST',
         date: '31/03/2025',
-        file: '/election/SMALLER GB LIST.pdf',
+        file: '/election/SMALLER%20GB%20LIST.pdf',
         type: 'pdf',
         desc: 'Delegate list as on 31/03/2025'
     },
     {
         title: 'NEWS PAPPER - GENERAL NOTICE(BODs ELECTION 2025)',
         date: '19/10/2025',
-        file: '#', // File missing in provided assets
-        type: 'image',
+        file: '/election/ELECTION%20GENERAL%20ASSEMBLY%20NOTICE.pdf', // Using General Notice as fallback
+        type: 'pdf',
         desc: 'News published in The Hindu news papper on 19/10/2025'
     },
     {
         title: 'ELECTION GENERAL NOTICE',
         date: '14/10/2025',
-        file: '/election/ELECTION GENERAL ASSEMBLY NOTICE.pdf',
+        file: '/election/ELECTION%20GENERAL%20ASSEMBLY%20NOTICE.pdf',
         type: 'pdf',
         desc: 'Election general notice signed by ARO on 14/10/2025'
     },
     {
         title: 'NOTICE OF MEETING',
         date: '14/10/2025',
-        file: '/election/Notice of Meeting.pdf',
+        file: '/election/Notice%20of%20Meeting.pdf',
         type: 'pdf',
         desc: 'Notice of meeting signed by ARO on 14/10/2025'
     },
     {
         title: 'APPOINTMENT OF "RETURNING OFFICER" AND THE "ELECTION PROGRAMME"',
         date: '08/05/2025',
-        file: '/election/681dd8da40004_thiruvalluvar20250509_15500874 (1).pdf',
+        file: '/election/681dd8da40004_thiruvalluvar20250509_15500874%20(1).pdf',
         type: 'pdf',
         desc: 'Election No.35/2025/26'
     },
@@ -164,7 +164,7 @@ export default function ElectionNotification({ isOpen, onClose }) {
 
                                 <div className="flex-grow">
                                     <div className="flex justify-between items-start mb-1">
-                                        <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-brand-teal dark:group-hover:text-brand-blue transition-colors text-sm md:text-base leading-tight">
+                                        <h3 className="font-bold text-gray-900 dark:text-white group-hover:text-brand-teal dark:group-hover:text-brand-blue transition-colors text-sm md:text-base leading-tight uppercase">
                                             {item.title}
                                         </h3>
                                         {item.date && (
