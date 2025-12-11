@@ -173,9 +173,7 @@ export default function ElectionNotification({ isOpen, onClose }) {
                                             </span>
                                         )}
                                     </div>
-                                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
-                                        {item.desc}
-                                    </p>
+
                                 </div>
                             </motion.a>
                         ))}
