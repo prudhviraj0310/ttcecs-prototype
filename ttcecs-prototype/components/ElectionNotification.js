@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 const notifications = [
     {
-        title: 'APPROVAL OF BOARD MEMBERS RESULT',
+        title: 'Form 19M - The List of Elected Directors as per approval from cooperative election authority new delhi.',
         date: '11/12/2025',
         file: '/election/APPROVAL_OF_BOARD_MEMBERS.pdf',
         type: 'pdf',
