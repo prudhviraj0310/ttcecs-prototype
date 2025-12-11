@@ -160,7 +160,7 @@ export default function Hero3D() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.9 }}
-        className="mt-10 md:mt-16 flex items-center gap-8 flex-wrap justify-center opacity-80 relative z-10 pb-10"
+        className="mt-10 md:mt-16 flex items-center gap-8 flex-wrap justify-center relative z-10 pb-10 bg-white/80 dark:bg-[#0a1628]/80 backdrop-blur-md shadow-lg rounded-2xl py-6 px-10 border border-white/20 dark:border-white/5"
       >
         <div className="flex flex-col items-center">
           <span className={`text-3xl font-bold ${isDark ? 'text-white' : 'text-brand-teal'}`}>7,000+</span>
