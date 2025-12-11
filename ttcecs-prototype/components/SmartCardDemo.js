@@ -57,9 +57,11 @@ export default function SmartCardDemo() {
             </motion.div>
           ))}
 
-          <button className="w-full bg-electric text-[#00121a] py-3 rounded-md font-semibold mt-6">
-            Apply for Smart Card →
-          </button>
+          <a href="/contact" className="block mt-6">
+            <button className="w-full bg-electric text-[#00121a] py-3 rounded-md font-semibold hover:bg-electric/90 transition-colors">
+              Apply for Smart Card →
+            </button>
+          </a>
         </div>
       </div>
     </section>
