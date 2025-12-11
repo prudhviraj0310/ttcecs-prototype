@@ -44,7 +44,7 @@ export default function FDCalculator() {
   const isDark = theme === 'dark';
   const [principal, setPrincipal] = useState(50000);
   const [years, setYears] = useState(3);
-  const [rate] = useState(14.40);
+  const [rate] = useState(11.00);
   const [maturityAmount, setMaturityAmount] = useState(0);
   const [interest, setInterest] = useState(0);
 
@@ -209,10 +209,10 @@ export default function FDCalculator() {
             {/* Interest Rate */}
             <div>
               <div className="flex justify-between items-center">
-                <label className="text-sm font-semibold text-muted">Interest Rate (p.a.)</label>
-                <span className="text-2xl font-black text-electric">{rate}%</span>
+                <label className="text-sm font-semibold text-muted">Interest Rate (Annual Yield)</label>
+                <span className="text-2xl font-black text-electric">14.40%</span>
               </div>
-              <p className="text-xs text-muted mt-2">Quarterly compounded</p>
+              <p className="text-xs text-muted mt-2">Base Rate: 11% | Quarterly Compounded</p>
             </div>
 
             {/* Results */}

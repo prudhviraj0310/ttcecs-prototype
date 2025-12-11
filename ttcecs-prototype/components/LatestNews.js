@@ -93,28 +93,31 @@ export default function LatestNews() {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const newsItems = [
-    // Removed obsolete "Board of Directors Election 2024" item
+    {
+      id: 1,
+      category: 'Annual Report',
+      title: 'FY 2024-25 Annual Report Published',
+      icon: '📊',
+      color: 'from-blue-500 to-indigo-600'
+    },
     {
       id: 2,
       category: 'Annual Report',
       title: 'FY 2023-24 Annual Report Published',
-      date: '15 Nov 2024',
-      icon: '📊',
+      icon: '📈',
       color: 'from-green-500 to-emerald-500'
     },
     {
       id: 3,
       category: 'Policy Update',
       title: 'Enhanced Interest Rates on Fixed Deposits',
-      date: '1 Nov 2024',
-      icon: '📈',
+      icon: '💎',
       color: 'from-purple-500 to-pink-500'
     },
     {
       id: 4,
       category: 'AGM Notice',
       title: 'Annual General Meeting - December 2024',
-      date: '25 Oct 2024',
       icon: '🤝',
       color: 'from-red-500 to-orange-500'
     },
@@ -122,7 +125,6 @@ export default function LatestNews() {
       id: 5,
       category: 'Achievement',
       title: 'THECOS Recognized as Best Co-operative Society',
-      date: '20 Sep 2024',
       icon: '🏆',
       color: 'from-yellow-500 to-orange-500'
     }
@@ -187,7 +189,7 @@ export default function LatestNews() {
                       <span className="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold">
                         {news.category}
                       </span>
-                      <span className="text-white/80 text-sm">{news.date}</span>
+
                     </div>
                     <div className="flex items-start gap-6">
                       <div className="text-7xl hidden md:block">{news.icon}</div>
