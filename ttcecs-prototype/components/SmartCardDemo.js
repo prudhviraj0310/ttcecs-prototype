@@ -1,7 +1,5 @@
-import Lottie from 'lottie-react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import smartcardAnimation from '../public/smartcard-animation.json';
 
 /**
  * Smart Card feature showcase with Lottie animation
@@ -25,12 +23,13 @@ export default function SmartCardDemo() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12 items-center">
         {/* Animation */}
+        {/* Animation/Image */}
         <div className="flex justify-center">
-          <div className="w-80 h-80 glass rounded-2xl p-8 flex items-center justify-center">
-            <Lottie 
-              animationData={smartcardAnimation} 
-              loop={true}
-              style={{ width: '100%', height: '100%' }}
+          <div className="relative w-80 md:w-96 rounded-2xl overflow-hidden shadow-2xl hover:scale-105 transition-transform duration-500">
+            <img
+              src="/images/member-card.png"
+              alt="THECOS Smart Card"
+              className="w-full h-auto object-cover"
             />
           </div>
         </div>
@@ -41,15 +40,13 @@ export default function SmartCardDemo() {
             <motion.div
               key={s.id}
               onClick={() => setStep(s.id)}
-              className={`glass p-5 rounded-lg cursor-pointer transition-all ${
-                step === s.id ? 'border-2 border-electric' : 'border border-transparent'
-              }`}
+              className={`glass p-5 rounded-lg cursor-pointer transition-all ${step === s.id ? 'border-2 border-electric' : 'border border-transparent'
+                }`}
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-start gap-4">
-                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${
-                  step === s.id ? 'bg-electric text-[#00121a]' : 'bg-white/5'
-                }`}>
+                <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold ${step === s.id ? 'bg-electric text-[#00121a]' : 'bg-white/5'
+                  }`}>
                   {s.id}
                 </div>
                 <div>
