@@ -94,9 +94,7 @@ export default function Header() {
             <a href="/downloads" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
               Downloads
             </a>
-            <a href="/member-check" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
-              Member Portal
-            </a>
+
 
             {/* Font Size Toggle */}
             <div className="hidden md:flex items-center gap-1 mr-2">
@@ -284,13 +282,7 @@ export default function Header() {
             >
               Downloads
             </a>
-            <a
-              href="/member-check"
-              onClick={() => setMobileMenuOpen(false)}
-              className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
-            >
-              Member Portal
-            </a>
+
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
