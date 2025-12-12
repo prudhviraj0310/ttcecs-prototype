@@ -20,22 +20,22 @@ const notifications = [
     {
         title: 'FINAL LIST OF CONTESTING CANDIDATE',
         date: '26/11/2025',
-        file: '/election/PHOTO-2025-12-06-18-48-29.jpg',
-        type: 'image',
+        file: '/election/FINAL%20LIST%20OF%20CONTESTING%20CANDIDATE.pdf',
+        type: 'pdf',
         desc: 'FINAL LIST OF CONTESTING CANDIDATE Published by ARO'
     },
     {
         title: 'LIST OF VALID NOMINATIONS',
         date: '25/11/2025',
-        file: '/election/PHOTO-2025-12-06-18-48-26.jpg',
-        type: 'image',
+        file: '/election/LIST%20OF%20VAILD%20NOMINATION%20RECEIVED.pdf',
+        type: 'pdf',
         desc: 'LIST OF VALID NOMINATIONS Published by ARO'
     },
     {
         title: 'NOMINATION FORMS RECEIVED',
         date: '24/11/2025',
-        file: '/election/PHOTO-2025-12-06-18-48-25.jpg',
-        type: 'image',
+        file: '/election/NOMINATION%20FORM%20RECEIVED%20BY%20THE%20RETURNING%20OFFICER.pdf',
+        type: 'pdf',
         desc: 'NOMINATION FORMS RECEIVED BY THE RETURNING OFFICER / ASSISTANT RETURNING OFFICER'
     },
     {
