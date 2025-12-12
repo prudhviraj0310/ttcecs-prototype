@@ -55,7 +55,7 @@ const notifications = [
     {
         title: 'NEWS PAPPER - GENERAL NOTICE(BODs ELECTION 2025)',
         date: '19/10/2025',
-        file: '/election/NEWS%20PAPPER%20-%20GENERAL%20NOTICE(%20BOARDS%20ELECTION%202025).pdf',
+        file: '/election/NEWS_PAPPER_GENERAL_NOTICE_BOARDS_ELECTION_2025.pdf',
         type: 'pdf',
         desc: 'News published in The Hindu news papper on 19/10/2025'
     },
