@@ -90,11 +90,24 @@ export default function Home({ content }) {
   )
 }
 
+import dbConnect from '../lib/dbConnect';
+import SiteContent from '../models/SiteContent';
+
 export async function getServerSideProps() {
   try {
-    const filePath = path.join(process.cwd(), 'data', 'site-content.json');
-    const fileContents = fs.readFileSync(filePath, 'utf8');
-    const content = JSON.parse(fileContents);
+    await dbConnect();
+    const contentDoc = await SiteContent.findOne().sort({ createdAt: -1 });
+
+    // Fallback if no content in DB
+    const content = contentDoc ? JSON.parse(JSON.stringify(contentDoc)) : {
+      interestRate: 14.4,
+      isMemberPortalEnabled: false,
+      isElectionNotificationEnabled: true,
+      isNewsNotificationEnabled: true,
+      news: [],
+      electionNotifications: []
+    };
+
     return {
       props: {
         content
