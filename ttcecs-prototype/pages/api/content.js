@@ -1,20 +1,28 @@
+import dbConnect from '../../lib/dbConnect';
+import SiteContent from '../../models/SiteContent';
 
-import fs from 'fs';
-import path from 'path';
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
     if (req.method === 'GET') {
         try {
-            // Path to the shared content file
-            const filePath = path.join(process.cwd(), 'data', 'site-content.json');
+            await dbConnect();
 
-            if (!fs.existsSync(filePath)) {
-                return res.status(404).json({ message: 'Content file not found' });
+            // Fetch the single document for site content
+            // We use sort by _id to consistently get the "latest" or first created if multiple
+            const content = await SiteContent.findOne().sort({ createdAt: -1 });
+
+            if (!content) {
+                // Return default/fallback if db is empty
+                return res.status(200).json({
+                    interestRate: 14.4, // Fallback
+                    isMemberPortalEnabled: false,
+                    isElectionNotificationEnabled: true,
+                    isNewsNotificationEnabled: true,
+                    news: [],
+                    electionNotifications: []
+                });
             }
 
-            const fileContents = fs.readFileSync(filePath, 'utf8');
-            const data = JSON.parse(fileContents);
-            res.status(200).json(data);
+            res.status(200).json(content);
         } catch (error) {
             console.error('Error reading site content:', error);
             res.status(500).json({ message: 'Error reading site content' });

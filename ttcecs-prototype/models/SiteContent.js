@@ -2,7 +2,9 @@ import mongoose from 'mongoose';
 
 const SiteContentSchema = new mongoose.Schema({
     interestRate: { type: Number, required: true },
-    isMemberPortalEnabled: { type: Boolean, default: true }, // New Toggle
+    isMemberPortalEnabled: { type: Boolean, default: false },
+    isElectionNotificationEnabled: { type: Boolean, default: true },
+    isNewsNotificationEnabled: { type: Boolean, default: true },
     scrollingNews: { type: String, required: true },
     news: [{
         id: Number,
