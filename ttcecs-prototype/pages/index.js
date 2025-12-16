@@ -2,6 +2,8 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Header from '../components/Header'
 import Hero3D from '../components/Hero3D'
+import fs from 'fs'
+import path from 'path'
 
 import WhyChoose from '../components/WhyChoose'
 import QuickLinks from '../components/QuickLinks'
@@ -12,18 +14,19 @@ import AssociatedOrgs from '../components/AssociatedOrgs'
 import Services from '../components/Services'
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import LatestNews from '../components/LatestNews'
 
 // Dynamically import components that use GSAP (no SSR)
 const Story = dynamic(() => import('../components/Story'), { ssr: false })
 const ScrollEffects = dynamic(() => import('../components/ScrollEffects'), { ssr: false })
 
-export default function Home() {
+export default function Home({ content }) {
   return (
     <>
       <Head>
-        <title>THECOS — Cinematic Financial Dashboard | Fixed Deposits 14.40%</title>
-        <meta name="description" content="THECOS — Cooperative financial services with Fixed Deposits at 14.40%, Smart Card access, and comprehensive member services across Chennai branches." />
-        <meta property="og:title" content="THECOS — Fixed Deposit 14.40%" />
+        <title>THECOS — Cinematic Financial Dashboard | Fixed Deposits {content?.interestRate?.toFixed(2)}%</title>
+        <meta name="description" content={`THECOS — Cooperative financial services with Fixed Deposits at ${content?.interestRate?.toFixed(2)}%, Smart Card access, and comprehensive member services across Chennai branches.`} />
+        <meta property="og:title" content={`THECOS — Fixed Deposit ${content?.interestRate?.toFixed(2)}%`} />
         <meta property="og:description" content="Premium cooperative banking with modern fintech solutions. High yielding fixed deposits and member services for transport employees." />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -43,9 +46,12 @@ export default function Home() {
       <Header />
       <main>
         {/* Hero: 14.40% with animated counter and CTAs */}
-        <Hero3D />
+        <Hero3D interestRate={content?.interestRate || 14.4} />
 
-
+        {/* Latest News & Announcements */}
+        {content?.isNewsNotificationEnabled && (
+          <LatestNews news={content?.news} notifications={content?.electionNotifications} />
+        )}
 
         {/* Why Choose THECOS: 5 key value points with icons */}
         <WhyChoose />
@@ -82,4 +88,28 @@ export default function Home() {
       <ScrollEffects />
     </>
   )
+}
+
+export async function getServerSideProps() {
+  try {
+    const filePath = path.join(process.cwd(), 'data', 'site-content.json');
+    const fileContents = fs.readFileSync(filePath, 'utf8');
+    const content = JSON.parse(fileContents);
+    return {
+      props: {
+        content
+      }
+    };
+  } catch (error) {
+    console.error('Error fetching site content:', error);
+    return {
+      props: {
+        content: {
+          interestRate: 14.4, // Fallback
+          news: [],
+          electionNotifications: []
+        }
+      }
+    };
+  }
 }

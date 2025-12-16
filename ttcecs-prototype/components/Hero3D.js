@@ -11,7 +11,7 @@ const CoinScene = dynamic(() => import('./CoinScene'), {
   loading: () => null
 });
 
-export default function Hero3D() {
+export default function Hero3D({ interestRate = 14.4 }) {
   const [showCounter, setShowCounter] = useState(false);
   const [theme, setTheme] = useState('light');
 
@@ -85,7 +85,7 @@ export default function Hero3D() {
                 transition={{ type: 'spring', stiffness: 100 }}
                 className={`text-7xl md:text-9xl font-black tracking-tighter ${isDark ? 'text-white' : 'text-brand-teal'}`}
               >
-                <CountUp start={0} end={14.4} duration={2.5} decimals={1} suffix="%" />
+                <CountUp start={0} end={interestRate} duration={2.5} decimals={1} suffix="%" />
               </motion.h1>
             )}
             <div className={`h-1 w-24 mx-auto mt-6 mb-4 rounded-full bg-gradient-gold`} />

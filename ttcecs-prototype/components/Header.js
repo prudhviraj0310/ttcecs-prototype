@@ -12,12 +12,29 @@ export default function Header() {
   const [showElectionModal, setShowElectionModal] = useState(false);
   const [theme, setTheme] = useState('light');
   const [mounted, setMounted] = useState(false);
+  const [portalEnabled, setPortalEnabled] = useState(true);
+  const [showElectionButton, setShowElectionButton] = useState(true);
 
   useEffect(() => {
     setMounted(true);
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
     document.documentElement.setAttribute('data-theme', savedTheme);
+
+    // Fetch site settings
+    fetch('/api/content')
+      .then(res => res.json())
+      .then(data => {
+        if (data) {
+          if (typeof data.isMemberPortalEnabled !== 'undefined') {
+            setPortalEnabled(data.isMemberPortalEnabled);
+          }
+          if (typeof data.isElectionNotificationEnabled !== 'undefined') {
+            setShowElectionButton(data.isElectionNotificationEnabled);
+          }
+        }
+      })
+      .catch(err => console.error('Failed to load site settings:', err));
   }, []);
 
   useEffect(() => {
@@ -94,6 +111,11 @@ export default function Header() {
             <a href="/downloads" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
               Downloads
             </a>
+            {portalEnabled && (
+              <a href="/login" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+                Login
+              </a>
+            )}
 
 
             {/* Font Size Toggle */}
@@ -160,14 +182,16 @@ export default function Header() {
             </motion.button>
 
             {/* CTA Button with gradient */}
-            <motion.button
-              onClick={() => setShowElectionModal(true)}
-              whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(0, 48, 61, 0.2)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2.5 rounded-lg font-bold text-white shadow-md bg-gradient-to-r from-red-600 to-orange-600 animate-pulse"
-            >
-              Election Notification 2025
-            </motion.button>
+            {showElectionButton && (
+              <motion.button
+                onClick={() => setShowElectionModal(true)}
+                whileHover={{ scale: 1.05, boxShadow: '0 8px 20px rgba(0, 48, 61, 0.2)' }}
+                whileTap={{ scale: 0.95 }}
+                className="px-6 py-2.5 rounded-lg font-bold text-white shadow-md bg-gradient-to-r from-red-600 to-orange-600 animate-pulse"
+              >
+                Election Notification 2025
+              </motion.button>
+            )}
           </nav>
 
           {/* Mobile Menu Button */}
@@ -282,17 +306,28 @@ export default function Header() {
             >
               Downloads
             </a>
+            {portalEnabled && (
+              <a
+                href="/login"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
+              >
+                Login
+              </a>
+            )}
 
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                setShowElectionModal(true);
-              }}
-              className="mt-4 px-6 py-3 rounded-lg font-bold text-white text-center shadow-lg w-full"
-              style={{ background: 'linear-gradient(90deg, #DC2626 0%, #EA580C 100%)' }}
-            >
-              Election Notification 2025
-            </button>
+            {showElectionButton && (
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  setShowElectionModal(true);
+                }}
+                className="mt-4 px-6 py-3 rounded-lg font-bold text-white text-center shadow-lg w-full"
+                style={{ background: 'linear-gradient(90deg, #DC2626 0%, #EA580C 100%)' }}
+              >
+                Election Notification 2025
+              </button>
+            )}
           </nav>
         </div>
       </motion.div>

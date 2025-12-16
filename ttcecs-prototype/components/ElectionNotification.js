@@ -2,94 +2,26 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
-const notifications = [
-    {
-        title: 'Form 19M - The List of Elected Directors as per approval from cooperative election authority new delhi.',
-        date: '11/12/2025',
-        file: '/election/APPROVAL_OF_BOARD_MEMBERS.pdf',
-        type: 'pdf',
-        desc: 'Convey the approval of Board Members result'
-    },
-    {
-        title: 'APPROVAL FOR APPOINTMENT OF ARO',
-        date: '11/12/2025',
-        file: '/election/APPROVAL_OF_ARO.pdf',
-        type: 'pdf',
-        desc: 'Approval for appointment of ARO'
-    },
-    {
-        title: 'FINAL LIST OF CONTESTING CANDIDATE',
-        date: '26/11/2025',
-        file: '/election/FINAL%20LIST%20OF%20CONTESTING%20CANDIDATE.pdf',
-        type: 'pdf',
-        desc: 'FINAL LIST OF CONTESTING CANDIDATE Published by ARO'
-    },
-    {
-        title: 'LIST OF VALID NOMINATIONS',
-        date: '25/11/2025',
-        file: '/election/LIST%20OF%20VAILD%20NOMINATION%20RECEIVED.pdf',
-        type: 'pdf',
-        desc: 'LIST OF VALID NOMINATIONS Published by ARO'
-    },
-    {
-        title: 'NOMINATION FORMS RECEIVED',
-        date: '24/11/2025',
-        file: '/election/NOMINATION%20FORM%20RECEIVED%20BY%20THE%20RETURNING%20OFFICER.pdf',
-        type: 'pdf',
-        desc: 'NOMINATION FORMS RECEIVED BY THE RETURNING OFFICER / ASSISTANT RETURNING OFFICER'
-    },
-    {
-        title: 'FINAL LIST OF DELEGATES',
-        date: '13/11/2025',
-        file: '/election/FINAL%20LIST%20OF%20DELEGATES.pdf',
-        type: 'pdf',
-        desc: 'Final List Of Delegates Published by ARO'
-    },
-    {
-        title: 'DELEGATE LIST',
-        date: '31/03/2025',
-        file: '/election/SMALLER%20GB%20LIST.pdf',
-        type: 'pdf',
-        desc: 'Delegate list as on 31/03/2025'
-    },
-    {
-        title: 'NEWS PAPPER - GENERAL NOTICE(BODs ELECTION 2025)',
-        date: '19/10/2025',
-        file: '/election/NEWS_PAPPER_GENERAL_NOTICE_BOARDS_ELECTION_2025.pdf',
-        type: 'pdf',
-        desc: 'News published in The Hindu news papper on 19/10/2025'
-    },
-    {
-        title: 'ELECTION GENERAL NOTICE',
-        date: '14/10/2025',
-        file: '/election/ELECTION%20GENERAL%20ASSEMBLY%20NOTICE.pdf',
-        type: 'pdf',
-        desc: 'Election general notice signed by ARO on 14/10/2025'
-    },
-    {
-        title: 'NOTICE OF MEETING',
-        date: '14/10/2025',
-        file: '/election/Notice%20of%20Meeting.pdf',
-        type: 'pdf',
-        desc: 'Notice of meeting signed by ARO on 14/10/2025'
-    },
-    {
-        title: 'APPOINTMENT OF "RETURNING OFFICER" AND THE "ELECTION PROGRAMME"',
-        date: '08/05/2025',
-        file: '/election/681dd8da40004_thiruvalluvar20250509_15500874%20(1).pdf',
-        type: 'pdf',
-        desc: 'Election No.35/2025/26'
-    },
-    {
-        title: 'CO-OPERATIVE ELECTION AUTHORITY (CEA)',
-        date: '04/08/2023',
-        file: 'https://crcs.gov.in/about-cea',
-        type: 'link',
-        desc: 'The amended Act the Multi State Co-operative Societies (Amendment) Act, 2023...'
-    }
-];
+const notifications = []; // Removed hardcoded data
 
 export default function ElectionNotification({ isOpen, onClose }) {
+    const [notifications, setNotifications] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    // Fetch notifications when modal opens
+    if (isOpen && !loading && notifications.length === 0) {
+        setLoading(true);
+        fetch('/api/content')
+            .then(res => res.json())
+            .then(data => {
+                if (data.electionNotifications) {
+                    setNotifications(data.electionNotifications);
+                }
+            })
+            .catch(err => console.error('Error fetching notifications:', err))
+            .finally(() => setLoading(false));
+    }
+
     if (!isOpen) return null;
 
     return (

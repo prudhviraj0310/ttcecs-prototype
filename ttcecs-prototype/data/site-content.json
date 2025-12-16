@@ -1,0 +1,122 @@
+{
+  "interestRate": 14.6,
+  "isMemberPortalEnabled": false,
+  "isElectionNotificationEnabled": true,
+  "isNewsNotificationEnabled": false,
+  "scrollingNews": "New Fixed Deposit rates effective from November 1, 2024. Avail up to 14.40% interest!",
+  "news": [
+    {
+      "id": 1,
+      "category": "Annual Report",
+      "title": "FY 2024-25 Annual Report Published",
+      "excerpt": "THECOS annual report for fiscal year 2024-25 is now available. The society achieved record growth with ₹550+ crore in total assets and maintained strong financial health.",
+      "icon": "📊",
+      "color": "from-blue-500 to-indigo-600",
+      "date": "2025-04-15"
+    },
+    {
+      "id": 2,
+      "category": "Policy Update",
+      "title": "Enhanced Interest Rates on Fixed Deposits",
+      "excerpt": "New FD interest rates effective from November 1, 2024. Premium plans now offering up to 14.40% per annum. Existing members can opt for renewal at revised rates.",
+      "icon": "💎",
+      "color": "from-purple-500 to-pink-500",
+      "date": "2024-11-01"
+    },
+    {
+      "id": 3,
+      "category": "AGM Notice",
+      "title": "Annual General Meeting - December 2024",
+      "excerpt": "The 33rd Annual General Meeting will be held on December 28, 2024, at 10:00 AM at Amma Arangam. All members are requested to attend.",
+      "icon": "🤝",
+      "color": "from-red-500 to-orange-500",
+      "date": "2024-12-01"
+    }
+  ],
+  "electionNotifications": [
+    {
+      "title": "FORM 19M - THE LIST OF ELECTED DIRECTORS AS PER APPROVAL FROM COOPERATIVE ELECTION AUTHORITY NEW DELHI.",
+      "date": "11/12/2025",
+      "file": "/election/APPROVAL_OF_BOARD_MEMBERS.pdf",
+      "type": "pdf",
+      "desc": "List of elected directors"
+    },
+    {
+      "title": "APPROVAL FOR APPOINTMENT OF ARO",
+      "date": "11/12/2025",
+      "file": "/election/APPROVAL_OF_ARO.pdf",
+      "type": "pdf",
+      "desc": "Approval for appointment of ARO"
+    },
+    {
+      "title": "FINAL LIST OF CONTESTING CANDIDATE",
+      "date": "26/11/2025",
+      "file": "/election/FINAL LIST OF CONTESTING CANDIDATE.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "LIST OF VALID NOMINATIONS",
+      "date": "25/11/2025",
+      "file": "/election/LIST_OF_VALID_NOMINATION_RECEIVED.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "NOMINATION FORMS RECEIVED",
+      "date": "24/11/2025",
+      "file": "/election/NOMINATION FORM RECEIVED BY THE RETURNING OFFICER.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "FINAL LIST OF DELEGATES",
+      "date": "13/11/2025",
+      "file": "/election/FINAL LIST OF DELEGATES.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "DELEGATE LIST",
+      "date": "31/03/2025",
+      "file": "/election/SMALLER GB LIST.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "NEWS PAPPER - GENERAL NOTICE(BODS ELECTION 2025)",
+      "date": "19/10/2025",
+      "file": "/election/NEWSPAPER_GENERAL_NOTICE_ELECTION_2025.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "ELECTION GENERAL NOTICE",
+      "date": "14/10/2025",
+      "file": "/election/ELECTION GENERAL ASSEMBLY NOTICE.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "NOTICE OF MEETING",
+      "date": "14/10/2025",
+      "file": "/election/Notice of Meeting.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "APPOINTMENT OF \"RETURNING OFFICER\" AND THE \"ELECTION PROGRAMME\"",
+      "date": "08/05/2025",
+      "file": "/election/ELECTION_PROGRAMME.pdf",
+      "type": "pdf",
+      "desc": ""
+    },
+    {
+      "title": "CO-OPERATIVE ELECTION AUTHORITY (CEA)",
+      "date": "04/08/2023",
+      "file": "https://www.ceatn.gov.in/",
+      "type": "link",
+      "desc": "External Link"
+    }
+  ]
+}

@@ -2,133 +2,19 @@ import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
-const notifications = [
-  {
-    title: 'APPROVAL OF BOARD MEMBERS RESULT',
-    date: '11/12/2025',
-    file: '/election/APPROVAL_OF_BOARD_MEMBERS.pdf',
-    type: 'pdf',
-    desc: 'Convey the approval of Board Members result'
-  },
-  {
-    title: 'APPROVAL FOR APPOINTMENT OF ARO',
-    date: '11/12/2025',
-    file: '/election/APPROVAL_OF_ARO.pdf',
-    type: 'pdf',
-    desc: 'Approval for appointment of ARO'
-  },
-  {
-    title: 'FINAL LIST OF CONTESTING CANDIDATE',
-    date: '26/11/2025',
-    file: '/election/PHOTO-2025-12-06-18-48-29.jpg',
-    type: 'image',
-    desc: 'FINAL LIST OF CONTESTING CANDIDATE Published by ARO'
-  },
-  {
-    title: 'LIST OF VALID NOMINATIONS',
-    date: '25/11/2025',
-    file: '/election/PHOTO-2025-12-06-18-48-26.jpg',
-    type: 'image',
-    desc: 'LIST OF VALID NOMINATIONS Published by ARO'
-  },
-  {
-    title: 'NOMINATION FORMS RECEIVED',
-    date: '24/11/2025',
-    file: '/election/PHOTO-2025-12-06-18-48-25.jpg',
-    type: 'image',
-    desc: 'NOMINATION FORMS RECEIVED BY THE RETURNING OFFICER / ASSISTANT RETURNING OFFICER'
-  },
-  {
-    title: 'FINAL LIST OF DELEGATES',
-    date: '13/11/2025',
-    file: '/election/FINAL%20LIST%20OF%20DELEGATES.pdf',
-    type: 'pdf',
-    desc: 'Final List Of Delegates Published by ARO'
-  },
-  {
-    title: 'DELEGATE LIST',
-    date: '31/03/2025',
-    file: '/election/SMALLER%20GB%20LIST.pdf',
-    type: 'pdf',
-    desc: 'Delegate list as on 31/03/2025'
-  },
-  {
-    title: 'NEWS PAPPER - GENERAL NOTICE(BODs ELECTION 2025)',
-    date: '19/10/2025',
-    file: '/election/ELECTION%20GENERAL%20ASSEMBLY%20NOTICE.pdf', // Fallback to General Notice PDF as image is missing
-    type: 'pdf',
-    desc: 'News published in The Hindu news papper on 19/10/2025'
-  },
-  {
-    title: 'ELECTION GENERAL NOTICE',
-    date: '14/10/2025',
-    file: '/election/ELECTION%20GENERAL%20ASSEMBLY%20NOTICE.pdf',
-    type: 'pdf',
-    desc: 'Election general notice signed by ARO on 14/10/2025'
-  },
-  {
-    title: 'NOTICE OF MEETING',
-    date: '14/10/2025',
-    file: '/election/Notice%20of%20Meeting.pdf',
-    type: 'pdf',
-    desc: 'Notice of meeting signed by ARO on 14/10/2025'
-  },
-  {
-    title: 'APPOINTMENT OF "RETURNING OFFICER" AND THE "ELECTION PROGRAMME"',
-    date: '08/05/2025',
-    file: '/election/681dd8da40004_thiruvalluvar20250509_15500874%20(1).pdf',
-    type: 'pdf',
-    desc: 'Election No.35/2025/26'
-  },
-  {
-    title: 'CO-OPERATIVE ELECTION AUTHORITY (CEA)',
-    date: '04/08/2023',
-    file: 'https://crcs.gov.in/about-cea',
-    type: 'link',
-    desc: 'The amended Act the Multi State Co-operative Societies (Amendment) Act, 2023...'
-  }
-];
-
-export default function LatestNews() {
+export default function LatestNews({ news, notifications }) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
-  const newsItems = [
+  // Use props if available, otherwise use default/empty
+  const newsItems = news || [
     {
       id: 1,
       category: 'Annual Report',
       title: 'FY 2024-25 Annual Report Published',
       icon: '📊',
       color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      id: 2,
-      category: 'Annual Report',
-      title: 'FY 2023-24 Annual Report Published',
-      icon: '📈',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      id: 3,
-      category: 'Policy Update',
-      title: 'Enhanced Interest Rates on Fixed Deposits',
-      icon: '💎',
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      id: 4,
-      category: 'AGM Notice',
-      title: 'Annual General Meeting - December 2024',
-      icon: '🤝',
-      color: 'from-red-500 to-orange-500'
-    },
-    {
-      id: 5,
-      category: 'Achievement',
-      title: 'THECOS Recognized as Best Co-operative Society',
-      icon: '🏆',
-      color: 'from-yellow-500 to-orange-500'
     }
-  ]
+  ];
 
   // Auto-scroll every 5 seconds
   useEffect(() => {
@@ -177,14 +63,14 @@ export default function LatestNews() {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {newsItems.map((news, idx) => (
-              <div key={news.id} className="w-full flex-shrink-0 px-2">
+              <div key={news.id || idx} className="w-full flex-shrink-0 px-2">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   className="bg-white dark:bg-[#0f1f3a] rounded-3xl shadow-2xl overflow-hidden"
                 >
-                  <div className={`bg-gradient-to-r ${news.color} p-8 md:p-12`}>
+                  <div className={`bg-gradient-to-r ${news.color || 'from-blue-500 to-blue-600'} p-8 md:p-12`}>
                     <div className="flex items-center gap-3 mb-4">
                       <span className="px-4 py-1 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-bold">
                         {news.category}
@@ -192,11 +78,14 @@ export default function LatestNews() {
 
                     </div>
                     <div className="flex items-start gap-6">
-                      <div className="text-7xl hidden md:block">{news.icon}</div>
+                      <div className="text-7xl hidden md:block">{news.icon || '📢'}</div>
                       <div className="flex-1">
                         <h3 className="text-3xl md:text-4xl font-black text-white mb-4">
                           {news.title}
                         </h3>
+                        {news.excerpt && (
+                          <p className="text-white/80 mb-4 line-clamp-2">{news.excerpt}</p>
+                        )}
                         <Link href="/news">
                           <button className="px-6 py-3 bg-white text-gray-900 rounded-lg font-bold hover:shadow-lg transition-all inline-flex items-center gap-2">
                             <span>Read More</span>
@@ -228,7 +117,7 @@ export default function LatestNews() {
         </div>
 
         {/* 2. Election Notification Grid */}
-        {/* 2. Election Notification Grid - Section Removed and moved to Modal in Header */}
+        {/* Removed redundant grid as per request, ensuring no fallback hardcoded notifications interfere */}
       </div>
     </section>
   )
