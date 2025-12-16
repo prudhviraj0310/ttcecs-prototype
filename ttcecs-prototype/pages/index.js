@@ -2,8 +2,7 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import Header from '../components/Header'
 import Hero3D from '../components/Hero3D'
-import fs from 'fs'
-import path from 'path'
+
 
 import WhyChoose from '../components/WhyChoose'
 import QuickLinks from '../components/QuickLinks'
