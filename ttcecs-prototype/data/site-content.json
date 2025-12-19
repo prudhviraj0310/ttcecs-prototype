@@ -35,6 +35,13 @@
   ],
   "electionNotifications": [
     {
+      "title": "ELECTION RESULT 2025",
+      "date": "19/12/2025",
+      "file": "/election/Election_Result2025.pdf",
+      "type": "pdf",
+      "desc": "Election Result 2025"
+    },
+    {
       "title": "FORM 19M - THE LIST OF ELECTED DIRECTORS AS PER APPROVAL FROM COOPERATIVE ELECTION AUTHORITY NEW DELHI.",
       "date": "11/12/2025",
       "file": "/election/APPROVAL_OF_BOARD_MEMBERS.pdf",
