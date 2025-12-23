@@ -177,7 +177,7 @@ export default function RecurringDeposits() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wide">Total Paid</p>
                                     <p className="font-semibold text-green-600">{formatCurrency(rd.TotalPaid)}</p>
@@ -193,6 +193,21 @@ export default function RecurringDeposits() {
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wide">Maturity Date</p>
                                     <p className="font-semibold text-gray-900 dark:text-white">{formatDate(rd.EDate)}</p>
+                                </div>
+                                <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-3 -m-1">
+                                    <p className="text-xs text-amber-600 dark:text-amber-400 uppercase tracking-wide font-bold">📅 Next Installment</p>
+                                    <p className="font-bold text-amber-700 dark:text-amber-300">{formatDate(rd.NextDueDate)}</p>
+                                    {rd.NextDueDate && (
+                                        <p className="text-xs text-amber-500 mt-1">
+                                            {(() => {
+                                                const daysUntil = Math.ceil((new Date(rd.NextDueDate) - new Date()) / (1000 * 60 * 60 * 24));
+                                                if (daysUntil < 0) return `🔴 Overdue by ${Math.abs(daysUntil)} days`;
+                                                if (daysUntil === 0) return '🔴 Due Today!';
+                                                if (daysUntil <= 7) return `⚠️ Due in ${daysUntil} days`;
+                                                return `${daysUntil} days left`;
+                                            })()}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>

@@ -172,7 +172,7 @@ export default function Loans() {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 pt-4 border-t border-gray-100 dark:border-gray-700">
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wide">Loan Amount</p>
                                     <p className="font-semibold text-gray-900 dark:text-white">{formatCurrency(loan.LAmt)}</p>
@@ -188,6 +188,21 @@ export default function Loans() {
                                 <div>
                                     <p className="text-xs text-gray-500 uppercase tracking-wide">EMI Amount</p>
                                     <p className="font-semibold text-gray-900 dark:text-white">{formatCurrency(loan.EMI)}</p>
+                                </div>
+                                <div className="bg-rose-50 dark:bg-rose-900/20 rounded-lg p-3 -m-1">
+                                    <p className="text-xs text-rose-600 dark:text-rose-400 uppercase tracking-wide font-bold">📅 Next EMI Due</p>
+                                    <p className="font-bold text-rose-700 dark:text-rose-300">{formatDate(loan.NextDueDate)}</p>
+                                    {loan.NextDueDate && (
+                                        <p className="text-xs text-rose-500 mt-1">
+                                            {(() => {
+                                                const daysUntil = Math.ceil((new Date(loan.NextDueDate) - new Date()) / (1000 * 60 * 60 * 24));
+                                                if (daysUntil < 0) return `🔴 Overdue by ${Math.abs(daysUntil)} days`;
+                                                if (daysUntil === 0) return '🔴 Due Today!';
+                                                if (daysUntil <= 7) return `⚠️ Due in ${daysUntil} days`;
+                                                return `${daysUntil} days left`;
+                                            })()}
+                                        </p>
+                                    )}
                                 </div>
                             </div>
                         </motion.div>
