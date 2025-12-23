@@ -28,14 +28,47 @@ export default function MemberPortal() {
     const MAX_OTP_ATTEMPTS = 3;
     const OTP_VALIDITY_SECONDS = 120;
 
-    // Turnstile CAPTCHA disabled for testing
-    // TODO: Re-enable for production
-    /*
+    // Load Turnstile script and render widget
     useEffect(() => {
         if (step !== 1) return;
-        // Turnstile loading code removed for testing
+
+        const loadTurnstile = () => {
+            if (window.turnstile && turnstileRef.current && !widgetIdRef.current) {
+                widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+                    sitekey: TURNSTILE_SITE_KEY,
+                    callback: (token) => {
+                        setTurnstileToken(token);
+                        setError('');
+                    },
+                    'expired-callback': () => {
+                        setTurnstileToken('');
+                    },
+                    'error-callback': () => {
+                        setError('CAPTCHA verification failed. Please try again.');
+                        setTurnstileToken('');
+                    },
+                    theme: 'auto',
+                });
+            }
+        };
+
+        if (window.turnstile) {
+            loadTurnstile();
+        } else {
+            const script = document.createElement('script');
+            script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+            script.async = true;
+            script.onload = loadTurnstile;
+            document.head.appendChild(script);
+        }
+
+        return () => {
+            if (widgetIdRef.current && window.turnstile) {
+                window.turnstile.remove(widgetIdRef.current);
+                widgetIdRef.current = null;
+            }
+        };
     }, [step]);
-    */
 
     // OTP timer effect
     useEffect(() => {
@@ -48,11 +81,10 @@ export default function MemberPortal() {
     const handleSendOtp = async (e) => {
         e.preventDefault();
 
-        // CAPTCHA check disabled for testing
-        // if (!turnstileToken) {
-        //     setError('Please complete the CAPTCHA verification.');
-        //     return;
-        // }
+        if (!turnstileToken) {
+            setError('Please complete the CAPTCHA verification.');
+            return;
+        }
 
         if (!memberNumber.trim()) {
             setError('Please enter your Member Number.');
@@ -230,10 +262,10 @@ export default function MemberPortal() {
                                         </p>
                                     </div>
 
-                                    {/* Cloudflare Turnstile CAPTCHA - Disabled for testing */}
-                                    {/* <div className="flex justify-center">
+                                    {/* Cloudflare Turnstile CAPTCHA */}
+                                    <div className="flex justify-center">
                                         <div ref={turnstileRef}></div>
-                                    </div> */}
+                                    </div>
 
                                     {error && (
                                         <motion.div
@@ -247,7 +279,7 @@ export default function MemberPortal() {
 
                                     <button
                                         type="submit"
-                                        disabled={loading}
+                                        disabled={loading || !turnstileToken}
                                         className="w-full py-4 bg-gradient-to-r from-brand-teal to-blue-600 text-white rounded-xl font-bold text-lg shadow-lg shadow-brand-teal/30 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
                                     >
                                         {loading ? (
