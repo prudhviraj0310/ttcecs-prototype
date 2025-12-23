@@ -1,8 +1,8 @@
-import dbConnect from '../lib/dbConnect';
-import Member from '../models/Member';
-import FixedDeposit from '../models/FixedDeposit';
-import RecurringDeposit from '../models/RecurringDeposit';
-import Loan from '../models/Loan';
+import dbConnect from '../../lib/dbConnect';
+import Member from '../../models/Member';
+import FixedDeposit from '../../models/FixedDeposit';
+import RecurringDeposit from '../../models/RecurringDeposit';
+import Loan from '../../models/Loan';
 
 // Dummy data for testing
 const DUMMY_MEMBERS = [
