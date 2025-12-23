@@ -23,7 +23,7 @@ export default function Home({ content }) {
   return (
     <>
       <Head>
-        <title>THECOS — Cinematic Financial Dashboard | Fixed Deposits {content?.interestRate?.toFixed(2)}%</title>
+        <title>{`THECOS — Cinematic Financial Dashboard | Fixed Deposits ${content?.interestRate?.toFixed(2)}%`}</title>
         <meta name="description" content={`THECOS — Cooperative financial services with Fixed Deposits at ${content?.interestRate?.toFixed(2)}%, Smart Card access, and comprehensive member services across Chennai branches.`} />
         <meta property="og:title" content={`THECOS — Fixed Deposit ${content?.interestRate?.toFixed(2)}%`} />
         <meta property="og:description" content="Premium cooperative banking with modern fintech solutions. High yielding fixed deposits and member services for transport employees." />

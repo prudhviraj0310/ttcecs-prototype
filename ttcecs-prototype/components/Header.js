@@ -112,8 +112,8 @@ export default function Header() {
               Downloads
             </a>
             {portalEnabled && (
-              <a href="/login" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
-                Login
+              <a href="/portal" className={`${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}>
+                Member Portal
               </a>
             )}
 
@@ -308,11 +308,11 @@ export default function Header() {
             </a>
             {portalEnabled && (
               <a
-                href="/login"
+                href="/portal"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`text-lg font-bold ${isDark ? 'text-white hover:text-brand-blue' : 'text-brand-teal hover:text-brand-blue'} transition-colors`}
               >
-                Login
+                Member Portal
               </a>
             )}
 
